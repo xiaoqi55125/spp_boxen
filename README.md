@@ -10,7 +10,7 @@
   sudo chown $USER:admin /opt/boxen
   mkdir -p ~/projects
   cd ~/projects
-  git clone git@github.com:lonelyplanet/spp_boxen.git
+  git clone https://github.com/lonelyplanet/spp_boxen.git
 
   script/boxen
 
