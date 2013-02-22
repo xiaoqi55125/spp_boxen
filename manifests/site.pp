@@ -57,11 +57,6 @@ node default {
   include nvm
   include ruby
 
-  # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
-  }
-
   # node versions
   include nodejs::0-4
   include nodejs::0-6
