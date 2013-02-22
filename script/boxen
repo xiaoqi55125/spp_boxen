@@ -66,6 +66,14 @@ abort "Can't bootstrap, dependencies are outdated." unless system *strap
 load "config/basic.rb"
 require "boxen/cli"
 
+
+# SPP Specific - Check for srcdir or make it ~/projects
+# This is the directory where repos live
+unless ARGV.include? "--srcdir"
+  ARGV.push "--srcdir"
+  ARGV.push "#{ENV['HOME']}/projects"
+end
+
 # Okay, let's run this thing.
 
 exit Boxen::CLI.run ARGV
