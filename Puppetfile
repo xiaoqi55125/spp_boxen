@@ -4,35 +4,37 @@
 # default. This ensures at least the ability to construct a basic
 # environment.
 
-def github(name, version, options = nil)
+def include_dependency(name, version_tag="1.0.0", options = nil)
   options ||= {}
   options[:repo] ||= "boxen/puppet-#{name}"
-  mod name, version, :github_tarball => options[:repo]
+  mod name, version_tag, :github_tarball => options[:repo]
 end
 
-# Core modules for a basic development environment. You can replace
-# some/most of those if you want, but it's not recommended.
+# Boxen Defaults
 
-# Includes many of our custom types and providers, as well as global
-# config. Required.
+include_dependency "boxen",    "1.0.2"
+include_dependency "dnsmasq"
+include_dependency "gcc"
+include_dependency "git"
+include_dependency "homebrew"
+include_dependency "hub"
+include_dependency "inifile",  "0.9.0", :repo => "cprice-puppet/puppetlabs-inifile"
+include_dependency "nginx"
+include_dependency "nodejs"
+include_dependency "nvm"
+include_dependency "ruby"
+include_dependency "stdlib",   "3.0.0", :repo => "puppetlabs/puppetlabs-stdlib"
+include_dependency "sudo"
 
-github "boxen", "1.0.2"
+# Optional/custom modules. There are tons available at https://github.com/boxen.
 
-# Core modules for a basic development environment. You can replace
-# some/most of these if you want, but it's not recommended.
+# SPP Modules
 
-github "dnsmasq",  "1.0.0"
-github "gcc",      "1.0.0"
-github "git",      "1.0.0"
-github "homebrew", "1.0.0"
-github "hub",      "1.0.0"
-github "inifile",  "0.9.0", :repo => "cprice-puppet/puppetlabs-inifile"
-github "nginx",    "1.0.0"
-github "nodejs",   "1.0.0"
-github "nvm",      "1.0.0"
-github "ruby",     "1.0.0"
-github "stdlib",   "3.0.0", :repo => "puppetlabs/puppetlabs-stdlib"
-github "sudo",     "1.0.0"
+include_dependency "chrome"
+include_dependency "firefox",   "1.0.0", :repo => "lonelyplanet/puppet-firefox"
+include_dependency "wget"
+include_dependency "sublime_text_2"
 
-# Optional/custom modules. There are tons available at
-# https://github.com/boxen.
+
+# Personal Modules (Used in modules/people/manifests/$user.pp)
+include_dependency "minecraft"
