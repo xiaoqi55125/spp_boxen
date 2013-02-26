@@ -34,6 +34,10 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 
 ### How to go about it all
 
+**Things we still need to understand**
+ - Why doesn't our lonelyplanet/puppet-firefox module install
+ - How do we configure post-installation.
+
 **SPP Module**
  - Create a lonelyplanet spp puppet module on github
   - Add applications mentioned above to it 
