@@ -4,8 +4,7 @@
 # default. This ensures at least the ability to construct a basic
 # environment.
 
-def include_dependency(name, version_tag="1.0.0", options = nil)
-  options ||= {}
+def include_dependency(name, version_tag="1.0.0", options = {})
   options[:repo] ||= "boxen/puppet-#{name}"
   mod name, version_tag, :github_tarball => options[:repo]
 end
@@ -30,7 +29,7 @@ include_dependency "sudo"
 
 # SPP Modules
 
-#include_dependency "chrome"
+include_dependency "chrome"
 #include_dependency "firefox",          "1.0.0", :repo => "lonelyplanet/puppet-firefox"
 include_dependency "gitx"
 include_dependency "wget"
