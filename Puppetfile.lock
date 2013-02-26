@@ -19,6 +19,11 @@ GITHUBTARBALL
     git (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-gitx
+  specs:
+    gitx (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.0.0)
@@ -27,6 +32,11 @@ GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
     hub (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-minecraft
+  specs:
+    minecraft (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-nginx
@@ -44,14 +54,29 @@ GITHUBTARBALL
     nvm (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-postgresql
+  specs:
+    postgresql (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
     ruby (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sublime_text_2
+  specs:
+    sublime_text_2 (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-wget
+  specs:
+    wget (1.0.0)
 
 GITHUBTARBALL
   remote: cprice-puppet/puppetlabs-inifile
@@ -63,18 +88,29 @@ GITHUBTARBALL
   specs:
     stdlib (3.0.0)
 
+GITHUBTARBALL
+  remote: strenuus/puppet-postgis
+  specs:
+    postgis (2.0.2)
+
 DEPENDENCIES
   boxen (= 1.0.2)
   dnsmasq (= 1.0.0)
   gcc (= 1.0.0)
   git (= 1.0.0)
+  gitx (= 1.0.0)
   homebrew (= 1.0.0)
   hub (= 1.0.0)
   inifile (= 0.9.0)
+  minecraft (= 1.0.0)
   nginx (= 1.0.0)
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
+  postgis (= 2.0.2)
+  postgresql (= 1.0.0)
   ruby (= 1.0.0)
   stdlib (= 3.0.0)
+  sublime_text_2 (= 1.0.0)
   sudo (= 1.0.0)
+  wget (= 1.0.0)
 
