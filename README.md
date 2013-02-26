@@ -14,7 +14,7 @@
   script/boxen
 
   # add boxen to your shell config, at the end, eg.
-  echo '[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh' >> ~/.bashrc
+  echo "echo '[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh'" >> ~/.bashrc
   ```
 
 Open a new terminal, `boxen --env` to confirm.
