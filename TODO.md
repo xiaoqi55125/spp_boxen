@@ -2,7 +2,8 @@
 
 **Purpose**
 
-The ability to provision a iMac with minimal & acceptable development environment. Aimed at Atlas only.
+The ability to provision a iMac with a minimal acceptable SPP development environment. 
+Setup under the github user sppdev. Which is the user all shared macs should be provisioned as.
 
 **Things to install**
 
