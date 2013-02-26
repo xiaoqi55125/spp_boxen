@@ -37,8 +37,9 @@ include_dependency "wget"
 include_dependency "sublime_text_2"
 include_dependency "postgresql"
 include_dependency "postgis",          "2.0.2", :repo => "strenuus/puppet-postgis"
-
-
+include_dependency "iterm2"
+include_dependency "phantomjs"
+#include_dependency "memcached"
 
 # Personal Modules (Used in modules/people/manifests/$user.pp)
 include_dependency "minecraft"

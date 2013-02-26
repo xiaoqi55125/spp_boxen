@@ -80,4 +80,11 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+
+  # SPP
+#  include projects::atlas
+  include iterm2::stable
+  include gitx
+  include wget
+  include sublime_text_2
 }
