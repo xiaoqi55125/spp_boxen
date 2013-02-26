@@ -1,4 +1,3 @@
-
 ## Getting Started
 
 **If starting from a machine that's not a fresh install read [this](https://coderwall.com/p/d8iw2g)**
@@ -15,7 +14,7 @@
   script/boxen
 
   # add boxen to your shell config, at the end, eg.
-  echo '[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh'
+  echo '[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh' >> ~/.bashrc
   ```
 
 Open a new terminal, `boxen --env` to confirm.
