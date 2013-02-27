@@ -87,4 +87,5 @@ node default {
   include gitx
   include wget
   include sublime_text_2
+  include firefox
 }
