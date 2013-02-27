@@ -82,10 +82,5 @@ node default {
   }
 
   # SPP
-#  include projects::atlas
-  include iterm2::stable
-  include gitx
-  include wget
-  include sublime_text_2
-  include firefox
+  include spp::environment
 }
