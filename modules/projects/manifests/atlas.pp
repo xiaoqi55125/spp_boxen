@@ -2,7 +2,7 @@ class projects::atlas {
 
   include phantomjs
 
-  boxen::atlas { 'atlas':
+  boxen::project { 'atlas':
     memcached     => true,
     postgresql    => true,
     nginx         => true,
