@@ -79,11 +79,6 @@ GITHUBTARBALL
     ruby (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-sublime_text_2
-  specs:
-    sublime_text_2 (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -107,6 +102,11 @@ GITHUBTARBALL
   remote: lonelyplanet/puppet-firefox
   specs:
     firefox (1.0.0)
+
+GITHUBTARBALL
+  remote: mriddle/puppet-sublime_text_2
+  specs:
+    sublime_text_2 (1.1.1)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
@@ -139,7 +139,7 @@ DEPENDENCIES
   postgresql (= 1.0.0)
   ruby (= 1.0.0)
   stdlib (= 3.0.0)
-  sublime_text_2 (= 1.0.0)
+  sublime_text_2 (= 1.1.1)
   sudo (= 1.0.0)
   sysctl (= 1.0.0)
   wget (= 1.0.0)
