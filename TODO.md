@@ -31,7 +31,7 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 - apache (passenger/nginx)
 - ssh keys (could be manual yo)
 - dotfiles (depending how easy)
-
+  - cdpath
 ### How to go about it all
 
 **Things we still need to understand**
