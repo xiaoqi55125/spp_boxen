@@ -33,7 +33,7 @@ include_dependency "chrome"
 include_dependency "firefox",          "1.0.0", :repo => "lonelyplanet/puppet-firefox"
 include_dependency "gitx"
 include_dependency "wget"
-include_dependency "sublime_text_2",   "1.1.1", :repo => "mriddle/puppet-sublime_text_2"
+include_dependency "sublime_text_2",   "1.1.3", :repo => "mriddle/puppet-sublime_text_2"
 include_dependency "postgresql"
 include_dependency "sysctl" # Required by postgresql
 include_dependency "postgis",          "2.0.2", :repo => "strenuus/puppet-postgis"

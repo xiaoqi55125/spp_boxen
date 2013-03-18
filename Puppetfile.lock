@@ -106,7 +106,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: mriddle/puppet-sublime_text_2
   specs:
-    sublime_text_2 (1.1.1)
+    sublime_text_2 (1.1.3)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
@@ -139,7 +139,7 @@ DEPENDENCIES
   postgresql (= 1.0.0)
   ruby (= 1.0.0)
   stdlib (= 3.0.0)
-  sublime_text_2 (= 1.1.1)
+  sublime_text_2 (= 1.1.3)
   sudo (= 1.0.0)
   sysctl (= 1.0.0)
   wget (= 1.0.0)
