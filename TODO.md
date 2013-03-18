@@ -50,3 +50,5 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 
 ##Nice to have
 - Cpu monitor
+- Mouse direction - normal
+- Shiftit
