@@ -48,3 +48,5 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 - ~~Project definitions should include all required dependencies.~~
 - ~~Might be worth creating a shared dependencies project~~
 
+##Nice to have
+- Cpu monitor
