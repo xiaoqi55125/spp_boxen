@@ -21,6 +21,8 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 - ~~gitx~~ (source tree comes later)
 - phantomjs
 - Atlas git repository  
+- ~~java~~
+- ~~xquartz (X11 replacement)~~
 
 (*We can skip auto-configuring most of these for now*)
 
@@ -51,4 +53,7 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 ##Nice to have
 - Cpu monitor
 - Mouse direction - normal
-- Shiftit
+- ~~Shiftit~~
+- ~~dbvisualizer~~
+ - setup with all our DBs
+- ~~quicksilver~~
