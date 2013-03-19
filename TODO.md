@@ -54,6 +54,8 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 - Cpu monitor
 - Mouse direction - normal
 - ~~Shiftit~~
+  - config to start on startup
+  - needs to enable accessibility API via mac preferences
 - ~~dbvisualizer~~
  - setup with all our DBs
 - ~~quicksilver~~
