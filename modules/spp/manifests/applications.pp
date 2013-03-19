@@ -5,5 +5,6 @@ class spp::applications {
   include wget
   include sublime_text_2
   include firefox
+  include chrome
 
 }
