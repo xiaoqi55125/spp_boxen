@@ -1,6 +1,7 @@
 class projects::atlas {
 
   include phantomjs
+  include postgresql
 
   boxen::project { 'atlas':
     postgresql    => true,
