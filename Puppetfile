@@ -39,6 +39,9 @@ include_dependency "sysctl" # Required by postgresql
 include_dependency "postgis",          "2.0.2", :repo => "strenuus/puppet-postgis"
 include_dependency "iterm2"
 include_dependency "phantomjs"
+include_dependency "java",      "1.0.6" 
+include_dependency "shiftit",          "0.0.2", :repo => "jlgeering/puppet-shiftit"
+include_dependency "xquartz"
 
 # Personal Modules (Used in modules/people/manifests/$user.pp)
 include_dependency "minecraft"
