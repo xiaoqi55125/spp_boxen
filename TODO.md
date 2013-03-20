@@ -17,7 +17,6 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 - ~~Firefox~~
 - postgresql (postgis)
 - apache (passenger/nginx) **Installed pow instead**
-  - pow doesn't install correctly due to ordering of steps in init.pp
 - rvm/rbenv
 - ~~memcached (possibly?)~~
 - ~~gitx~~ (source tree comes later)
