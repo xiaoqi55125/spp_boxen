@@ -7,15 +7,17 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 
 **Things to install**
 
+- setup hostname somehow
 - ~~iTerm2~~
   - ~~Solarized~~
 - ~~Sublime Text 2~~
   - ~~Plugins~~
   - ~~Solarized~~
-- Chrome
+- ~~Chrome~~
 - ~~Firefox~~
 - postgresql (postgis)
-- apache (passenger/nginx)
+- apache (passenger/nginx) **Installed pow instead**
+  - pow doesn't install correctly due to ordering of steps in init.pp
 - rvm/rbenv
 - ~~memcached (possibly?)~~
 - ~~gitx~~ (source tree comes later)
@@ -56,6 +58,7 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 - ~~Shiftit~~
   - config to start on startup
   - needs to enable accessibility API via mac preferences
+  - check for updates automatically
 - ~~dbvisualizer~~
  - setup with all our DBs
 - ~~quicksilver~~
