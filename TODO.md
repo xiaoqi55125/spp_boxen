@@ -15,13 +15,54 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
   - ~~Solarized~~
 - ~~Chrome~~
 - ~~Firefox~~
-- postgresql (postgis)
-- apache (passenger/nginx) **Installed pow instead**
-- rvm/rbenv
+- ~~postgresql (postgis)~~
+- ~~apache (passenger/nginx)~~ **Running with nginx and unicorn**
+  - I have yet to get the server automatically started on machine start. Create launchDaemon with
+
+
+  ```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+    <key>Disabled</key>
+    <false/>
+    <key>UserName</key>
+    <string>dev</string>
+    <key>Label</key>
+    <string>dev.unicorn</string>
+    <key>ProgramArguments</key>
+    <array>
+            <string>/Users/dev/projects/atlas/script/server.sh</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/dev/projects/atlas</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>EnableTransactions</key>
+    <false/>
+    <key>KeepAlive</key>
+    <false/>
+    <key>AbandonProcessGroup</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/var/log/unicorn-agent.log</string>
+    <key>StandardErrorPath</key>
+    <string>/var/log/unicorn-agent.log</string>
+</dict>
+</plist>
+  ```
+
+  ```
+  # sudo chmod 755 /Library/LaunchDaemons/dev.unicorn.plist
+  # sudo launchctl load /Library/LaunchDaemons/dev.unicorn.plist
+  ```
+
+
+- ~~rvm/rbenv~~
 - ~~memcached (possibly?)~~
 - ~~gitx~~ (source tree comes later)
 - phantomjs
-- Atlas git repository  
+- ~~Atlas git repository~~
 - ~~java~~
 - ~~xquartz (X11 replacement)~~
 
