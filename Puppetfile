@@ -12,7 +12,6 @@ end
 # Boxen Defaults
 
 include_dependency "boxen",    "1.0.2"
-include_dependency "dnsmasq"
 include_dependency "gcc"
 include_dependency "git"
 include_dependency "homebrew"
