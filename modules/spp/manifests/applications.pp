@@ -8,6 +8,7 @@ class spp::applications {
   include chrome
   include shiftit
   include xquartz
+  include pow
 
   # package { "DbVisualizer":
   #   ensure => "absent",

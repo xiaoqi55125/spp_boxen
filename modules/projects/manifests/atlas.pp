@@ -11,4 +11,12 @@ class projects::atlas {
     source        => 'lonelyplanet/atlas'
   }
 
+  $home = "/Users/${::luser}"
+
+  file { "${home}/.pow/atlas":
+    target  => "${::boxen_srcdir}/atlas",
+    ensure  => "link",
+    require => Package["pow"]
+  }
+
 }
