@@ -53,7 +53,6 @@ node default {
   include dnsmasq
   include git
   include hub
-  include nginx
   include nvm
   include ruby
 

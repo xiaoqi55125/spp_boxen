@@ -54,11 +54,6 @@ GITHUBTARBALL
     minecraft (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-nginx
-  specs:
-    nginx (1.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
     nodejs (1.0.0)
@@ -147,7 +142,6 @@ DEPENDENCIES
   iterm2 (= 1.0.0)
   java (= 1.0.6)
   minecraft (= 1.0.0)
-  nginx (= 1.0.0)
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
   phantomjs (= 1.0.0)
