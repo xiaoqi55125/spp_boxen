@@ -58,7 +58,7 @@ class pow {
   }->
   exec { "load pow":
     command => "launchctl load -w '${home}/Library/LaunchAgents/cx.pow.powd.plist'",
-  }->
+  }
   # Still need to run curl get.pow.cx/ | sh
   # Cause the server works but hitting atlas.dev times out.. I am missing a step in the install process
   # Why I do it like this? Because running the module via github redbubble/pow or lonelyplanet/pow doesn't work
