@@ -22,3 +22,14 @@ A few things that we have learnt along the way.
     provider => "gem",
   }
 ```
+**How to update iTerm preferences**
+
+ 1. Make your change in iTerm.
+ 2. Export the changes with:
+
+    ```shell
+    $ plutil -convert xml1 \
+      -o ~/projects/spp_boxen/modules/spp/files/com.googlecode.iterm2.plist \
+      ~/Library/Preferences/com.googlecode.iterm2.plist
+    ```
+ 3. Commit.
