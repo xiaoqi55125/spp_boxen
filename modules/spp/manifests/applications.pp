@@ -9,10 +9,10 @@ class spp::applications {
   include xquartz
   include pow
 
-  # package { "DbVisualizer":
-  #   ensure => "absent",
-  #   provider => 'pkgdmg', 
-  #   source => 'http://www.dbvis.com/form/registerDownload.jsp?prodid=73&product=DbVisualizer&version=9.0.5&version_type=current&target_os=mac&with_jre=false&filename=dbvis_macos_9_0_5.dmg&type=Mac+OS+X+(installer)&installer=%2fproduct_download%2fdbvis-9.0.5%2fmedia%2fdbvis_macos_9_0_5.dmg'
+  # Not installing cause of a license prompt ><
+  # package { "PGAdmin":
+  #   provider => 'appdmg',
+  #   source => 'http://ftp.postgresql.org/pub/pgadmin3/release/v1.16.1/osx/pgadmin3-1.16.1.dmg'
   # }
 
   package { "Quicksilver":
