@@ -17,4 +17,8 @@ class spp::config {
     user => "root", # Needs to be sudo 'cause it returns successfully and does nothing without it
   }
 
+  file { "ShiftIt Preferences":
+      path => "/Users/${::luser}/Library/Preferences/org.shiftitapp.ShiftIt.plist",
+      source  => "puppet:///modules/spp/org.shiftitapp.ShiftIt.plist",
+  }
 }
