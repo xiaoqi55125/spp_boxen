@@ -12,8 +12,9 @@ class people::sppdev {
       require => Repository["${::boxen_srcdir}/pairing_station"],
     }
   }
-  
+
   add_dotfile {'bashrc': }
+  add_dotfile {'bash_aliases': }
   add_dotfile {'bash_profile': }
 
 }
