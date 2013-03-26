@@ -3,7 +3,6 @@ class spp::applications {
   include iterm2::stable
   include gitx
   include wget
-  include sublime_text_2
   include firefox
   include chrome
   include shiftit
@@ -20,6 +19,11 @@ class spp::applications {
     ensure => "present",
     provider => 'appdmg',
     source => 'https://github.com/downloads/quicksilver/Quicksilver/Quicksilver%20B70.dmg',
+  }
+
+  package { 'SublimeText2':
+    provider => 'appdmg',
+    source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg';
   }
 
 }
