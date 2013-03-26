@@ -113,11 +113,6 @@ GITHUBTARBALL
   specs:
     stdlib (3.0.0)
 
-GITHUBTARBALL
-  remote: strenuus/puppet-postgis
-  specs:
-    postgis (2.0.2)
-
 DEPENDENCIES
   boxen (= 1.0.2)
   chrome (= 1.0.0)
@@ -134,7 +129,6 @@ DEPENDENCIES
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
   phantomjs (= 1.0.0)
-  postgis (= 2.0.2)
   postgresql (= 1.0.0)
   ruby (= 1.0.0)
   shiftit (= 0.0.2)

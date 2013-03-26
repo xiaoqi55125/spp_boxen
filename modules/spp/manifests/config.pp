@@ -1,6 +1,7 @@
 class spp::config {
 
   include config::sublime
+  include config::postgis
 
   file { "iTerm2 Preferences":
       path => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
