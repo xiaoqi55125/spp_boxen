@@ -28,10 +28,11 @@ class pow {
   }
 
   # Add dev resolver
-  file { "/etc/resolver/dev":
-    content => "nameserver 127.0.0.1\nport 20560",
-    group   => 'wheel',
-    owner   => 'root',
+  exec { "append port to resolver":
+    command => "echo -e '\nport 20560' >> /etc/resolver/dev",
+    user    => "root",
+    unless  => "grep -c 20560 /etc/resolver/dev",
+    require => Package["pow"]
   }->
 
   # Setup firewall
