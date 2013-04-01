@@ -4,8 +4,9 @@ class spp::config {
   include config::postgis
 
   file { "iTerm2 Preferences":
-      path => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
-      source  => "puppet:///modules/spp/com.googlecode.iterm2.plist",
+    path => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
+    source  => "puppet:///modules/spp/com.googlecode.iterm2.plist",
+    require => Package['iTerm'],
   }
 
   exec {"Add colour to git output":
@@ -19,7 +20,7 @@ class spp::config {
   }
 
   file { "ShiftIt Preferences":
-      path => "/Users/${::luser}/Library/Preferences/org.shiftitapp.ShiftIt.plist",
-      source  => "puppet:///modules/spp/org.shiftitapp.ShiftIt.plist",
+    path => "/Users/${::luser}/Library/Preferences/org.shiftitapp.ShiftIt.plist",
+    source  => "puppet:///modules/spp/org.shiftitapp.ShiftIt.plist",
   }
 }
