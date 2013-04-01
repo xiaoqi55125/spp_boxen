@@ -102,3 +102,12 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 - ~~dbvisualizer~~
  - setup with all our DBs
 - ~~quicksilver~~
+- Setup shiftit and quicksilver as login items
+  - Enable access for assistive devices in accessibility options
+- Dock options
+  - Remove default crap
+  - Set size
+  - Autohide
+- Chrome as default browser
+- Chrome should be setup with atlas2ninjas account
+- Turn off native scrolling
