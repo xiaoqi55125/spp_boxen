@@ -14,6 +14,11 @@ class spp::config {
     require => Package['boxen/brews/git'],
   }
 
+  exec {"Set push.default to simple":
+    command => "git config --global push.default simple",
+    require => Package['boxen/brews/git'],
+  }
+
   exec {"Disable Gatekeeper":
     command => "spctl --master-disable",
     user => "root", # Needs to be sudo 'cause it returns successfully and does nothing without it
