@@ -8,7 +8,6 @@ file { "Grab postgis setup SQL":
 
 exec { "Setup postgres to work with postgis":
   command => "psql -p 15432 -d postgres -f /tmp/boxen/create_postgis_template.sql > /tmp/boxen/postgis.out",
-  unless =>  "psql -l | grep 'template_postgis'",
   require => File["Grab postgis setup SQL"],
 }
 
