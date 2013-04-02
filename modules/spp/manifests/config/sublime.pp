@@ -36,7 +36,7 @@ class config::sublime {
 
   file { "${base}/Sublime Text 2/Packages/User/Preferences.sublime-settings":
       source  => "puppet:///modules/sublime_text_2/preferences",
-  }->
+  }
 
   addpkg { [
     "jisaacks/GitGutter",
