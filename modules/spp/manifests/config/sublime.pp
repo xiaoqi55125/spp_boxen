@@ -31,17 +31,19 @@ class config::sublime {
   }->
 
   file { "${base}/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap":
-      content  => '[{ "keys": ["super+ctrl+r"], "command": "reveal_in_side_bar"}]',
-  }->
+    content  => '[{ "keys": ["super+ctrl+r"], "command": "reveal_in_side_bar"}]',
+    require => Package['SublimeText2'],
+  }
 
   file { "${base}/Sublime Text 2/Packages/User/Preferences.sublime-settings":
-      content  => '
+    content  => '
 {
   "color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
   "trim_trailing_white_space_on_save": true,
   "tab_size": 2,
   "translate_tabs_to_spaces": true
-}'
+}',
+    require => Package['SublimeText2'],
   }
 
   addpkg { [
