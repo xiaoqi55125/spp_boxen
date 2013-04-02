@@ -2,21 +2,12 @@ class spp::config {
 
   include config::sublime
   include config::postgis
+  include config::git
 
   file { "iTerm2 Preferences":
     path => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
     source  => "puppet:///modules/spp/com.googlecode.iterm2.plist",
     require => Package['iTerm'],
-  }
-
-  exec {"Add colour to git output":
-    command => "git config --global color.ui true",
-    require => Package['boxen/brews/git'],
-  }
-
-  exec {"Set push.default to simple":
-    command => "git config --global push.default simple",
-    require => Package['boxen/brews/git'],
   }
 
   exec {"Disable Gatekeeper":
