@@ -2,7 +2,7 @@
 
 **Purpose**
 
-The ability to provision a iMac with a minimal acceptable SPP development environment. 
+The ability to provision a iMac with a minimal acceptable SPP development environment.
 Setup under the github user sppdev. Which is the user all shared macs should be provisioned as.
 
 **Things to install**
@@ -16,52 +16,11 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 - ~~Chrome~~
 - ~~Firefox~~
 - ~~postgresql (postgis)~~
-- ~~apache (passenger/nginx)~~ **Running with nginx and unicorn**
-  - I have yet to get the server automatically started on machine start. Create launchDaemon with
-
-
-  ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<plist version="1.0">
-<dict>
-    <key>Disabled</key>
-    <false/>
-    <key>UserName</key>
-    <string>dev</string>
-    <key>Label</key>
-    <string>dev.unicorn</string>
-    <key>ProgramArguments</key>
-    <array>
-            <string>/Users/dev/projects/atlas/script/server.sh</string>
-    </array>
-    <key>WorkingDirectory</key>
-    <string>/Users/dev/projects/atlas</string>
-    <key>RunAtLoad</key>
-    <true/>
-    <key>EnableTransactions</key>
-    <false/>
-    <key>KeepAlive</key>
-    <false/>
-    <key>AbandonProcessGroup</key>
-    <true/>
-    <key>StandardOutPath</key>
-    <string>/var/log/unicorn-agent.log</string>
-    <key>StandardErrorPath</key>
-    <string>/var/log/unicorn-agent.log</string>
-</dict>
-</plist>
-  ```
-
-  ```
-  # sudo chmod 755 /Library/LaunchDaemons/dev.unicorn.plist
-  # sudo launchctl load /Library/LaunchDaemons/dev.unicorn.plist
-  ```
-
-
+- ~~pow~~
 - ~~rvm/rbenv~~
 - ~~memcached (possibly?)~~
 - ~~gitx~~ (source tree comes later)
-- phantomjs
+- ~~phantomjs~~
 - ~~Atlas git repository~~
 - ~~java~~
 - ~~xquartz (X11 replacement)~~
@@ -103,11 +62,10 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
  - setup with all our DBs
 - ~~quicksilver~~
 - Setup shiftit and quicksilver as login items
-  - Enable access for assistive devices in accessibility options
+  - ~~Enable access for assistive devices in accessibility options~~
 - Dock options
-  - Remove default crap
-  - Set size
-  - Autohide
+  - ~~Remove default crap~~
+  - ~~Autohide~~
 - Chrome as default browser
 - Chrome should be setup with atlas2ninjas account
 - Turn off native scrolling
