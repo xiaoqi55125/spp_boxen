@@ -19,4 +19,12 @@ class spp::config {
     path => "/Users/${::luser}/Library/Preferences/org.shiftitapp.ShiftIt.plist",
     source  => "puppet:///modules/spp/org.shiftitapp.ShiftIt.plist",
   }
+
+  file { "Enable Accessibility API":
+    path => "/private/var/db/.AccessibilityAPIEnabled",
+    content => "a",
+    mode => "444",
+    owner => "root"
+  }
+
 }
