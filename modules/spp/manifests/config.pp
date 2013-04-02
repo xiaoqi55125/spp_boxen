@@ -27,4 +27,13 @@ class spp::config {
     owner => "root"
   }
 
+  file { "Dock Preferences":
+    path => "/Users/${::luser}/Library/Preferences/com.apple.dock.plist",
+    source  => "puppet:///modules/spp/com.apple.dock.plist",
+  }
+
+  file { "Disable the 'Are you sure you want to open this application?' dialog":
+    path => "/Users/${::luser}/Library/Preferences/com.apple.LaunchServices.plist",
+    source  => "puppet:///modules/spp/com.apple.LaunchServices.plist",
+  }
 }
