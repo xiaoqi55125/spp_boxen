@@ -36,4 +36,9 @@ class spp::config {
     path => "/Users/${::luser}/Library/Preferences/com.apple.LaunchServices.plist",
     source  => "puppet:///modules/spp/com.apple.LaunchServices.plist",
   }
+
+  exec { "Enable ssh access":
+    command => "systemsetup -setremotelogin on",
+  }
+
 }
