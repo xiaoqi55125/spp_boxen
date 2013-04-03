@@ -10,7 +10,7 @@ class config::sublime {
       provider => 'shell',
       creates  => "/Users/${::luser}${packagedir}${pkgname}",
       path     => "${boxen::config::homebrewdir}/bin",
-      require  => [Package['SublimeText2'], Class['git']],
+      require  => [Package['SublimeText2'], Package['boxen/brews/git']],
     }
   }
 
