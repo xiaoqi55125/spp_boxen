@@ -34,7 +34,7 @@ include_dependency "gitx"
 include_dependency "wget"
 include_dependency "postgresql"
 include_dependency "sysctl" # Required by postgresql
-# include_dependency "postgis",          "2.0.2", :repo => "strenuus/puppet-postgis"
+include_dependency "postgis",          "2.1.0", :repo => "lonelyplanet/puppet-postgis"
 include_dependency "iterm2"
 include_dependency "phantomjs"
 include_dependency "java",      "1.0.6"
