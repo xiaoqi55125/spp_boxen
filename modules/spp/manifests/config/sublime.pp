@@ -41,7 +41,8 @@ class config::sublime {
   "color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
   "trim_trailing_white_space_on_save": true,
   "tab_size": 2,
-  "translate_tabs_to_spaces": true
+  "translate_tabs_to_spaces": true,
+  "ensure_newline_at_eof_on_save": true
 }',
     require => Package['SublimeText2'],
   }
