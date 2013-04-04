@@ -5,6 +5,11 @@ class config::git {
     provider => "gem",
   }
 
+  exec {"Set push.default to simple":
+    command => "git config --global push.default simple",
+    require => File["/Users/${::luser}/.gitconfig"],
+  }
+
   file { "/Users/${::luser}/.gitconfig":
     content => "
 [hub]
@@ -22,9 +27,6 @@ class config::git {
   status = auto
   branch = auto
   ui = true
-
-[push]
-  default = simple
 
 [git-pair]
   authors = Jonathan Ricketson <jonathanr@lonelyplanet.com.au>
