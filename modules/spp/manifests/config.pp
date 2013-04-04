@@ -41,4 +41,9 @@ class spp::config {
     command => "systemsetup -setremotelogin on",
   }
 
+  file { "GitX Preferences":
+    path => "/Users/${::luser}/Library/Preferences/nl.frim.GitX.plist",
+    source => "puppet:///modules/spp/nl.frim.GitX.plist",
+  }
+
 }
