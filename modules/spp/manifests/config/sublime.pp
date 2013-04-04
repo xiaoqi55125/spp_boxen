@@ -15,7 +15,7 @@ class config::sublime {
   }
 
   $base = "/Users/${::luser}/Library/Application Support"
-  $structure = [ "${base}/Sublime Text 2", "${base}/Sublime Text 2/Packages" ]
+  $structure = [ "${base}/Sublime Text 2", "${base}/Sublime Text 2/Packages", "${base}/Sublime Text 2/Packages/User"]
 
   file { $structure:
     ensure  => 'directory',
