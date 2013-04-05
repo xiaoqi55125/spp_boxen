@@ -1,5 +1,7 @@
 class people::sppdev {
 
+  include spp::environment
+
   repository { "${::boxen_srcdir}/pairing_station":
     source => 'lonelyplanet/pairing_station',
   }

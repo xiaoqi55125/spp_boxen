@@ -80,6 +80,4 @@ node default {
     target => $boxen::config::repodir
   }
 
-  # SPP
-  include spp::environment
 }
