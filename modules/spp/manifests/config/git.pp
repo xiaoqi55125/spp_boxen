@@ -28,7 +28,6 @@ class config::git {
 
 [git-pair]
   authors = Jonathan Ricketson <jonathanr@lonelyplanet.com.au>
-  authors = Jani Patokallio <jani.patokallio@lonelyplanet.com.au>
   authors = Duncan Warnock <duncan.warnock@lonelyplanet.com.au>
   authors = David Hodges <david.hodges@lonelyplanet.com.au>
   authors = Matt Riddle <matthew.riddle@lonelyplanet.com.au>
