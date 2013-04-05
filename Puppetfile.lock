@@ -64,6 +64,11 @@ GITHUBTARBALL
     nvm (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-osx
+  specs:
+    osx (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (1.0.0)
@@ -144,6 +149,7 @@ DEPENDENCIES
   minecraft (= 1.0.0)
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
+  osx (= 1.0.0)
   phantomjs (= 1.0.0)
   postgis (= 2.1.0)
   postgresql (= 1.0.0)

@@ -46,4 +46,18 @@ class spp::config {
     source => "puppet:///modules/spp/nl.frim.GitX.plist",
   }
 
+  osx_login_item { 'Quicksilver':
+    name => 'Quicksilver',
+    path => '/Applications/Quicksilver.app',
+    hidden => true,
+    require => Package['Quicksilver'],
+  }
+
+  osx_login_item { 'ShiftIt':
+    name => 'ShiftIt',
+    path => '/Applications/ShiftIt.app',
+    hidden => true,
+    require => Package['ShiftIt'],
+  }
+
 }
