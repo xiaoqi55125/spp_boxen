@@ -1,6 +1,10 @@
 class people::mriddle {
   include minecraft
 
+  include spp::applications
+  include spp::config
+  include projects::atlas
+
   repository { "${::boxen_srcdir}/dotfiles":
     source => 'mriddle/dotfiles',
   }
