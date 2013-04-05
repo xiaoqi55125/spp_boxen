@@ -13,7 +13,7 @@ class people::mriddle {
       require => Repository["${::boxen_srcdir}/dotfiles"],
     }
   }
-  
+
   add_dotfile {'ackrc': }
   add_dotfile {'bash_aliases': }
   add_dotfile {'bash_profile': }
