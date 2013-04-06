@@ -11,13 +11,6 @@ class projects::atlas {
     source        => 'lonelyplanet/atlas'
   }
 
-  $home = "/Users/${::luser}"
-
-  exec { "bundle install --local":
-    cwd => "${::boxen_srcdir}/atlas",
-    require => Repository["${::boxen_srcdir}/atlas"],
-  }
-
   file { "${home}/.pow/atlas":
     target  => "${::boxen_srcdir}/atlas",
     ensure  => "link",
