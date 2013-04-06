@@ -67,6 +67,7 @@ class config::sublime {
     "eklein/sublime-text-puppet",
     "drewda/cucumber-sublime2-bundle",
     "natew/ExpandSelectionByParagraph",
+    "kemayo/sublime-text-2-git",
     ]:
   }
 
