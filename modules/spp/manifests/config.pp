@@ -62,6 +62,7 @@ class spp::config {
   # Without this `gem install libv8` fails and so does brew install node (required by pow)
   exec { "Fix Xcode command line issue": # https://github.com/mxcl/homebrew/issues/13337
     command => "xcode-select -switch /usr/bin",
+    unless => "xcode-select --print-path | grep -c /usr/bin",
     user => "root"
   }
 
