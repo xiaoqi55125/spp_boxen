@@ -3,6 +3,8 @@ class spp::config {
   include config::sublime
   include config::postgis
   include config::git
+  include config::shift_it
+  include config::dock
 
   file { "iTerm2 Preferences":
     path => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
@@ -12,12 +14,8 @@ class spp::config {
 
   exec {"Disable Gatekeeper":
     command => "spctl --master-disable",
+    unless => "spctl --status | grep -c disabled",
     user => "root", # Needs to be sudo 'cause it returns successfully and does nothing without it
-  }
-
-  file { "ShiftIt Preferences":
-    path => "/Users/${::luser}/Library/Preferences/org.shiftitapp.ShiftIt.plist",
-    source  => "puppet:///modules/spp/org.shiftitapp.ShiftIt.plist",
   }
 
   file { "Enable Accessibility API":
@@ -27,23 +25,24 @@ class spp::config {
     owner => "root"
   }
 
-  file { "Dock Preferences":
-    path => "/Users/${::luser}/Library/Preferences/com.apple.dock.plist",
-    source  => "puppet:///modules/spp/com.apple.dock.plist",
-  }
-
-  file { "Disable the 'Are you sure you want to open this application?' dialog":
-    path => "/Users/${::luser}/Library/Preferences/com.apple.LaunchServices.plist",
-    source  => "puppet:///modules/spp/com.apple.LaunchServices.plist",
-  }
-
   exec { "Enable ssh access":
     command => "systemsetup -setremotelogin on",
+    unless => "systemsetup -getremotelogin | grep -c On",
   }
 
-  file { "GitX Preferences":
-    path => "/Users/${::luser}/Library/Preferences/nl.frim.GitX.plist",
-    source => "puppet:///modules/spp/nl.frim.GitX.plist",
+  property_list_key { 'Show GitX where git lives':
+    ensure => present,
+    path   => "/Users/${::luser}/Library/Preferences/nl.frim.GitX.plist",
+    key    => 'gitExecutable',
+    value  => '/opt/boxen/homebrew/bin/git',
+  }
+
+  property_list_key { "Disable the 'Are you sure you want to open this application?' dialog":
+    ensure => present,
+    path   => "/Users/${::luser}/Library/Preferences/com.apple.LaunchServices.plist",
+    key    => 'LSQuarantine',
+    value  => false,
+    value_type => 'boolean',
   }
 
   osx_login_item { 'Quicksilver':

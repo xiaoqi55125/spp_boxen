@@ -41,6 +41,7 @@ include_dependency "shiftit",          "0.0.2", :repo => "jlgeering/puppet-shift
 include_dependency "xquartz"
 include_dependency "pow",         		"0.1.0", :repo => "redbubble/puppet-pow"
 include_dependency "osx"
+include_dependency "property_list_key",  "0.1.0", :repo => "glarizza/puppet-property_list_key"
 
 # Personal Modules (Used in modules/people/manifests/$user.pp)
 include_dependency "minecraft"

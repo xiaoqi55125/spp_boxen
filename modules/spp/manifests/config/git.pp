@@ -1,7 +1,6 @@
 class config::git {
 
-  package { ["edgecase-git-pair"]:
-    ensure => installed,
+  package { "edgecase-git-pair":
     provider => "gem",
   }
 
