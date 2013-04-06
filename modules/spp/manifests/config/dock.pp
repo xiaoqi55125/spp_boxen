@@ -1,10 +1,5 @@
 class config::dock {
 
-  file { "Dock Preferences":
-    path => "/Users/${::luser}/Library/Preferences/com.apple.dock.plist",
-    source  => "puppet:///modules/spp/com.apple.dock.plist",
-  }
-
   property_list_key { "Remove items kept in dock":
     ensure => present,
     path   => "/Users/${::luser}/Library/Preferences/com.apple.dock.plist",
