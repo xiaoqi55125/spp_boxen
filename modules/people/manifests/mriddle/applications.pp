@@ -5,4 +5,9 @@ class people::mriddle::applications {
     source   => 'https://github-central.s3.amazonaws.com/mac%2FGitHub%20for%20Mac%20124.zip',
     provider => compressed_app
   }
+
+  package { "powder":
+    ensure => installed,
+    provider => "gem"
+  }
 }

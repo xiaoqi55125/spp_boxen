@@ -13,6 +13,10 @@ class people::mriddle::repositories {
     source => 'mriddle/dotfiles',
   }
 
+  repository { "${::boxen_srcdir}/private_dotfiles":
+    source => 'mriddle/private_dotfiles',
+  }
+
   add_dotfile {'ackrc': }
   add_dotfile {'bash_aliases': }
   add_dotfile {'bash_profile': }
