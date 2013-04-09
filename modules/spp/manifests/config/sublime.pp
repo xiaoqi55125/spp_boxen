@@ -49,7 +49,10 @@ class config::sublime {
   "trim_trailing_white_space_on_save": true,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
-  "ensure_newline_at_eof_on_save": true,
+  "ensure_newline_at_eof_on_save": true
+  "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".tmp", ".librarian"],
+  "hot_exit": false,
+  "remember_open_files": false,
 
   // Set the Cucumber bundle to left-align cells
   "table_cleaner_align_to_middle": false
