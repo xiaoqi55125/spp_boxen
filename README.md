@@ -3,18 +3,13 @@
 **If starting from a machine that's not a fresh install read [this](https://coderwall.com/p/d8iw2g)**
 
 1. Install Xcode Command Line Tools
-1. Use your install of [boxen-web](https://github.com/boxen/boxen-web) or get running manually like so:
+1. Run the following
   ```
   sudo mkdir -p /opt/boxen
   sudo chown $USER:admin /opt/boxen
   mkdir -p ~/projects
   cd ~/projects
-  git clone https://github.com/lonelyplanet/spp_boxen.git
-
-  script/boxen
-
-  # add boxen to your shell config, at the end, eg.
-  echo '[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh' >> ~/.bashrc
+  git clone https://github.com/lonelyplanet/spp_boxen.git && cd spp_boxen && ./script/boxen
   ```
 
 Open a new terminal, `boxen --env` to confirm.
