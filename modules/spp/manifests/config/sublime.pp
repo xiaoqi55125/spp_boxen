@@ -71,7 +71,8 @@ class config::sublime {
     "drewda/cucumber-sublime2-bundle",
     "natew/ExpandSelectionByParagraph",
     "kemayo/sublime-text-2-git",
-    "dzhibas/SublimePrettyJson"
+    "dzhibas/SublimePrettyJson",
+    "lonelyplanet/AtlasTestRunner"
     ]:
   }
 
