@@ -7,7 +7,7 @@ class projects::atlas {
 
   boxen::project { 'atlas':
     postgresql    => true,
-    ruby          => '1.9.3',
+    ruby          => '1.9.3-p392',
     source        => 'lonelyplanet/atlas'
   }
 

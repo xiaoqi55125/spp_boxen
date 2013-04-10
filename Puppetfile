@@ -19,7 +19,7 @@ include_dependency "hub"
 include_dependency "inifile",  "0.9.0", :repo => "cprice-puppet/puppetlabs-inifile"
 include_dependency "nodejs"
 include_dependency "nvm"
-include_dependency "ruby"
+include_dependency "ruby",     "3.4.0"
 include_dependency "stdlib",   "3.0.0", :repo => "puppetlabs/puppetlabs-stdlib"
 include_dependency "sudo"
 
