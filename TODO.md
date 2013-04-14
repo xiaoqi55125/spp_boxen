@@ -8,6 +8,23 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 **Things to install**
 
 - setup hostname somehow
+  ```puppet
+  exec {"set computer name":
+    command => "scutil --set ComputerName 'air-pedro'",
+    user => 'root',
+    path    => ["/usr/bin", "/usr/sbin", "/bin"]
+  }
+  exec {"set host name":
+    command => "scutil --set HostName 'air-pedro'",
+    user => 'root',
+    path    => ["/usr/bin", "/usr/sbin", "/bin"]
+  }
+  exec {"set local host name":
+    command => "scutil --set LocalHostName 'air-pedro'",
+    user => 'root',
+    path    => ["/usr/bin", "/usr/sbin", "/bin"]
+  }
+  ```
 - ~~iTerm2~~
   - ~~Solarized~~
 - ~~Sublime Text 2~~
