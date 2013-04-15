@@ -15,7 +15,11 @@ class config::sublime {
   }
 
   $base = "/Users/${::luser}/Library/Application Support"
-  $structure = [ "${base}/Sublime Text 2", "${base}/Sublime Text 2/Packages", "${base}/Sublime Text 2/Packages/User"]
+  $structure = [ "${base}/Sublime Text 2",
+                 "${base}/Sublime Text 2/Settings",
+                 "${base}/Sublime Text 2/Packages",
+                 "${base}/Sublime Text 2/Packages/User"
+               ]
 
   file { $structure:
     ensure  => 'directory',
@@ -59,6 +63,43 @@ class config::sublime {
 
   "highlight_line": true
 }',
+    require => Package['SublimeText2'],
+  }
+
+  file { "${base}/Sublime Text 2/Packages/User/Preferences.sublime-settings":
+    content  => '
+{
+  "color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+  "trim_trailing_white_space_on_save": true,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "ensure_newline_at_eof_on_save": true,
+  "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".tmp", ".librarian"],
+  "hot_exit": false,
+  "remember_open_files": false,
+
+  // Set the Cucumber bundle to left-align cells
+  "table_cleaner_align_to_middle": false
+}',
+    require => Package['SublimeText2'],
+  }
+
+  file { "${base}/Sublime Text 2/Settings/License.sublime_license":
+    content  => '
+----- BEGIN LICENSE -----
+Lonely Planet
+7 User License
+EA7E-858309
+777C587E C6504149 9E5CBF29 38777BB7
+B128FE3D 816F6992 A0D1D22C D9DA7B7C
+0A357A52 4F8B710B E339EC83 9068FF1E
+7A562351 373F308D 4F1C9537 1AF5CD0C
+D935E6A6 7857A68B E7A8D567 B607B59D
+631CE139 7AA0D408 92B8AAD0 6C61B457
+9612A75E 153A8023 55CF5716 61B1D2CD
+2DCC6FE2 9AA8D07F 273E2800 9824BE8E
+------ END LICENSE ------
+',
     require => Package['SublimeText2'],
   }
 
