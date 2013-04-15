@@ -50,12 +50,14 @@ class config::sublime {
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
   "ensure_newline_at_eof_on_save": true,
-  "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".tmp", ".librarian"],
+  "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".tmp", ".librarian", "public/assets", "public/spec"],
   "hot_exit": false,
   "remember_open_files": false,
 
   // Set the Cucumber bundle to left-align cells
-  "table_cleaner_align_to_middle": false
+  "table_cleaner_align_to_middle": false,
+
+  "highlight_line": true
 }',
     require => Package['SublimeText2'],
   }
