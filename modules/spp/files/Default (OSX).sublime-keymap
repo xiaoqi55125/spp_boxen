@@ -1,0 +1,7 @@
+[
+  { "keys": ["super+ctrl+r"], "command": "reveal_in_side_bar"},
+  { "keys": ["alt+down"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": true} },
+  { "keys": ["alt+up"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": false} },
+  { "keys": ["alt+shift+down"], "command": "expand_selection_forward_paragraph" },
+  { "keys": ["alt+shift+up"], "command": "expand_selection_backward_paragraph" }
+]
