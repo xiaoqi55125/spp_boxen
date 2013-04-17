@@ -48,7 +48,7 @@ class config::sublime {
     ensure  => link,
     mode    => '0644',
     target  => "${::boxen_srcdir}/pairing_station/licenses/License.sublime_license",
-    require => Package['SublimeText2'], Repository["${::boxen_srcdir}/pairing_station"],
+    require => [Package['SublimeText2'], Repository["${::boxen_srcdir}/pairing_station"]],
   }
 
   addpkg { [
