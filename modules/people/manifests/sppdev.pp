@@ -18,5 +18,6 @@ class people::sppdev {
   add_dotfile {'bashrc': }
   add_dotfile {'bash_aliases': }
   add_dotfile {'bash_profile': }
+  add_dotfile {'inputrc': }
 
 }
