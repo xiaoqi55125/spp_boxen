@@ -45,8 +45,10 @@ class config::sublime {
   }
 
   file { "${base}/Sublime Text 2/Settings/License.sublime_license":
-    source  => "puppet:///modules/spp/License.sublime_license",
-    require => Package['SublimeText2'],
+    ensure  => link,
+    mode    => '0644',
+    target  => "${::boxen_srcdir}/pairing_station/licenses/License.sublime_license",
+    require => Package['SublimeText2'], Repository["${::boxen_srcdir}/pairing_station"],
   }
 
   addpkg { [
