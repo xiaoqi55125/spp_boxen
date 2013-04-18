@@ -35,12 +35,12 @@ class config::sublime {
   }->
 
   file { "${base}/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap":
-    source  => "puppet:///modules/spp/Default (OSX).sublime-keymap",
+    source  => "puppet:///modules/spp/sublime_text/Default (OSX).sublime-keymap",
     require => Package['SublimeText2'],
   }
 
   file { "${base}/Sublime Text 2/Packages/User/Preferences.sublime-settings":
-    source  => "puppet:///modules/spp/Preferences.sublime-settings",
+    source  => "puppet:///modules/spp/sublime_text/Preferences.sublime-settings",
     require => Package['SublimeText2'],
   }
 

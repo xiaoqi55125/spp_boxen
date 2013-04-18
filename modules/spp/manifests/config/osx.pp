@@ -6,10 +6,6 @@ class config::osx {
 
   # OSX Defaults
 
-  boxen::osx_defaults {
-    user => $::luser,
-  }
-
   boxen::osx_defaults { 'Secure Empty Trash':
     key    => 'EmptyTrashSecurely',
     domain => 'com.apple.finder',
