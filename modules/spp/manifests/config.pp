@@ -5,6 +5,7 @@ class spp::config {
   include config::git
   include config::shift_it
   include config::dock
+  include config::source_tree
 
   file { "iTerm2 Preferences":
     path => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",

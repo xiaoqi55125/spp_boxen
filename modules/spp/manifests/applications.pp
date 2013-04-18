@@ -26,4 +26,9 @@ class spp::applications {
     source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg';
   }
 
+  package { 'SourceTree':
+    provider => 'appdmg',
+    source => 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.5.8.dmg'
+  }
+
 }
