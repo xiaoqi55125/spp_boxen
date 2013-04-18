@@ -40,14 +40,6 @@ class spp::config {
     value  => '/opt/boxen/homebrew/bin/git',
   }
 
-  property_list_key { "Disable the 'Are you sure you want to open this application?' dialog":
-    ensure => present,
-    path   => "/Users/${::luser}/Library/Preferences/com.apple.LaunchServices.plist",
-    key    => 'LSQuarantine',
-    value  => false,
-    value_type => 'boolean',
-  }
-
   osx_login_item { 'Quicksilver':
     name => 'Quicksilver',
     path => '/Applications/Quicksilver.app',
