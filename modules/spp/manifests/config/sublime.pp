@@ -68,4 +68,15 @@ class config::sublime {
     ]:
   }
 
+  file { "/Users/${::luser}/Library/Fonts":
+    ensure  => 'directory',
+    owner   => "${::luser}",
+    mode    => '0700',
+  }->
+
+  file { "/Users/${::luser}/Library/Fonts/Inconsolata.otf":
+    mode    => '0644',
+    source  => "puppet:///modules/spp/Inconsolata.otf",
+  }
+
 }
