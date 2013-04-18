@@ -63,7 +63,8 @@ class config::sublime {
     "natew/ExpandSelectionByParagraph",
     "kemayo/sublime-text-2-git",
     "dzhibas/SublimePrettyJson",
-    "lonelyplanet/AtlasTestRunner"
+    "lonelyplanet/AtlasTestRunner",
+    "NaN1488/sublime-gem-browser"
     ]:
   }
 
