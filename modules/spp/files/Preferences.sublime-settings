@@ -5,6 +5,9 @@
   "translate_tabs_to_spaces": true,
   "ensure_newline_at_eof_on_save": true,
 
+  "font_face": "Inconsolata",
+  "font_size": 17.0,
+
   "folder_exclude_patterns": [".svn",
                               ".git",
                               ".hg",
@@ -13,7 +16,7 @@
                               "fixtures",
                               "public/assets",
                               "public/spec",
-                              "remixer/doc"]
+                              "remixer/doc"],
 
   "hot_exit": false,
   "remember_open_files": false,
