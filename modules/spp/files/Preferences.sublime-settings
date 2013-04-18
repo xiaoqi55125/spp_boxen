@@ -4,7 +4,16 @@
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
   "ensure_newline_at_eof_on_save": true,
-  "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".tmp", ".librarian", "public/assets", "public/spec"],
+
+  "folder_exclude_patterns": [".svn",
+                              ".git",
+                              ".hg",
+                              ".bundle",
+                              "CVS",
+                              "fixtures",
+                              "public/assets",
+                              "public/spec",
+                              "remixer/doc"]
 
   "hot_exit": false,
   "remember_open_files": false,
