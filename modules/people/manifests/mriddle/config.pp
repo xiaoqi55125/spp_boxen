@@ -8,10 +8,6 @@ class people::mriddle::config {
     value => 'mriddle89@gmail.com',
   }
 
-  git::config::global { 'alias.lg':
-    value => "log --pretty=format:'%C(yellow)%h%C(reset) %s %C(cyan)%cr%C(reset) %C(blue)%an%C(reset) %C(green)%d%C(reset)' --graph --date-order",
-  }
-
   file { "/Users/${::luser}/.id_rsa":
     ensure  => link,
     mode    => '0600',
