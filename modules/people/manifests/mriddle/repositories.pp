@@ -21,6 +21,7 @@ class people::mriddle::repositories {
   add_dotfile {'bash_aliases': }
   add_dotfile {'bash_profile': }
   add_dotfile {'bashrc': }
+  add_dotfile {'inputrc': }
 
   repository { "${::boxen_srcdir}/notes_bin":
     source => 'mriddle/notes_pin',
