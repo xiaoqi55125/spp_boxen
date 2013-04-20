@@ -44,13 +44,6 @@ class config::sublime {
     require => Package['SublimeText2'],
   }
 
-  file { "${base}/Sublime Text 2/Settings/License.sublime_license":
-    ensure  => link,
-    mode    => '0644',
-    target  => "${::boxen_srcdir}/pairing_station/licenses/License.sublime_license",
-    require => [Package['SublimeText2'], Repository["${::boxen_srcdir}/pairing_station"]],
-  }
-
   addpkg { [
     "jisaacks/GitGutter",
     "surjikal/sublime-coffee-compile",

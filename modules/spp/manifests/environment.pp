@@ -4,4 +4,6 @@ class spp::environment {
   include projects::atlas
   include spp::config
 
+  include spp::licenses # Split out so other users can use their own keys
+
 }

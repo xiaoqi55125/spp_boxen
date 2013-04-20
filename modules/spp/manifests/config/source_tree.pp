@@ -8,13 +8,6 @@ class config::source_tree {
     mode    => '0755',
   }->
 
-  file { "${app_support}/sourcetree.license":
-    ensure  => link,
-    mode    => '0644',
-    target  => "${::boxen_srcdir}/pairing_station/licenses/sourcetree.license",
-    require => [Package['SourceTree'], Repository["${::boxen_srcdir}/pairing_station"]],
-  }
-
   file { "${app_support}/browser.plist":
     ensure  => present,
     source  => "puppet:///modules/spp/source_tree/browser.plist"
