@@ -4,6 +4,7 @@ class people::mriddle {
   include spp::config
 
   include projects::atlas
+  include projects::remixer
 
   include people::mriddle::repositories
   include people::mriddle::applications
