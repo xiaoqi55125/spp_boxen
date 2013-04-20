@@ -74,6 +74,7 @@ class config::osx {
 
   exec { "Show the ~/Library folder":
     command => "chflags nohidden ~/Library",
+    onlyif => "ls -dlaO ~/Library | grep hidden",
   }
 
 }
