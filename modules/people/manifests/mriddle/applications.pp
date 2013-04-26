@@ -6,6 +6,11 @@ class people::mriddle::applications {
     provider => compressed_app
   }
 
+  package { 'VLC':
+    source   => 'http://get.videolan.org/vlc/2.0.6/macosx/vlc-2.0.6.dmg',
+    provider => 'appdmg'
+  }
+
   package { "powder":
     ensure => installed,
     provider => "gem"
