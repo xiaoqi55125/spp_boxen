@@ -43,6 +43,13 @@ class people::mriddle::repositories {
     source => 'mriddle/blog',
   }
 
+  file { "/Users/${::luser}/.work_env":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${::boxen_srcdir}/private_dotfiles/work_env",
+    require => Repository["${::boxen_srcdir}/private_dotfiles"],
+  }
+
 }
 
 
