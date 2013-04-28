@@ -3,14 +3,21 @@
 **If starting from a machine that's not a fresh install read [this](https://coderwall.com/p/d8iw2g)**
 
 1. Install Xcode Command Line Tools
-1. Run the following
-  ```
+2. Run the following
+
+```
   sudo mkdir -p /opt/boxen
   sudo chown $USER:admin /opt/boxen
   mkdir -p ~/projects
   cd ~/projects
-  git clone https://github.com/lonelyplanet/spp_boxen.git && cd spp_boxen && ./script/boxen
-  ```
+  git clone https://github.com/lonelyplanet/spp_boxen.git
+  cd spp_boxen
+  # Boxen is setup to run with the GitHub user sppdev. If you want to
+  # run a personalized setup then create a puppet file for yourself
+  # under modules/people. See below (Personal Manifests) for more
+  # information. Use mriddle.pp as an example.
+  ./script/boxen
+```
 
 Open a new terminal, `boxen --env` to confirm.
 
