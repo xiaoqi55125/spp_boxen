@@ -28,12 +28,12 @@ class config::git {
   }
 
   add_git_pair{"Jonathan Ricketson <jonathanr@lonelyplanet.com.au>":}
-  add_git_pair{"Duncan Warnock <duncan.warnock@lonelyplanet.com.au>":}
   add_git_pair{"David Hodges <david.hodges@lonelyplanet.com.au>":}
   add_git_pair{"Matt Riddle <matthew.riddle@lonelyplanet.com.au>":}
   add_git_pair{"Adel Smee <adel.smee@lonelyplanet.com.au>":}
   add_git_pair{"James Holmes <james.holmes@lonelyplanet.com.au>":}
   add_git_pair{"Ben Galvin <ben.galvin@lonelyplanet.com.au>":}
   add_git_pair{"Tim Moore <tim.moore@lonelyplanet.com.au>":}
+  add_git_pair{"Luke Robins <luke.robins@lonelyplanet.com.au>":}
 
 }
