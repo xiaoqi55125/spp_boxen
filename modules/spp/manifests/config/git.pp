@@ -35,5 +35,6 @@ class config::git {
   add_git_pair{"Ben Galvin <ben.galvin@lonelyplanet.com.au>":}
   add_git_pair{"Tim Moore <tim.moore@lonelyplanet.com.au>":}
   add_git_pair{"Luke Robins <luke.robins@lonelyplanet.com.au>":}
+  add_git_pair{"Daniel Corbett <daniel.corbett@lonelyplanet.com.au>":}
 
 }
