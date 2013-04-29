@@ -1,4 +1,4 @@
-class people::david {
+class people::dhodges {
 
   include spp::environment
 
