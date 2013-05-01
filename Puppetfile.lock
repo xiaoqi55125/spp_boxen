@@ -1,7 +1,7 @@
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (1.0.2)
+    boxen (1.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-chrome
@@ -134,7 +134,7 @@ GITHUBTARBALL
     stdlib (3.0.0)
 
 DEPENDENCIES
-  boxen (= 1.0.2)
+  boxen (= 1.2.0)
   chrome (= 1.0.0)
   firefox (= 1.0.0)
   gcc (= 1.0.0)
