@@ -12,10 +12,6 @@ class config::git {
     value => 'auto',
   }
 
-  git::config::global{ 'push.default':
-    value => 'simple',
-  }
-
   git::config::global{ 'core.editor':
     value => 'subl -w',
   }
