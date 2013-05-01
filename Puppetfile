@@ -39,7 +39,7 @@ include_dependency "phantomjs"
 include_dependency "java",      "1.0.6"
 include_dependency "shiftit",          "0.0.2", :repo => "jlgeering/puppet-shiftit"
 include_dependency "xquartz"
-include_dependency "pow",         		   "0.1.1", :repo => "mriddle/puppet-pow"
+include_dependency "pow",         		   "0.1.2", :repo => "mriddle/puppet-pow"
 include_dependency "osx"
 include_dependency "property_list_key",  "0.1.0", :repo => "glarizza/puppet-property_list_key"
 
