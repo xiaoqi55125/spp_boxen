@@ -71,7 +71,8 @@ node default {
       'ack',
       'findutils',
       'gnu-tar',
-      'csshX'
+      'csshX',
+      'bash-completion',
     ]:
   }
 
