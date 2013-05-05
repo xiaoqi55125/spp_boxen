@@ -44,6 +44,16 @@ class config::sublime {
     require => Package['SublimeText2'],
   }
 
+  file { "${base}/Sublime Text 2/Packages/User/Shell-Unix-Generic.sublime-settings":
+    source  => "puppet:///modules/spp/sublime_text/Shell-Unix-Generic.sublime-settings",
+    require => Package['SublimeText2'],
+  }
+
+  file { "${base}/Sublime Text 2/Packages/User/Ruby.sublime-settings":
+    source  => "puppet:///modules/spp/sublime_text/Ruby.sublime-settings",
+    require => Package['SublimeText2'],
+  }
+
   addpkg { [
     "jisaacks/GitGutter",
     "surjikal/sublime-coffee-compile",
