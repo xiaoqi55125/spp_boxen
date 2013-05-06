@@ -16,6 +16,10 @@ class config::git {
     value => 'subl -w',
   }
 
+  git::config::global{ 'branch.autosetuprebase':
+    value => 'always',
+  }
+
   define add_git_pair ($user_details = $title) {
     exec {"Add ${user_details} git pair":
       command => "git config --global --add git-pair.authors \"${user_details}\"",
