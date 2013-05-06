@@ -21,6 +21,8 @@ fatal: HTTP request failed
 This can be resolved by removing the `[credential helper]` from the `~/.gitconfig`, pushing and then running Boxen again to add the credential helper back in. Looking for a better way to push ignoring the credential helper or make it compatible with multiple accounts.
 - pow install may fail if xcode is not setup correctly. Make sure `xcode-select -print-path` returns `/usr/bin` and `/usr/bin/xcodebuild` is a binary file. If you install the [gcc compiler from Github](https://github.com/kennethreitz/osx-gcc-installer) then the binary which is installed when installing xcode command line tools is replaced with a shell script which is bad. Don't install the GCC compiler, xcode command line tools does everything for you.
 
+- iTerm preferences will not be setup correctly when running Boxen from iTerm, best to use Terminal while running Boxen.
+
 **How to add a gem**
 
 ```puppet
