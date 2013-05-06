@@ -70,20 +70,34 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
 - ~~Might be worth creating a shared dependencies project~~
 
 ##Nice to have
-- Cpu monitor
-- Mouse direction - normal
+- OSX settings:
+  - Mouse scroll direction - normal
+  - Dock options
+    - ~~Remove default crap~~
+    - Enable Hiding
+    - Disable Magnification
+  - Disable ⌘-space shortcut for spotlight (to allow Quicksilver to use it)
+- CPU monitor
 - ~~Shiftit~~
   - config to start on startup
   - needs to enable accessibility API via mac preferences
   - check for updates automatically
 - ~~dbvisualizer~~
- - setup with all our DBs
+  - setup with all our DBs
 - ~~quicksilver~~
+  - Hide Quicksilver icon from dock
 - Setup shiftit and quicksilver as login items
   - ~~Enable access for assistive devices in accessibility options~~
-- Dock options
-  - ~~Remove default crap~~
-  - ~~Autohide~~
 - Chrome as default browser
 - Chrome should be setup with atlas2ninjas account
-- Turn off native scrolling
+- Install git pair for use with system ruby
+  - Need to set/export `GEM_HOME=$HOME/.gem`
+  - Need to add `$GEM_HOME/bin` to `PATH`
+- Clone via SSH instead of HTTPS
+- Update to latest Firefox out of the box
+- Include the Firefox module directly in `spp_boxen` rather than a separate shared module
+
+##Bugs
+
+- SSH private key file permission is 0644, needs to be fixed manually
+- pow serves up at `atlas.dev` instead of `atlas.local`. This breaks the Christo Firefox extension.
