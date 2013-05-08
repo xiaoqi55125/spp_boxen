@@ -15,8 +15,10 @@
                               "CVS",
                               "fixtures",
                               "public/assets",
+                              "public/ckeditor",
                               "public/spec",
-                              "remixer/doc"],
+                              "remixer/doc",
+                              "spec/reports"],
 
   "hot_exit": false,
   "remember_open_files": false,
