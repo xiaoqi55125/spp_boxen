@@ -32,7 +32,7 @@ include_dependency "firefox",          "1.0.0", :repo => "lonelyplanet/puppet-fi
 include_dependency "gitx"
 include_dependency "wget"
 include_dependency "sysctl" # Required by postgresql
-include_dependency "postgresql"
+include_dependency "postgresql",       "1.0.3", :repo => "octanner/puppet-postgresql"
 include_dependency "postgis",          "2.1.0", :repo => "lonelyplanet/puppet-postgis"
 include_dependency "iterm2"
 include_dependency "phantomjs"
