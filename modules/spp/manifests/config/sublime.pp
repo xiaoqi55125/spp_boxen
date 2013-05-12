@@ -69,7 +69,8 @@ class config::sublime {
     "lonelyplanet/AtlasTestRunner",
     "NaN1488/sublime-gem-browser",
     "Monnoroch/ColorHighlighter",
-    "facelessuser/BracketHighlighter"
+    "facelessuser/BracketHighlighter",
+    "Dimillian/Sublime-Hacker-News-Reader"
     ]:
   }
 
