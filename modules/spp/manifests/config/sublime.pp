@@ -67,7 +67,9 @@ class config::sublime {
     "kemayo/sublime-text-2-git",
     "dzhibas/SublimePrettyJson",
     "lonelyplanet/AtlasTestRunner",
-    "NaN1488/sublime-gem-browser"
+    "NaN1488/sublime-gem-browser",
+    "Monnoroch/ColorHighlighter",
+    "facelessuser/BracketHighlighter"
     ]:
   }
 
