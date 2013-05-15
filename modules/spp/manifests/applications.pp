@@ -31,4 +31,8 @@ class spp::applications {
     source => 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.5.8.dmg'
   }
 
+  package { "tig":
+    ensure => installed,
+  }
+
 }
