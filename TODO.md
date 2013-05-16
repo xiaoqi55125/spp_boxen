@@ -82,7 +82,7 @@ Setup under the github user sppdev. Which is the user all shared macs should be 
   - config to start on startup
   - needs to enable accessibility API via mac preferences
   - check for updates automatically
-- ~~dbvisualizer~~
+- dbvisualizer
   - setup with all our DBs
 - ~~quicksilver~~
   - Hide Quicksilver icon from dock
