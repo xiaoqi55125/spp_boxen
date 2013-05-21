@@ -12,10 +12,10 @@
   cd ~/projects
   git clone https://github.com/lonelyplanet/spp_boxen.git
   cd spp_boxen
-  # Boxen is setup to run with the GitHub user sppdev. If you want to
-  # run a personalized setup then create a puppet file for yourself
-  # under modules/people. See below (Personal Manifests) for more
-  # information. Use mriddle.pp as an example.
+```
+Our Boxen repo is setup to run with the GitHub user sppdev. If you want to run a personalized setup then create a puppet file for yourself under modules/people. See below (Personal Manifests) for more information. Use mriddle.pp as an example.  
+When prompted for username **provide sppdev** as git user for pairing-station setup or create your own personal manifest.
+```
   ./script/boxen
 ```
 
