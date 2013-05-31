@@ -20,12 +20,11 @@ class projects::atlas {
     source        => 'lonelyplanet/atlas'
   }
 
-  file { '/private/etc/apache2/others/atlas-vhost.conf':
+  file { '/private/etc/apache2/other/atlas-vhost.conf':
     ensure  => file,
     owner   => 'root',
     group   => 'wheel',
     mode    => 0644,
-    content => template('projects/atlas-vhost.conf.erb'),
-    require => Package['passenger']
+    content => template('projects/atlas-vhost.conf.erb')
   }
 }

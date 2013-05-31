@@ -9,7 +9,7 @@ class projects::remixer {
   }
 
   file { "${::boxen_srcdir}/atlas/public/remixer":
-    target  => "${::boxen_srcdir}/remixer",
+    target  => "${::boxen_srcdir}/remixer/public",
     ensure  => "link"
   }
 
