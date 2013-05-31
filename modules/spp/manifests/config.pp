@@ -7,6 +7,7 @@ class spp::config {
   include config::dock
   include config::source_tree
   include config::osx
+  include config::hosts
 
 
   file { "iTerm2 Preferences":
