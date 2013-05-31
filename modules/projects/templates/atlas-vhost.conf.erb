@@ -1,0 +1,34 @@
+<VirtualHost *:80>
+   ServerAdmin webmaster@loacalhost
+   DocumentRoot "<%= scope.lookupvar('boxen_srcdir') %>/atlas/public"
+   ServerName localhost
+   ServerAlias atlas.dev remixer.dev
+   ErrorLog "/private/var/log/apache2/localhost-error_log"
+   CustomLog "/private/var/log/apache2/localhost-access_log" common
+   LoadModule passenger_module <%= scope.lookupvar('boxen_home') %>/rbenv/versions/<%= @ruby_version %>/lib/ruby/gems/1.9.1/gems/passenger-<%= @passenger_version %>/ext/apache2/mod_passenger.so
+   PassengerRoot <%= scope.lookupvar('boxen_home') %>/rbenv/versions/<%= @ruby_version %>/lib/ruby/gems/1.9.1/gems/passenger-<%= @passenger_version %>
+   PassengerRuby <%= scope.lookupvar('boxen_home') %>/rbenv/versions/<%= @ruby_version %>/bin/ruby
+   RailsEnv development
+   SetEnv BOXEN_POSTGRESQL_PORT 15432
+
+  AliasMatch ^/remixer(.*)$ <%= scope.lookupvar('boxen_srcdir') %>/remixer/public/$1
+  # gzip html, css, js and json
+  AddOutputFilterByType DEFLATE text/html text/css application/x-javascript application/javascript application/json application/xml
+
+  <Directory <%= scope.lookupvar('boxen_srcdir') %>/remixer/public >
+    RailsBaseURI /remixer
+    Options FollowSymLinks -MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  <Directory <%= scope.lookupvar('boxen_srcdir') %>/atlas/public >
+    RailsBaseURI /
+    Options FollowSymLinks -MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+</VirtualHost>

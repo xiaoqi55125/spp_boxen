@@ -8,10 +8,9 @@ class projects::remixer {
     source        => 'lonelyplanet/remixer'
   }
 
-  file { "/Users/${::luser}/.pow/remixer":
+  file { "${::boxen_srcdir}/atlas/public/remixer":
     target  => "${::boxen_srcdir}/remixer",
-    ensure  => "link",
-    require => Package["pow"]
+    ensure  => "link"
   }
 
 }
