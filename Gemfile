@@ -7,4 +7,5 @@ group :development do
   gem "aws-sdk"
   gem "net-ssh"
   gem "rbvmomi"
+  gem "edgecase-git-pair"
 end
