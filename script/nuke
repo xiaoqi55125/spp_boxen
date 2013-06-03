@@ -10,6 +10,7 @@ all      = false
 force    = false
 opt      = false
 services = false
+receipts = false
 
 OptionParser.new do |o|
   o.banner = "Remove most traces of Boxen from your machine."
@@ -24,7 +25,7 @@ OptionParser.new do |o|
 
   o.parse!
 
-  abort o.to_s unless all || opt || services
+  abort o.to_s unless all || opt || services || receipts
 end
 
 unless force
