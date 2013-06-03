@@ -28,7 +28,6 @@ include_dependency "sudo"
 # SPP Modules
 
 include_dependency "chrome"
-include_dependency "firefox",          "1.0.0", :repo => "lonelyplanet/puppet-firefox"
 include_dependency "gitx"
 include_dependency "wget"
 include_dependency "sysctl" # Required by postgresql

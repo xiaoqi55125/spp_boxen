@@ -3,7 +3,6 @@ class spp::applications {
   include iterm2::stable
   include gitx
   include wget
-  include firefox
   include chrome
   include shiftit
   include xquartz
@@ -13,6 +12,11 @@ class spp::applications {
   #   provider => 'appdmg',
   #   source => 'http://ftp.postgresql.org/pub/pgadmin3/release/v1.16.1/osx/pgadmin3-1.16.1.dmg'
   # }
+
+  package { 'Firefox':
+    provider => 'appdmg',
+    source   => 'http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/21.0/mac/en-US/Firefox%2021.0.dmg'
+  }
 
   package { "Quicksilver":
     ensure => "present",
@@ -33,5 +37,4 @@ class spp::applications {
   package { "tig":
     ensure => installed,
   }
-
 }

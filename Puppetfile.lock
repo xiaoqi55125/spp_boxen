@@ -109,11 +109,6 @@ GITHUBTARBALL
     shiftit (0.0.2)
 
 GITHUBTARBALL
-  remote: lonelyplanet/puppet-firefox
-  specs:
-    firefox (1.0.0)
-
-GITHUBTARBALL
   remote: lonelyplanet/puppet-postgis
   specs:
     postgis (2.1.0)
@@ -136,7 +131,6 @@ GITHUBTARBALL
 DEPENDENCIES
   boxen (= 1.2.0)
   chrome (= 1.0.0)
-  firefox (= 1.0.0)
   gcc (= 1.0.0)
   git (= 1.0.0)
   gitx (= 1.0.0)
