@@ -35,7 +35,7 @@ include_dependency "postgresql",       "1.0.3", :repo => "octanner/puppet-postgr
 include_dependency "postgis",          "2.1.0", :repo => "lonelyplanet/puppet-postgis"
 include_dependency "iterm2"
 include_dependency "phantomjs"
-include_dependency "java",      "1.0.6"
+include_dependency "java",             "1.1.1"
 include_dependency "shiftit",          "0.0.2", :repo => "jlgeering/puppet-shiftit"
 include_dependency "xquartz"
 include_dependency "pow",         		   "0.1.3", :repo => "mriddle/puppet-pow"
