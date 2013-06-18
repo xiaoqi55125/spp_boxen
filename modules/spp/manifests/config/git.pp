@@ -17,6 +17,10 @@ class config::git {
     value => 'subl -w',
   }
 
+  git::config::global{'push.default':
+    value => 'simple',
+  }
+
   git::config::global{ 'branch.autosetuprebase':
     value => 'always',
   }
