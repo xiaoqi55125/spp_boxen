@@ -13,4 +13,16 @@ class projects::remixer {
     ensure  => "link"
   }
 
+  package { "gs":
+    ensure => installed
+  }
+
+  package { "fontconfig":
+    ensure => installed
+  }
+
+  package { "imagemagick":
+    ensure => installed
+  }
+
 }
