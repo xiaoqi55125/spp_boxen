@@ -6,7 +6,10 @@
 passenger-install-apache2-module
 sudo apachectl restart
 ```
-
+- git-pair is not installed under system ruby
+```
+sudo gem install ehrenmurdick-git-pair
+```
 
 
 ## Troubleshooting
