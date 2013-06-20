@@ -8,7 +8,7 @@ class spp::config {
   include config::source_tree
   include config::osx
   include config::hosts
-
+  include config::repositories
 
   file { "iTerm2 Preferences":
     path => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
