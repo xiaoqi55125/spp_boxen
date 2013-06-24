@@ -43,6 +43,8 @@ Boxen Keychain Helper: Encountered error code: -25308
 Error: User interaction is not allowed.
 ```
 
+- install DBVisualiser or PGAdmin
+ - use the package at the moment
 
 ## Troubleshooting
 
