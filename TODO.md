@@ -11,6 +11,13 @@ sudo apachectl restart
 sudo gem install ehrenmurdick-git-pair
 ```
 
+- Quicksilver shows in dock
+ right-click, go to preferences, deselect 'show in dock'
+
+- setup printer (warhol)
+- native scrolling for mouse
+- keyboard keypress repeat delay
+- setup local db
 
 ## Troubleshooting
 
