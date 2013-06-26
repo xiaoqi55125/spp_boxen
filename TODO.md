@@ -46,6 +46,9 @@ Error: User interaction is not allowed.
 - install DBVisualiser or PGAdmin
  - use the package at the moment
 
+- install openoffice
+ - use the package at the moment
+
 ## Troubleshooting
 
 **Christo fails to fetch places and manifests?**
