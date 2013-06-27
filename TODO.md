@@ -21,6 +21,9 @@ sudo gem install ehrenmurdick-git-pair
 
 - Unable to run boxen script OR push upstream to git repo when logged into a devmac over an ssh connection. A strange keychain error occurs mere moments before my head explodes:
 
+- Setup VirtualBox with a WindowsXP image - used for cross OS testing
+- Boxen should prompt for devmac name and set it up accordingly
+
 ```
 $ ssh devmac-8
 Last login: Mon Jun 24 14:51:05 2013 from devs-imac.au.lpint.net
