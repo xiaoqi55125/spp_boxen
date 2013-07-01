@@ -52,6 +52,8 @@ Error: User interaction is not allowed.
 - install openoffice
  - use the package at the moment
 
+- package control for sublime
+
 ## Troubleshooting
 
 **Christo fails to fetch places and manifests?**
