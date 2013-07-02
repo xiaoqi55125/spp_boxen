@@ -37,4 +37,9 @@ class spp::applications {
   package { "tig":
     ensure => installed,
   }
+
+  package { 'ChickenVNC':
+    provider => 'appdmg',
+    source => 'http://freefr.dl.sourceforge.net/project/chicken/Chicken-2.2b2.dmg'
+  }
 }
