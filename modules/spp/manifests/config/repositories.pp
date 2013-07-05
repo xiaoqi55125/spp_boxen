@@ -15,4 +15,8 @@ class config::repositories {
   repository { "${::boxen_srcdir}/spp_aws":
     source => 'lonelyplanet/spp_aws',
   }
+
+  repository { "${::boxen_srcdir}/deployment_tools":
+    source => 'lonelyplanet/deployment_tools',
+  }
 }
