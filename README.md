@@ -2,7 +2,7 @@
 
 **If starting from a machine that's not a fresh install read [this](https://coderwall.com/p/d8iw2g)**
 
-1. Install Xcode Command Line Tools
+1. Install [Xcode Command Line Tools](http://docwiki.embarcadero.com/RADStudio/XE4/en/Installing_the_Xcode_Command_Line_Tools_on_a_Mac )
 2. Run the following
 
 ```
