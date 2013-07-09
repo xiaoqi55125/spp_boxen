@@ -9,6 +9,7 @@ class spp::config {
   include config::osx
   include config::hosts
   include config::repositories
+  include config::rubydebug
 
   file { "iTerm2 Preferences":
     path => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
