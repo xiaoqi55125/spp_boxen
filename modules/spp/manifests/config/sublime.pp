@@ -70,7 +70,10 @@ class config::sublime {
     "NaN1488/sublime-gem-browser",
     "Monnoroch/ColorHighlighter",
     "facelessuser/BracketHighlighter",
-    "Dimillian/Sublime-Hacker-News-Reader"
+    "Dimillian/Sublime-Hacker-News-Reader",
+    "CraigWilliams/BeautifyRuby",
+    "irohiroki/RubyBlockConverter",
+    "iltempo/sublime-text-2-hash-syntax",
     ]:
   }
 
