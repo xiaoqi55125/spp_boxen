@@ -13,11 +13,10 @@ class projects::remixer {
     ensure  => "link"
   }
 
-  package { "gs":
-    ensure => installed
-  }
+  # xquartz includes fontconfig, which remixer depends on
+  include xquartz
 
-  package { "fontconfig":
+  package { "gs":
     ensure => installed
   }
 
