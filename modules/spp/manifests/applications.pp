@@ -21,12 +21,12 @@ class spp::applications {
   package { "Quicksilver":
     ensure => "present",
     provider => 'appdmg',
-    source => 'https://github.com/downloads/quicksilver/Quicksilver/Quicksilver%20B70.dmg',
+    source => 'https://github.com/downloads/quicksilver/Quicksilver/Quicksilver%20B70.dmg'
   }
 
   package { 'SublimeText2':
     provider => 'appdmg',
-    source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg';
+    source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg'
   }
 
   package { 'SourceTree':
@@ -42,4 +42,11 @@ class spp::applications {
     provider => 'appdmg',
     source => 'http://freefr.dl.sourceforge.net/project/chicken/Chicken-2.2b2.dmg'
   }
+
+  package { "OpenOffice":
+    ensure => "present",
+    provider => 'appdmg',
+    source => 'http://waix.dl.sourceforge.net/project/openofficeorg.mirror/stable/3.4.1/Apache_OpenOffice_incubating_3.4.1_MacOS_x86_install_en-US.dmg'
+  }
+
 }
