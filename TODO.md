@@ -23,6 +23,7 @@ sudo gem install ehrenmurdick-git-pair
 
 - Setup VirtualBox with a WindowsXP image - used for cross OS testing
 - Boxen should prompt for devmac name and set it up accordingly
+- install openoffice (http://www.openoffice.org/download/)
 
 ```
 $ ssh devmac-8
