@@ -57,6 +57,7 @@ class config::sublime {
   addpkg { [
     "jisaacks/GitGutter",
     "surjikal/sublime-coffee-compile",
+    "Xavura/CoffeeScript-Sublime-Plugin",
     "revolunet/sublimetext-markdown-preview",
     "SublimeColors/Solarized",
     "wbond/sublime_package_control",
