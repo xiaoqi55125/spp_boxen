@@ -53,6 +53,7 @@ Error: User interaction is not allowed.
  - use the package at the moment
 
 - package control for sublime
+- Skype
 
 ## Troubleshooting
 
