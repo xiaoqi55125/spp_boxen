@@ -64,4 +64,20 @@ class spp::config {
     user => "root"
   }
 
+  # These boxen symlinks (node,node-waf,npm) break when invoking coffee from a SublimeText plugin.
+  # Instead, we've hard-coded our PATH to include /opt/boxen/nvm/v0.8.8/bin.
+  exec { "Boxen node symlink":
+    command => "rm /opt/boxen/bin/node",
+    require => Class[nvm]
+  }
+
+  exec { "Boxen node-waf symlink":
+    command => "rm /opt/boxen/bin/node-waf",
+    require => Class[nvm]
+  }
+
+  exec { "Boxen npm symlink":
+    command => "rm /opt/boxen/bin/npm",
+    require => Class[nvm]
+  }
 }
