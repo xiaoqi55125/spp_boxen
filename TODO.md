@@ -1,59 +1,54 @@
 ## TODO
 
- - passenger config is added to httpd.conf but must still run installer manually. Must run
+ - passenger config is added to httpd.conf but must still run installer manually:
+  ```bash
+  passenger-install-apache2-module
+  sudo apachectl restart
+  ```
 
-```bash
-passenger-install-apache2-module
-sudo apachectl restart
-```
-- git-pair is not installed under system ruby
-```
-sudo gem install ehrenmurdick-git-pair
-```
+- git-pair needs to be installed under system ruby
+  ```
+  sudo gem install ehrenmurdick-git-pair
+  ```
 
-- Quicksilver shows in dock
- right-click, go to preferences, deselect 'show in dock'
-
-- setup printer (warhol)
+- Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock')
+- setup printer
 - native scrolling for mouse
 - keyboard keypress repeat delay
 - setup local db
-
-- Unable to run boxen script OR push upstream to git repo when logged into a devmac over an ssh connection. A strange keychain error occurs mere moments before my head explodes:
-
 - Setup VirtualBox with a WindowsXP image - used for cross OS testing
 - Boxen should prompt for devmac name and set it up accordingly
 
-```
-$ ssh devmac-8
-Last login: Mon Jun 24 14:51:05 2013 from devs-imac.au.lpint.net
-(devmac-8) (14:54:41) ~ 'Sacha Chua' 1.9.3p392
-$
-$ ./script/boxen
-Successfully installed bundler-1.3.5
-1 gem installed
-Boxen Keychain Helper: Encountered error code: -25308
-Error: User interaction is not allowed.
-Boxen Keychain Helper: Encountered error code: -25308
-Error: User interaction is not allowed.
---> Hey, I need your current GitHub credentials to continue.
+- these still need automating:
+  * npm install -g coffee-script
+  * DBVisualiser or PGAdmin
+  * package control for sublime
+  * Skype
 
-GitHub login: |sppdev|
-GitHub password: ********
-Boxen Keychain Helper: Encountered error code: -25308
-Error: User interaction is not allowed.
-Boxen Keychain Helper: Encountered error code: -25308
-Error: User interaction is not allowed.
-```
+- Unable to run `./script/boxen` OR `git push` when logged into a devmac over an ssh connection. Boxen has a problematic relationship with the OSX keychain, causing ssh authentication woes:
 
-- install DBVisualiser or PGAdmin
- - use the package at the moment
+  ```
+  $ ssh devmac-8
+  Last login: Mon Jun 24 14:51:05 2013 from devs-imac.au.lpint.net
+  (devmac-8) (14:54:41) ~ 'Sacha Chua' 1.9.3p392
+  $
+  $ ./script/boxen
+  Successfully installed bundler-1.3.5
+  1 gem installed
+  Boxen Keychain Helper: Encountered error code: -25308
+  Error: User interaction is not allowed.
+  Boxen Keychain Helper: Encountered error code: -25308
+  Error: User interaction is not allowed.
+  --> Hey, I need your current GitHub credentials to continue.
 
-- install openoffice
- - use the package at the moment
+  GitHub login: |sppdev|
+  GitHub password: ********
+  Boxen Keychain Helper: Encountered error code: -25308
+  Error: User interaction is not allowed.
+  Boxen Keychain Helper: Encountered error code: -25308
+  Error: User interaction is not allowed.
+  ```
 
-- package control for sublime
-- Skype
 
 ## Troubleshooting
 
