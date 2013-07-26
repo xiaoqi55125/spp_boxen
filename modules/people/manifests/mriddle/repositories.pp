@@ -13,6 +13,10 @@ class people::mriddle::repositories {
     source => 'mriddle/dotfiles',
   }
 
+  repository { "${::boxen_srcdir}/pairing_station":
+    source => 'lonelyplanet/pairing_station',
+  }
+
   repository { "${::boxen_srcdir}/private_dotfiles":
     source => 'mriddle/private_dotfiles',
   }
@@ -24,7 +28,7 @@ class people::mriddle::repositories {
   add_dotfile {'inputrc': }
 
   repository { "${::boxen_srcdir}/notes_bin":
-    source => 'mriddle/notes_pin',
+    source => 'mriddle/notes_bin',
   }
 
   repository { "${::boxen_srcdir}/epubifier":
