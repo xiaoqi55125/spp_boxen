@@ -23,7 +23,7 @@ exec { "Check for old PostGIS version (1.5.3) and prep for installing new versio
 
 exec { "Setup postgres to work with postgis":
   command => "psql -p 15432 -d postgres -f /tmp/boxen/create_postgis_template.sql > /tmp/boxen/postgis.out",
-  require => [Package['boxen/brews/postgis'], Exec["Check for old PostGIS version (1.5.3) and prep for installing new version"]],
+  require => [Exec["Check for old PostGIS version (1.5.3) and prep for installing new version"], Package['boxen/brews/postgresql'], Package['boxen/brews/postgis']],
 }
 
 exec { "Import data from PostGIS upgrade":
