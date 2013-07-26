@@ -3,7 +3,6 @@ class config::postgis {
 file { "Grab postgis setup SQL":
   path => "/tmp/boxen/create_postgis_template.sql",
   content  => template("spp/create_postgis_template.sql.erb"),
-  require => Package['boxen/brews/postgis'],
 }
 
 exec { "Check for old PostGIS version (1.5.3) and prep for installing new version":
@@ -18,12 +17,10 @@ exec { "Check for old PostGIS version (1.5.3) and prep for installing new versio
       'rm -rf /opt/boxen/data/postgresql/'
     ], ' && '),
   onlyif => "psql -h localhost -p 15432 -c 'SELECT PostGIS_version()' atlas_development | grep -c 1.5",
-  require => File["Grab postgis setup SQL"],
 }
 
 exec { "Setup postgres to work with postgis":
   command => "psql -p 15432 -d postgres -f /tmp/boxen/create_postgis_template.sql",
-  require => [Exec["Check for old PostGIS version (1.5.3) and prep for installing new version"], Package['boxen/brews/postgresql'], Package['boxen/brews/postgis']],
 }
 
 exec { "Import data from PostGIS upgrade":
@@ -32,7 +29,12 @@ exec { "Import data from PostGIS upgrade":
     'mv /tmp/atlas_development.backup /tmp/atlas_development.backup.old', # Should rm but not, in case something went wrong and we still got here
     ], ' && '),
   onlyif => '[ -e /tmp/atlas_development.backup ]',
-  require => Exec["Setup postgres to work with postgis"],
 }
+
+File["Grab postgis setup SQL"] ->
+Exec["Check for old PostGIS version (1.5.3) and prep for installing new version"] ->
+Package['boxen/brews/postgis'] ->
+Exec["Setup postgres to work with postgis"] ->
+Exec["Import data from PostGIS upgrade"]
 
 }
