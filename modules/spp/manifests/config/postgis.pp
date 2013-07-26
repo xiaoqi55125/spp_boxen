@@ -25,7 +25,9 @@ exec { "Setup postgres to work with postgis":
 
 exec { "Import data from PostGIS upgrade":
   command => join([
-    'perl postgis_restore.pl "/tmp/atlas_development.backup" | psql -h localhost -p 15432 atlas_development',
+    'dropdb -h localhost -p 15432 atlas_development',
+    'createdb -h localhost -p 15432 atlas_development',
+    'perl /opt/boxen/homebrew/bin/postgis_restore.pl "/tmp/atlas_development.backup" | psql -h localhost -p 15432 atlas_development',
     'mv /tmp/atlas_development.backup /tmp/atlas_development.backup.old', # Should rm but not, in case something went wrong and we still got here
     ], ' && '),
   onlyif => '[ -e /tmp/atlas_development.backup ]',
