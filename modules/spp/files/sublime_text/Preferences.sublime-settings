@@ -12,6 +12,8 @@
                               ".git",
                               ".hg",
                               ".svn",
+                              ".tmp",
+                              ".librarian",
                               "CVS",
                               "spec/fixtures",
                               "public/assets",
