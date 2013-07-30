@@ -43,10 +43,4 @@ class spp::applications {
     source => 'http://freefr.dl.sourceforge.net/project/chicken/Chicken-2.2b2.dmg'
   }
 
-  package { "OpenOffice":
-    ensure => "present",
-    provider => 'appdmg',
-    source => 'http://waix.dl.sourceforge.net/project/openofficeorg.mirror/stable/3.4.1/Apache_OpenOffice_incubating_3.4.1_MacOS_x86_install_en-US.dmg'
-  }
-
 }
