@@ -19,4 +19,8 @@ class config::repositories {
   repository { "${::boxen_srcdir}/deployment_tools":
     source => 'lonelyplanet/deployment_tools',
   }
+
+  repository { "${::boxen_srcdir}/spp_blog":
+    source => 'lonelyplanet/spp_blog',
+  }
 }
