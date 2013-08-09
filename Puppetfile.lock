@@ -39,11 +39,6 @@ GITHUBTARBALL
     iterm2 (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-java
-  specs:
-    java (1.1.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-minecraft
   specs:
     minecraft (1.0.0)
@@ -128,7 +123,6 @@ DEPENDENCIES
   hub (= 1.0.0)
   inifile (= 0.9.0)
   iterm2 (= 1.0.0)
-  java (= 1.1.1)
   minecraft (= 1.0.0)
   nodejs (= 1.0.0)
   nvm (= 1.0.0)

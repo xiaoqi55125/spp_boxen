@@ -13,7 +13,7 @@
   git clone https://github.com/lonelyplanet/spp_boxen.git
   cd spp_boxen
 ```
-Our Boxen repo is setup to run with the GitHub user sppdev. If you want to run a personalized setup then create a puppet file for yourself under modules/people. See below (Personal Manifests) for more information. Use mriddle.pp as an example.  
+Our Boxen repo is setup to run with the GitHub user sppdev. If you want to run a personalized setup then create a puppet file for yourself under modules/people. See below (Personal Manifests) for more information. Use mriddle.pp as an example.
 When prompted for username **provide sppdev** as git user for pairing-station setup or create your own personal manifest.
 ```
   ./script/boxen
@@ -86,11 +86,9 @@ boxen repo (ex. /path/to/your-boxen/Puppetfile):
     # Optional/custom modules. There are tons available at
     # https://github.com/boxen.
 
-    github "java",     "1.0.5"
-
 In the above snippet of a customized Puppetfile, the bottom line
-includes the Java module from Github using the tag "1.0.5" from the github repository
-"boxen/puppet-java".  The function "github" is defined at the top of the Puppetfile
+includes the sudo module from Github using the tag "1.0.0" from the github repository
+"boxen/sudo".  The function "github" is defined at the top of the Puppetfile
 and takes the name of the module, the version, and optional repo location:
 
     def github(name, version, options = nil)
@@ -101,9 +99,9 @@ and takes the name of the module, the version, and optional repo location:
 
 Now Puppet knows where to download the module from when you include it in your site.pp or mypersonal.pp file:
 
-    # include the java module referenced in my Puppetfile with the line
-    # github "java",     "1.0.5"
-    include java
+    # include the ruby module referenced in my Puppetfile with the line
+    # github "ruby",     "1.0.0"
+    include ruby
 
 ### Node definitions
 
