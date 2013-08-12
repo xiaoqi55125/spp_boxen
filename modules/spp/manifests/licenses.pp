@@ -8,10 +8,11 @@ class spp::licenses {
     require => [Package['SublimeText2'], Repository["${::boxen_srcdir}/pairing_station"]],
   }
 
+  # sourcetree.license cannot be a symlink
   file { "/Users/${::luser}/Library/Application Support/SourceTree/sourcetree.license":
-    ensure  => link,
+    ensure  => present,
     mode    => '0644',
-    target  => "${::boxen_srcdir}/pairing_station/licenses/sourcetree.license",
+    source  => "${::boxen_srcdir}/pairing_station/licenses/sourcetree.license",
     require => [Package['SourceTree'], Repository["${::boxen_srcdir}/pairing_station"]],
   }
 
