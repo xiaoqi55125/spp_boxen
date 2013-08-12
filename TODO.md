@@ -49,6 +49,7 @@ Error: User interaction is not allowed.
 Boxen Keychain Helper: Encountered error code: -25308
 Error: User interaction is not allowed.
 ```
+
 - Update repository dsl to update repository if it already exists
 
 ## Troubleshooting
