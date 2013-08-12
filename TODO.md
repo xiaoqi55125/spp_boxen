@@ -1,7 +1,7 @@
 ## TODO
 
- - **Boxen hangs when trying to update homebrew during `script/boxen` if there are unstagged files** Make it not so.
- - passenger config is added to httpd.conf but must still run installer manually. Must run
+ - **Boxen hangs when trying to update homebrew during `script/boxen` if there are unstaged files** Make it not so.
+ - passenger config is added to httpd.conf but the installer must still be run manually:
 
 ```bash
 passenger-install-apache2-module
