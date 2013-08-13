@@ -15,8 +15,8 @@ CREATE LANGUAGE plpgsql;
 
 -- Install PostGIS (your file paths may vary)
 <%- homebrewdir = scope.lookupvar 'boxen::config::homebrewdir' %>
-\i <%= Dir.glob("#{homebrewdir}/**/postgresql/contrib/postgis-*").first %>/postgis.sql
-\i <%= Dir.glob("#{homebrewdir}/**/postgresql/contrib/postgis-*").first %>/spatial_ref_sys.sql
+\i <%= Dir.glob("#{homebrewdir}/**/1.5.3-boxen1/**/postgis.sql").first || 'postgis.sql not found' %>;
+\i <%= Dir.glob("#{homebrewdir}/**/1.5.3-boxen1/**/spatial_ref_sys.sql").first || 'spatial_ref_sys.sql not found' %>;
 
 GRANT ALL ON geometry_columns TO PUBLIC;
 GRANT ALL ON geography_columns TO PUBLIC;
