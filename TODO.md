@@ -57,11 +57,11 @@ Error: User interaction is not allowed.
 
 ## Troubleshooting
 
-###Christo fails to fetch places and manifests?###
+### Christo fails to fetch places and manifests?
 
 Most likely an issue with your server. Hit atlas.local/server-info to get more information
 
-###Getting a Postgres error like: `PG::Error: ERROR: relation "geometry_columns" does not exist`
+### Getting a Postgres error like: `PG::Error: ERROR: relation "geometry_columns" does not exist`
 
 Postgis has not been setup correctly. Inspect the log `/tmp/boxen/postgis.out` and ensure the script `/tmp/boxen/create_postgis_template.sql` points to the correct `/postgis.sql` and `/spatial_ref_sys.sql`.
 
@@ -71,7 +71,7 @@ While the path may vary, it should look like this:
 \i /opt/boxen/homebrew/Cellar/postgresql/9.1.9-ocboxen/share/postgresql/contrib/postgis-1.5/spatial_ref_sys.sql
 ```
 
-###Getting a Postgres error like: `could not access file "$libdir/postgis-1.5": No such file or directory`
+### Getting a Postgres error like: `could not access file "$libdir/postgis-1.5": No such file or directory`
 
 The postgresql installation is probably missing the postgis shared library.
 
