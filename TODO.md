@@ -1,5 +1,7 @@
 ## TODO
 
+- **Boxen sometimes fails to install the postgis shared library $libdir/postgis-1.5.so**. Make it not so.
+
 - **Boxen hangs when trying to update homebrew during `script/boxen` if there are unstaged files**. Make it not so.
 
 - passenger config is added to httpd.conf but the installer must still be run manually:
@@ -68,3 +70,19 @@ While the path may vary, it should look like this:
 \i /opt/boxen/homebrew/Cellar/postgresql/9.1.9-ocboxen/share/postgresql/contrib/postgis-1.5/postgis.sql
 \i /opt/boxen/homebrew/Cellar/postgresql/9.1.9-ocboxen/share/postgresql/contrib/postgis-1.5/spatial_ref_sys.sql
 ```
+
+###Getting a Postgres error like: `could not access file "$libdir/postgis-1.5": No such file or directory`
+
+The postgresql installation is probably missing the postgis shared library.
+
+You can verify the location of your postgresql shared library directory via pg_config:
+
+`$ pg_config --pkglibdir`
+
+which will probably be something like:
+
+`/opt/boxen/homebrew/Cellar/postgresql/9.1.9-ocboxen/lib`
+
+Check for the existence of the file: `postgis-1.5.so`. This ought to have been installed by boxen, but sometimes fails to materialise. Copying the binary across from another pairing station will resolve the problem until the spp_boxen scripts are fixed.
+
+
