@@ -4,41 +4,52 @@
 # default. This ensures at least the ability to construct a basic
 # environment.
 
-def include_dependency(name, version_tag="1.0.0", options = {})
+def github(name, version, options = nil)
+  options ||= {}
   options[:repo] ||= "boxen/puppet-#{name}"
-  mod name, version_tag, :github_tarball => options[:repo]
+  mod name, version, :github_tarball => options[:repo]
 end
 
-# Boxen Defaults
+# Includes many of our custom types and providers, as well as global
+# config. Required.
 
-include_dependency "boxen",    "1.2.0"
-include_dependency "gcc"
-include_dependency "git"
-include_dependency "homebrew", "1.1.2"
-include_dependency "hub"
-include_dependency "inifile",  "0.9.0", :repo => "cprice-puppet/puppetlabs-inifile"
-include_dependency "nodejs"
-include_dependency "nvm"
-include_dependency "ruby",     "3.4.0"
-include_dependency "stdlib",   "3.0.0", :repo => "puppetlabs/puppetlabs-stdlib"
-include_dependency "sudo"
+github "boxen",      "3.0.1"
 
-# Optional/custom modules. There are tons available at https://github.com/boxen.
+# Core modules for a basic development environment. You can replace
+# some/most of these if you want, but it's not recommended.
+
+github "autoconf",   "1.0.0"
+github "dnsmasq",    "1.0.0"
+github "gcc",        "2.0.1"
+github "git",        "1.2.5"
+github "homebrew",   "1.4.1"
+github "hub",        "1.0.3"
+github "inifile",    "1.0.0", :repo => "puppetlabs/puppetlabs-inifile"
+github "nginx",      "1.4.2"
+github "nodejs",     "3.2.9"
+github "openssl",    "1.0.0"
+github "repository", "2.2.0"
+github "ruby",       "6.3.0"
+github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
+github "sudo",       "1.0.0"
+github "xquartz",    "1.1.0"
+
+# Optional/custom modules. There are tons available at
+# https://github.com/boxen.
 
 # SPP Modules
 
-include_dependency "chrome"
-include_dependency "gitx"
-include_dependency "wget"
-include_dependency "sysctl" # Required by postgresql
-include_dependency "postgresql",       "1.0.3", :repo => "octanner/puppet-postgresql"
-# include_dependency "postgis",          "2.1.0", :repo => "lonelyplanet/puppet-postgis"
-include_dependency "iterm2"
-include_dependency "phantomjs"
-include_dependency "shiftit",          "0.0.2", :repo => "jlgeering/puppet-shiftit"
-include_dependency "xquartz"
-include_dependency "osx"
-include_dependency "property_list_key",  "0.1.0", :repo => "glarizza/puppet-property_list_key"
+github "chrome",            "1.0.0"
+github "gitx",              "1.0.0"
+github "wget",              "1.0.0"
+github "sysctl",            "1.0.0" # Required by postgresql
+github "postgresql",        "1.0.3", :repo => "octanner/puppet-postgresql"
+# github "postgis",          "2.1.0", :repo => "lonelyplanet/puppet-postgis"
+github "iterm2",            "1.0.0"
+github "phantomjs",         "1.0.0"
+github "shiftit",           "0.0.2", :repo => "jlgeering/puppet-shiftit"
+github "osx",               "1.0.0"
+github "property_list_key", "0.1.0", :repo => "glarizza/puppet-property_list_key"
 
 # Personal Modules (Used in modules/people/manifests/$user.pp)
-include_dependency "minecraft"
+github "minecraft",         "1.0.0"
