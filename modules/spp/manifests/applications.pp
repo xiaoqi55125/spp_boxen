@@ -6,6 +6,7 @@ class spp::applications {
   include chrome
   include shiftit
   include xquartz
+  include pgadmin3
 
   # Not installing cause of a license prompt ><
   # package { "PGAdmin":

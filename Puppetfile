@@ -50,6 +50,7 @@ github "phantomjs",         "1.0.0"
 github "shiftit",           "0.0.2", :repo => "jlgeering/puppet-shiftit"
 github "osx",               "1.0.0"
 github "property_list_key", "0.1.0", :repo => "glarizza/puppet-property_list_key"
+github "pgadmin3",          "1.0.0"
 
 # Personal Modules (Used in modules/people/manifests/$user.pp)
 github "minecraft",         "1.0.0"

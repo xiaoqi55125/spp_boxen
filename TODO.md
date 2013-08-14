@@ -25,7 +25,7 @@ sudo gem install ehrenmurdick-git-pair
 
 - these still need automating:
   * npm install -g coffee-script
-  * DBVisualiser or PGAdmin
+  * configuration for PGAdmin
   * package control for sublime
   * Skype
 
@@ -61,7 +61,7 @@ Error: User interaction is not allowed.
 
 Most likely an issue with your server. Hit atlas.local/server-info to get more information
 
-###Getting a Postgres error like: `PG::Error: ERROR: relation "geometry_columns" does not exist` 
+###Getting a Postgres error like: `PG::Error: ERROR: relation "geometry_columns" does not exist`
 
 Postgis has not been setup correctly. Inspect the log `/tmp/boxen/postgis.out` and ensure the script `/tmp/boxen/create_postgis_template.sql` points to the correct `/postgis.sql` and `/spatial_ref_sys.sql`.
 

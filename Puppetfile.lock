@@ -74,6 +74,11 @@ GITHUBTARBALL
     osx (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-pgadmin3
+  specs:
+    pgadmin3 (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (1.0.0)
@@ -150,6 +155,7 @@ DEPENDENCIES
   nodejs (= 3.2.9)
   openssl (= 1.0.0)
   osx (= 1.0.0)
+  pgadmin3 (= 1.0.0)
   phantomjs (= 1.0.0)
   postgresql (= 1.0.3)
   property_list_key (= 0.1.0)
