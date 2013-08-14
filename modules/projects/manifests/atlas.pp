@@ -26,4 +26,10 @@ class projects::atlas {
     mode    => 0644,
     content => template('projects/atlas-vhost.conf.erb')
   }
+
+  file { '/opt/boxen/data/postgresql/postgresql.conf':
+    ensure  => file,
+    mode    => '0600',
+    source  => "puppet:///modules/projects/postgresql.conf",
+  }
 }
