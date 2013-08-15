@@ -30,6 +30,7 @@
   * configuration for PGAdmin
   * package control for sublime
   * Skype
+  * Disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
 
 - Update repository dsl to update repository if it already exists
 
