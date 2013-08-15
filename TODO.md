@@ -55,6 +55,11 @@ Boxen Keychain Helper: Encountered error code: -25308
 Error: User interaction is not allowed.
 ```
 
+- Permissions for pgAdmin.app are set incorrectly due to a bug in Boxen's `appdmg_eula` provider. To fix:
+
+        sudo chown -R sppdev:staff /Applications/pgAdmin3.app
+
+
 ## Troubleshooting
 
 ### Christo fails to fetch places and manifests?
