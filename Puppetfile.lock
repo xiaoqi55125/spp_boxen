@@ -1,12 +1,14 @@
+GIT
+  remote: https://github.com/TimMoore/puppet-boxen.git
+  ref: appdmg_eula_permissions
+  sha: 727ae215dd5fe4d8062a56efa43edcbe306ea018
+  specs:
+    boxen (0.0.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-autoconf
   specs:
     autoconf (1.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-boxen
-  specs:
-    boxen (3.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-chrome
@@ -140,7 +142,7 @@ GITHUBTARBALL
 
 DEPENDENCIES
   autoconf (= 1.0.0)
-  boxen (= 3.0.1)
+  boxen (>= 0)
   chrome (= 1.0.0)
   dnsmasq (= 1.0.0)
   gcc (= 2.0.1)
