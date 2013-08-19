@@ -31,5 +31,6 @@ class projects::atlas {
     ensure  => file,
     mode    => '0600',
     source  => "puppet:///modules/projects/postgresql.conf",
+    require => Package['boxen/brews/postgresql'],
   }
 }
