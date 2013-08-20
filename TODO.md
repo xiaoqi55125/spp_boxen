@@ -31,6 +31,16 @@
   * package control for sublime
   * Skype
   * Disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
+  * ghostscript needs to be setup correctly. Manually install via:
+
+```
+  brew uninstall freetype
+  brew install freetype --from-source
+  brew uninstall fontconfig
+  brew install fontconfig --from-source
+  brew uninstall ghostscript
+  brew install ghostscript --from-source
+```
 
 - Update repository dsl to update repository if it already exists
 
