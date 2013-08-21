@@ -42,6 +42,15 @@
   brew install ghostscript --from-source
 ```
 
+- if you get an error installing ghostscript saying
+'''
+  dyld: Library not loaded: /opt/boxen/homebrew/lib/libtiff.5.dylib
+'''
+
+- run this command
+'''
+  sudo ln -s /opt/boxen/homebrew/Cellar/libtiff/4.0.3/lib/libtiff.5.dylib /usr/lib/libtiff.5.dylib
+'''
 - Update repository dsl to update repository if it already exists
 
 - Unable to run `./script/boxen` OR `git push` when logged into a devmac over an ssh connection. Boxen has a problematic relationship with the OSX keychain, causing ssh authentication woes:
