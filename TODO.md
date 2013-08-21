@@ -51,6 +51,11 @@
 ```
   sudo ln -s /opt/boxen/homebrew/Cellar/libtiff/4.0.3/lib/libtiff.5.dylib /usr/lib/libtiff.5.dylib
 ```
+
+- also if you get an 'Illegal instruction: 4' error. something isn't installed from source. If you
+run brew info [app_name] it will tell you whether it's installed from source. libpng needs to be install from source
+for remixer features to work, and possibly others
+
 - Update repository dsl to update repository if it already exists
 
 - Unable to run `./script/boxen` OR `git push` when logged into a devmac over an ssh connection. Boxen has a problematic relationship with the OSX keychain, causing ssh authentication woes:
