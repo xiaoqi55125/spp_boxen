@@ -50,4 +50,17 @@ class people::sppdev {
     require => Repository["${::boxen_srcdir}/pairing_station"],
   }
 
+  file { "/Users/${::luser}/.vim":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${::boxen_srcdir}/pairing_station/vim",
+    require => Repository["${::boxen_srcdir}/pairing_station"],
+  }
+
+  file { "/Users/${::luser}/.vimrc":
+    ensure  => link,
+    mode    => '0644',
+    target  => "${::boxen_srcdir}/pairing_station/vimrc",
+    require => Repository["${::boxen_srcdir}/pairing_station"],
+  }
 }
