@@ -32,7 +32,31 @@ class config::sublime {
     target  => '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl',
     mode    => '0755',
     require => Package['SublimeText2'],
-  }->
+  }
+
+  $installedPackagesDir = "${base}/Sublime Text 2/Installed Packages"
+  file { $installedPackagesDir:
+    ensure  => "${installedPackagesDir}",
+    owner   => "${::luser}",
+    mode    => '0755',
+  }
+
+  $packageControlLink = "https://sublime.wbond.net/Package%20Control.sublime-package"
+  exec { "curl -o 'Package Control.sublime-package' ${packageControlLink}":
+    cwd      => "${installedPackagesDir}",
+    provider => 'shell',
+    creates  => "${installedPackagesDir}/Package Control.sublime-package",
+    path     => "/usr/bin",
+    require  => [Package['SublimeText2'], File[$installedPackagesDir]],
+  }
+
+  exec { "git clone https://github.com/${name}.git":
+    cwd      => "/Users/${::luser}${packagedir}",
+    provider => 'shell',
+    creates  => "/Users/${::luser}${packagedir}${pkgname}",
+    path     => "${boxen::config::homebrewdir}/bin",
+    require  => [Package['SublimeText2'], Package['boxen/brews/git']],
+  }
 
   file { "${base}/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap":
     source  => "puppet:///modules/spp/sublime_text/Default (OSX).sublime-keymap",
@@ -60,7 +84,6 @@ class config::sublime {
     "Xavura/CoffeeScript-Sublime-Plugin",
     "revolunet/sublimetext-markdown-preview",
     "SublimeColors/Solarized",
-    "wbond/sublime_package_control",
     "eklein/sublime-text-puppet",
     "drewda/cucumber-sublime2-bundle",
     "natew/ExpandSelectionByParagraph",

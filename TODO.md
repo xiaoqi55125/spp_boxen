@@ -28,7 +28,6 @@
 - these still need automating:
   * npm install -g coffee-script
   * configuration for PGAdmin
-  * package control for sublime
   * Skype
   * Disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
   * ghostscript needs to be setup correctly. Manually install via:
