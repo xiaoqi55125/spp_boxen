@@ -57,6 +57,16 @@ class spp::config {
     require => Package['ShiftIt'],
   }
 
+  $xcodeDir     = "/Applications/Xcode.app"
+  $toolchainDir = "${xcodeDir}/Contents/Developer/Toolchains"
+
+  exec { "OSX10.8.xctoolchain symlink":
+    # Various homebrew recipes assume the existence of this symlink
+    # apparently changed in recent versions of XCode
+    command => "ln -s ${toolchainDir}/OSX10.8.xctoolchain ${toolchainDir}/OSX10.8.xctoolchain",
+    onlyif  => "ls -l ${toolchainDir} | grep -c Toolchains"
+  }
+
   # ensure xcode-select, regardless of whether we've installed Xcode or command-line tools
 
   exec { "xcode-select /usr/bin":
