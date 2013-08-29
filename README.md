@@ -2,8 +2,11 @@
 
 **If starting from a machine that's not a fresh install read [this](https://coderwall.com/p/d8iw2g)**
 
-1. Install [Xcode Command Line Tools](http://docwiki.embarcadero.com/RADStudio/XE4/en/Installing_the_Xcode_Command_Line_Tools_on_a_Mac )
-2. Run the following
+1. Install either Xcode or [Xcode Command Line Tools](http://docwiki.embarcadero.com/RADStudio/XE4/en/Installing_the_Xcode_Command_Line_Tools_on_a_Mac).
+
+2. Ensure the OSX login account is `dev`. Note that our github user account is `sppdev`.
+
+3. Run the following:
 
 ```
   sudo mkdir -p /opt/boxen
@@ -13,8 +16,10 @@
   git clone https://github.com/lonelyplanet/spp_boxen.git
   cd spp_boxen
 ```
-Our Boxen repo is setup to run with the GitHub user sppdev. If you want to run a personalized setup then create a puppet file for yourself under modules/people. See below (Personal Manifests) for more information. Use mriddle.pp as an example.
-When prompted for username **provide sppdev** as git user for pairing-station setup or create your own personal manifest.
+
+NB: When prompted for username, **provide sppdev** as the git user to setup the pairing-station or your own personal manifest.
+
+4. Run:
 ```
   ./script/boxen
 ```
@@ -23,6 +28,8 @@ Open a new terminal, `boxen --env` to confirm.
 
 
 ## Personal Manifests
+
+Our Boxen repo is setup to run with the GitHub user `sppdev`. If you want to run a personalized setup then create a puppet file for yourself under modules/people. Use `mriddle.pp` as an example.
 
 Per-user manifests live in `modules/people/manifests/$login.pp`, where
 `$login` is a GitHub login. A simple user manifest example:
@@ -46,8 +53,7 @@ class people::jbarnette {
 ### Projects
 
 While you _can_ include projects one by one, sometimes you might just want
-all of them.
-You can do that easily with:
+all of them. You can do this easily with:
 
 ```
 include projects::all
