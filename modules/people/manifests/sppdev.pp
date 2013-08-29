@@ -27,6 +27,12 @@ class people::sppdev {
     require => Repository["${::boxen_srcdir}/pairing_station"],
   }
 
+  exec { ".ssh/id_rsa":
+    # we need to set file permisssion on the origin file, not the symlink
+    command => "chmod 600 ${::boxen_srcdir}/pairing_station/ssh_pairing_station",
+    require => Repository["${::boxen_srcdir}/pairing_station"],
+  }
+
   file { "/Users/${::luser}/.ssh/id_rsa.pub":
     ensure  => link,
     mode    => '0600',
