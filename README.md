@@ -19,6 +19,8 @@
 
 NB: When prompted for username, **provide sppdev** as the git user to setup the pairing-station or your own personal manifest.
 
+NB: Our install scripts often timeout when cloning the Atlas and Remixer repositories for the first time. You might be better off rsync'-ing them from another pairing station into `$HOME/projects` before running boxen.
+
 4. Run:
 ```
   ./script/boxen
