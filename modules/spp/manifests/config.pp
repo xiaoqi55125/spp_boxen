@@ -57,10 +57,19 @@ class spp::config {
     require => Package['ShiftIt'],
   }
 
-  # Without this `gem install libv8` fails and so does brew install node (required by pow)
-  exec { "Fix Xcode command line issue": # https://github.com/mxcl/homebrew/issues/13337
+  # ensure xcode-select, regardless of whether we've installed Xcode or command-line tools
+
+  exec { "xcode-select /usr/bin":
+    # Without this `gem install libv8` fails and so does brew install node
+    # https://github.com/mxcl/homebrew/issues/13337#issuecomment-6925743
     command => "xcode-select -switch /usr/bin",
-    unless => "xcode-select --print-path | grep -c /usr/bin",
-    user => "root"
+    unless  => "ls -l /Applications | grep -ic Xcode",
+    user    => "root"
+  }
+
+  exec { "xcode-select XCode.app":
+    command => "xcode-select -switch /usr/bin",
+    onlyif  => "ls -l /Applications | grep -ic Xcode",
+    user    => "root"
   }
 }
