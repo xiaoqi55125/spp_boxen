@@ -13,10 +13,9 @@ UPDATE pg_database SET datistemplate = TRUE WHERE datname = 'template1';
 
 CREATE LANGUAGE plpgsql;
 
--- Install PostGIS (your file paths may vary)
-<%- homebrewdir = scope.lookupvar 'boxen::config::homebrewdir' %>
-\i <%= Dir.glob("#{homebrewdir}/**/1.5.3-boxen1/**/postgis.sql").first || 'postgis.sql not found' %>;
-\i <%= Dir.glob("#{homebrewdir}/**/1.5.3-boxen1/**/spatial_ref_sys.sql").first || 'spatial_ref_sys.sql not found' %>;
+-- Install PostGIS
+\i '/opt/boxen/homebrew/Cellar/postgis/1.5.3/postgis/postgis.sql';
+\i '/opt/boxen/homebrew/Cellar/postgis/1.5.3/spatial_ref_sys.sql';
 
 GRANT ALL ON geometry_columns TO PUBLIC;
 GRANT ALL ON geography_columns TO PUBLIC;

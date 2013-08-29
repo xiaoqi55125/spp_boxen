@@ -2,7 +2,7 @@ class projects::atlas {
 
   include phantomjs
   include postgresql
-  include postgis
+  include spp::postgis
 
   $ruby_version = '1.9.3-p392'
   $passenger_version = '3.0.17'
