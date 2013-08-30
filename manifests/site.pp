@@ -2,6 +2,8 @@ require boxen::environment
 require homebrew
 require gcc
 
+include boxen::config
+
 Exec {
   group       => 'staff',
   logoutput   => on_failure,
@@ -39,7 +41,11 @@ Repository {
   extra    => [
     '--recurse-submodules'
   ],
-  require  => File["${boxen::config::bindir}/boxen-git-credential"]
+  config => {
+    # see:  https://github.com/boxen/our-boxen/issues/286#issuecomment-18516146
+    # also: https://github.com/boxen/our-boxen/issues/286#issuecomment-18508672
+    'credential.helper' => "${boxen::config::bindir}/boxen-git-credential"
+  },
 }
 
 Service {
