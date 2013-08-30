@@ -6,29 +6,29 @@
 
 3. Run the following:
 
-```
-  sudo mkdir -p /opt/boxen
-  sudo chown $USER:admin /opt/boxen
-  mkdir -p ~/projects
-  cd ~/projects
-  git clone https://github.com/lonelyplanet/spp_boxen.git
-  cd spp_boxen
-```
-
-NB: Our install scripts often timeout when cloning repositories for the first time.
-It's much quicker to rsync from another pairing station:
   ```
-  $ cd $HOME/projects
-  $ rsync -r dev@devmac-4:projects/atlas .
-  $ rsync -r dev@devmac-4:projects/deployment_tools .
-  $ rsync -r dev@devmac-4:projects/lpos-chef-repo .
-  $ rsync -r dev@devmac-4:projects/pairing_station .
-  $ rsync -r dev@devmac-4:projects/remixer .
-  $ rsync -r dev@devmac-4:projects/spp_aws .
-  $ rsync -r dev@devmac-4:projects/spp_boxen .
+    sudo mkdir -p /opt/boxen
+    sudo chown $USER:admin /opt/boxen
+    mkdir -p ~/projects
+    cd ~/projects
+    git clone https://github.com/lonelyplanet/spp_boxen.git
+    cd spp_boxen
   ```
 
-NB: When the boxen script prompts for username, **provide sppdev** (because this is our git user account).
+  NB: Our install scripts often timeout when cloning repositories for the first time.
+  It's much quicker to rsync from another pairing station:
+    ```
+    $ cd $HOME/projects
+    $ rsync -r dev@devmac-4:projects/atlas .
+    $ rsync -r dev@devmac-4:projects/deployment_tools .
+    $ rsync -r dev@devmac-4:projects/lpos-chef-repo .
+    $ rsync -r dev@devmac-4:projects/pairing_station .
+    $ rsync -r dev@devmac-4:projects/remixer .
+    $ rsync -r dev@devmac-4:projects/spp_aws .
+    $ rsync -r dev@devmac-4:projects/spp_boxen .
+    ```
+
+  NB: When the boxen script prompts for username, **provide sppdev** (because this is our git user account).
 
 4. Run:
 ```
@@ -41,6 +41,7 @@ You may want to reboot.
 
 To finish, follow the manual steps described within [TODO](TODO.md).
 
+#-
 ## Other Stuff
 
 
