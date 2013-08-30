@@ -2,7 +2,7 @@
 
 **If starting from a machine that's not a fresh install read [this](https://coderwall.com/p/d8iw2g)**
 
-1. Install either Xcode or [Xcode Command Line Tools](http://docwiki.embarcadero.com/RADStudio/XE4/en/Installing_the_Xcode_Command_Line_Tools_on_a_Mac).
+1. Install either Xcode (with command line tools) or [Xcode Command Line Tools](http://docwiki.embarcadero.com/RADStudio/XE4/en/Installing_the_Xcode_Command_Line_Tools_on_a_Mac).
 
 2. Ensure the OSX login account is `dev`. Note that our github user account is `sppdev`.
 
@@ -17,16 +17,27 @@
   cd spp_boxen
 ```
 
-NB: When prompted for username, **provide sppdev** as the git user to setup the pairing-station or your own personal manifest.
+NB: Our install scripts often timeout when cloning repositories for the first time.
+It's much quicker to rsync from another pairing station:
+  ```
+  $ cd $HOME/projects
+  $ rsync -r dev@devmac-4:projects/atlas .
+  $ rsync -r dev@devmac-4:projects/deployment_tools .
+  $ rsync -r dev@devmac-4:projects/lpos-chef-repo .
+  $ rsync -r dev@devmac-4:projects/pairing_station .
+  $ rsync -r dev@devmac-4:projects/remixer .
+  $ rsync -r dev@devmac-4:projects/spp_aws .
+  $ rsync -r dev@devmac-4:projects/spp_boxen .
+  ```
 
-NB: Our install scripts often timeout when cloning the Atlas and Remixer repositories for the first time. You might be better off rsync'-ing them from another pairing station into `$HOME/projects` before running boxen.
+NB: When the boxen script prompts for username, **provide sppdev** (because this is our git user account).
 
 4. Run:
 ```
   ./script/boxen
 ```
 
-Open a new terminal, `boxen --env` to confirm.
+Open a new terminal, `./script/boxen --env` to confirm.
 
 
 ## Personal Manifests
