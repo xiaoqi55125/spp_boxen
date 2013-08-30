@@ -8,12 +8,6 @@ class spp::applications {
   include xquartz
   include pgadmin3
 
-  # Not installing cause of a license prompt ><
-  # package { "PGAdmin":
-  #   provider => 'appdmg',
-  #   source => 'http://ftp.postgresql.org/pub/pgadmin3/release/v1.16.1/osx/pgadmin3-1.16.1.dmg'
-  # }
-
   package { 'Firefox':
     provider => 'appdmg',
     source   => 'http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/23.0.1/mac/en-US/Firefox%2023.0.1.dmg'
