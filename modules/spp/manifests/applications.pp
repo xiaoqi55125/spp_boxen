@@ -16,7 +16,7 @@ class spp::applications {
 
   package { 'Firefox':
     provider => 'appdmg',
-    source   => 'http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/21.0/mac/en-US/Firefox%2021.0.dmg'
+    source   => 'http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/23.0.1/mac/en-US/Firefox%2023.0.1.dmg'
   }
 
   package { "Quicksilver":
