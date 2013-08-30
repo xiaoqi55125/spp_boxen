@@ -9,34 +9,37 @@
 - passenger config is added to httpd.conf but the installer must still be run manually:
 
   ```bash
-  passenger-install-apache2-module
-  sudo apachectl restart
+  $ cd atlas
+  $ passenger-install-apache2-module
+  $ sudo apachectl restart
   ```
 
 - git-pair needs to be installed under system ruby:
 
   ```
-  sudo gem install ehrenmurdick-git-pair
+  $ cd atlas
+  $ sudo gem install ehrenmurdick-git-pair
   ```
 
 - ghostscript needs to be setup correctly. Manually install via:
 
-```
-  brew uninstall freetype
-  brew install freetype --from-source
-  brew uninstall fontconfig
-  brew install fontconfig --from-source
-  brew uninstall ghostscript
-  brew install ghostscript --from-source
-```
+  ```
+    brew uninstall freetype
+    brew install freetype --from-source
+    brew uninstall fontconfig
+    brew install fontconfig --from-source
+    brew uninstall ghostscript
+    brew install ghostscript --from-source
+  ```
 
-- Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock')
+- Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock') 
 - setup printer
 - native scrolling for mouse
 - keyboard keypress repeat delay
-- setup local db
+- enable automatic login (System Preferences/Users & Groups/Login Options)
+- turn off screensaver "require password" (System Preferences/Security & Privacy/Require password)
 - Setup VirtualBox with a WindowsXP image - used for cross OS testing
-- Boxen should prompt for devmac name and set it up accordingly
+- set the hostname (`sudo hostname` and possibly System Preferences/Sharing/Computer Name)
 
 - these still need automating:
   * npm install -g coffee-script
@@ -44,13 +47,11 @@
   * Skype
   * Disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
 
-- Update repository dsl to update repository if it already exists
-
 - Permissions for pgAdmin.app are set incorrectly due to a bug in Boxen's `appdmg_eula` provider. To fix:
 
-```
-sudo chown -R sppdev:staff /Applications/pgAdmin3.app
-```
+  ```
+  sudo chown -R dev:staff /Applications/pgAdmin3.app
+  ```
 
 ### Troubleshooting
 
