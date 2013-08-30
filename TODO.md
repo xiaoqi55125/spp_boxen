@@ -7,7 +7,6 @@
 ### Manual Steps (post-install)
 
 - passenger config is added to httpd.conf but the installer must still be run manually:
-
   ```bash
   $ cd atlas
   $ passenger-install-apache2-module
@@ -15,21 +14,25 @@
   ```
 
 - git-pair needs to be installed under system ruby:
-
   ```
   $ cd atlas
   $ sudo gem install ehrenmurdick-git-pair
   ```
 
-- ghostscript needs to be setup correctly. Manually install via:
-
+- setup the local db with realistic content:
   ```
-    brew uninstall freetype
-    brew install freetype --from-source
-    brew uninstall fontconfig
-    brew install fontconfig --from-source
-    brew uninstall ghostscript
-    brew install ghostscript --from-source
+  $ cd atlas
+  $ ber db:clone_devint
+  ```
+
+- ghostscript needs to be setup correctly. Manually install via:
+  ```
+    $ brew uninstall freetype
+    $ brew install freetype --from-source
+    $ brew uninstall fontconfig
+    $ brew install fontconfig --from-source
+    $ brew uninstall ghostscript
+    $ brew install ghostscript --from-source
   ```
 
 - Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock') 
@@ -48,7 +51,6 @@
   * Disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
 
 - Permissions for pgAdmin.app are set incorrectly due to a bug in Boxen's `appdmg_eula` provider. To fix:
-
   ```
   sudo chown -R dev:staff /Applications/pgAdmin3.app
   ```
@@ -57,10 +59,10 @@
 
 #### dyld: Library not loaded: /opt/boxen/homebrew/lib/libtiff.5.dylib
 
-run this command
-```
-  sudo ln -s /opt/boxen/homebrew/Cellar/libtiff/4.0.3/lib/libtiff.5.dylib /usr/lib/libtiff.5.dylib
-```
+run this command:
+  ```
+    sudo ln -s /opt/boxen/homebrew/Cellar/libtiff/4.0.3/lib/libtiff.5.dylib /usr/lib/libtiff.5.dylib
+  ```
 
 #### Illegal instruction: 4' error
 
