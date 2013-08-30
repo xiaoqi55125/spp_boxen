@@ -39,7 +39,7 @@ Open a new terminal, `./script/boxen --env` to confirm.
 
 You may want to reboot.
 
-To finish, follow the manual steps described within [TODO.md].
+To finish, follow the manual steps described within [TODO](TODO.md).
 
 ## Other Stuff
 
