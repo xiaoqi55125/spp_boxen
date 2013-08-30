@@ -1,7 +1,5 @@
 ## Getting Started
 
-**If starting from a machine that's not a fresh install read [this](https://coderwall.com/p/d8iw2g)**
-
 1. Install either Xcode (with command line tools) or [Xcode Command Line Tools](http://docwiki.embarcadero.com/RADStudio/XE4/en/Installing_the_Xcode_Command_Line_Tools_on_a_Mac).
 
 2. Ensure the OSX login account is `dev`. Note that our github user account is `sppdev`.
@@ -39,8 +37,14 @@ NB: When the boxen script prompts for username, **provide sppdev** (because this
 
 Open a new terminal, `./script/boxen --env` to confirm.
 
+You may want to reboot.
 
-## Personal Manifests
+To finish, follow the manual steps described within [TODO.md].
+
+## Other Stuff
+
+
+### Personal Manifests
 
 Our Boxen repo is setup to run with the GitHub user `sppdev`. If you want to run a personalized setup then create a puppet file for yourself under modules/people. Use `mriddle.pp` as an example.
 
@@ -73,7 +77,7 @@ include projects::all
 ```
 
 
-## Customizing
+### Customizing
 
 You can always check out the number of existing modules we already
 provide as optional installs under the
@@ -181,11 +185,11 @@ See [the documentation in the
 directory for creating organization projects (i.e., repositories that people
 will be working in).
 
-## Binary packages
+### Binary packages
 
 We support binary packaging for everything in Homebrew, RBEnv, and NVM.
 See `config/boxen.rb` for the environment variables to define.
 
-## Halp!
+### Halp!
 
 Use Issues or #boxen on irc.freenode.net.
