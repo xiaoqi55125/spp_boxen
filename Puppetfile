@@ -47,7 +47,7 @@ github "wget",              "1.0.0"
 github "sysctl",            "1.0.0" # Required by postgresql
 github "postgresql",        "1.0.3", :repo => "octanner/puppet-postgresql"
 # github "postgis",          "2.1.0", :repo => "lonelyplanet/puppet-postgis"
-github "iterm2",            "1.0.0"
+github "iterm2",            "1.0.3"
 github "phantomjs",         "1.0.0"
 github "shiftit",           "0.0.2", :repo => "jlgeering/puppet-shiftit"
 github "osx",               "1.0.0"
