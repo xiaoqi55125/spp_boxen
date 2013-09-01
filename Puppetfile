@@ -50,7 +50,7 @@ github "postgresql",        "1.0.3", :repo => "octanner/puppet-postgresql"
 github "iterm2",            "1.0.3"
 github "phantomjs",         "1.0.0"
 github "shiftit",           "0.0.2", :repo => "jlgeering/puppet-shiftit"
-github "osx",               "1.0.0"
+github "osx",               "1.6.0"
 github "property_list_key", "0.1.0", :repo => "glarizza/puppet-property_list_key"
 github "pgadmin3",          "1.0.0"
 
