@@ -41,7 +41,7 @@ github "xquartz",    "1.1.0"
 
 # SPP Modules
 
-github "chrome",            "1.0.0"
+github "chrome",            "1.1.1"
 github "gitx",              "1.0.0"
 github "wget",              "1.0.0"
 github "sysctl",            "1.0.0" # Required by postgresql
