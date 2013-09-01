@@ -14,9 +14,9 @@ class spp::applications {
   }
 
   package { "Quicksilver":
-    ensure => "present",
+    ensure   => "present",
     provider => 'appdmg',
-    source => 'https://github.com/downloads/quicksilver/Quicksilver/Quicksilver%20B70.dmg'
+    source   => 'http://cdn.qsapp.com/com.blacktree.Quicksilver__16384.dmg',
   }
 
   package { 'SublimeText2':
