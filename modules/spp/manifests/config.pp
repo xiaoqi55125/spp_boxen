@@ -18,6 +18,11 @@ class spp::config {
     require => Package['iTerm'],
   }
 
+  file { "Terminal Preferences":
+    path => "/Users/${::luser}/Library/Preferences/com.apple.Terminal.plist",
+    source  => "puppet:///modules/spp/com.apple.Terminal.plist",
+  }
+
   exec {"Disable Gatekeeper":
     command => "spctl --master-disable",
     unless => "spctl --status | grep -c disabled",
