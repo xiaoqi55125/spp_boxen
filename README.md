@@ -9,35 +9,35 @@
 3. Run the following:
 
   ```
-    $ sudo mkdir -p /opt/boxen
-    $ sudo chown $USER:admin /opt/boxen
-    $ mkdir -p ~/projects
-    $ cd ~/projects
+    sudo mkdir -p /opt/boxen
+    sudo chown $USER:admin /opt/boxen
+    mkdir -p ~/projects
+    cd ~/projects
   ```
 
   NB: Our install scripts often timeout when cloning repositories for the first time.
   It's much quicker to rsync from another pairing station:
   ```
-    $ cd ~/projects
-    $ rsync -r dev@devmac-4:projects/atlas .
-    $ rsync -r dev@devmac-4:projects/deployment_tools .
-    $ rsync -r dev@devmac-4:projects/lpos-chef-repo .
-    $ rsync -r dev@devmac-4:projects/pairing_station .
-    $ rsync -r dev@devmac-4:projects/remixer .
-    $ rsync -r dev@devmac-4:projects/spp_aws .
-    $ rsync -r dev@devmac-4:projects/spp_boxen .
+    cd ~/projects
+    rsync -r dev@devmac-4:projects/atlas .
+    rsync -r dev@devmac-4:projects/deployment_tools .
+    rsync -r dev@devmac-4:projects/lpos-chef-repo .
+    rsync -r dev@devmac-4:projects/pairing_station .
+    rsync -r dev@devmac-4:projects/remixer .
+    rsync -r dev@devmac-4:projects/spp_aws .
+    rsync -r dev@devmac-4:projects/spp_boxen .
   ```
 
 4. Run:
 
   ```
-    $ cd ~/projects
-    $ git clone https://github.com/lonelyplanet/spp_boxen.git
-    $ cd spp_boxen
-    $ #
-    $ # NB: When boxen prompts for username, provide `sppdev' (because this is our git user account).
-    $ #
-    $ ./script/boxen
+    cd ~/projects
+    git clone https://github.com/lonelyplanet/spp_boxen.git
+    cd spp_boxen
+    #
+    # NB: When boxen prompts for username, provide `sppdev' (because this is our git user account).
+    #
+    ./script/boxen
   ```
 
 5. Reboot to verify things startup as expected (e.g, postgresql, apache, Quicksilver, ShiftIt).
