@@ -8,52 +8,51 @@
 
 - passenger config is added to httpd.conf but the installer must still be run manually:
   ```bash
-  $ cd atlas
-  $ passenger-install-apache2-module
-  $ sudo apachectl restart
+  cd atlas
+  passenger-install-apache2-module
+  sudo apachectl restart
   ```
 
 - git-pair needs to be installed under system ruby:
   ```
-  $ cd atlas
-  $ sudo gem install ehrenmurdick-git-pair
+  cd atlas
+  sudo gem install ehrenmurdick-git-pair
   ```
 
 - setup the local db with realistic content:
   ```
-  $ cd atlas
-  $ ber db:clone_devint
+  cd atlas
+  ber db:clone_devint
   ```
 
 - ghostscript needs to be setup correctly. Manually install via:
   ```
-    $ brew uninstall freetype
-    $ brew install freetype --from-source
-    $ brew uninstall fontconfig
-    $ brew install fontconfig --from-source
-    $ brew uninstall ghostscript
-    $ brew install ghostscript --from-source
+    brew uninstall freetype
+    brew install freetype --from-source
+    brew uninstall fontconfig
+    brew install fontconfig --from-source
+    brew uninstall ghostscript
+    brew install ghostscript --from-source
   ```
 
-- Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock') 
-- setup printer
-- native scrolling for mouse
-- keyboard keypress repeat delay
-- enable automatic login (System Preferences/Users & Groups/Login Options)
-- turn off screensaver "require password" (System Preferences/Security & Privacy/Require password)
-- Setup VirtualBox with a WindowsXP image - used for cross OS testing
-- set the hostname (`sudo hostname` and possibly System Preferences/Sharing/Computer Name)
+- install coffeescript (still needs automating):
+  ```
+  npm install -g coffee-script
+  ```
 
-- these still need automating:
-  * npm install -g coffee-script
+- these require manual intervention
   * configuration for PGAdmin
-  * Skype
-  * Disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
+  * installation of Skype
+  * set the hostname (`sudo hostname` and edit System Preferences/Sharing/Computer Name)
+  * enable automatic login (System Preferences/Users & Groups/Login Options)
+  * Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock') 
+  * disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
+  * setup printer
+  * native scrolling for mouse
+  * keyboard keypress repeat delay
+  * turn off screensaver "require password" (System Preferences/Security & Privacy/Require password)
+  * Setup VirtualBox with a WindowsXP image - used for cross OS testing
 
-- Permissions for pgAdmin.app are set incorrectly due to a bug in Boxen's `appdmg_eula` provider. To fix:
-  ```
-  sudo chown -R dev:staff /Applications/pgAdmin3.app
-  ```
 
 ### Troubleshooting
 
