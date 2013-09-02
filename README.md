@@ -1,24 +1,24 @@
 ## Getting Started
 
-1. Install either Xcode (with command line tools) or [Xcode Command Line Tools](http://docwiki.embarcadero.com/RADStudio/XE4/en/Installing_the_Xcode_Command_Line_Tools_on_a_Mac).
+1. Install either:
+  * Xcode (with Command Line Tools installed from Preferences/Downloads/Components), or
+  * [Xcode Command Line Tools](http://docwiki.embarcadero.com/RADStudio/XE4/en/Installing_the_Xcode_Command_Line_Tools_on_a_Mac).
 
 2. Ensure the OSX login account is `dev`. Note that our github user account is `sppdev`.
 
 3. Run the following:
 
   ```
-    sudo mkdir -p /opt/boxen
-    sudo chown $USER:admin /opt/boxen
-    mkdir -p ~/projects
-    cd ~/projects
-    git clone https://github.com/lonelyplanet/spp_boxen.git
-    cd spp_boxen
+    $ sudo mkdir -p /opt/boxen
+    $ sudo chown $USER:admin /opt/boxen
+    $ mkdir -p ~/projects
+    $ cd ~/projects
   ```
 
   NB: Our install scripts often timeout when cloning repositories for the first time.
   It's much quicker to rsync from another pairing station:
-    ```
-    $ cd $HOME/projects
+  ```
+    $ cd ~/projects
     $ rsync -r dev@devmac-4:projects/atlas .
     $ rsync -r dev@devmac-4:projects/deployment_tools .
     $ rsync -r dev@devmac-4:projects/lpos-chef-repo .
@@ -26,18 +26,21 @@
     $ rsync -r dev@devmac-4:projects/remixer .
     $ rsync -r dev@devmac-4:projects/spp_aws .
     $ rsync -r dev@devmac-4:projects/spp_boxen .
-    ```
-
-  NB: When the boxen script prompts for username, **provide sppdev** (because this is our git user account).
+  ```
 
 4. Run:
-```
-  ./script/boxen
-```
 
-Open a new terminal, `./script/boxen --env` to confirm.
+  ```
+    $ cd ~/projects
+    $ git clone https://github.com/lonelyplanet/spp_boxen.git
+    $ cd spp_boxen
+    $ #
+    $ # NB: When boxen prompts for username, provide `sppdev' (because this is our git user account).
+    $ #
+    $ ./script/boxen
+  ```
 
-You may want to reboot.
+5. Reboot to verify things startup as expected (e.g, postgresql, apache, Quicksilver, ShiftIt).
 
 To finish, follow the manual steps described within [TODO](TODO.md).
 
