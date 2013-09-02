@@ -2,11 +2,11 @@
 
 - **Cannot run `./script/boxen` OR `git push` when logged into a devmac over an ssh connection**. Boxen has a problematic relationship with the OSX keychain. Make it not so.
 
-- **spp_boxen does not prompt for the hostname during install**. Make it not so.
+- **spp_boxen does not prompt for the hostname during install**. Make it so.
 
 ### Manual Steps (post-install)
 
-- passenger config is added to httpd.conf but the installer must still be run manually:
+- passenger installer must still be run manually:
   ```bash
   cd atlas
   passenger-install-apache2-module
@@ -19,13 +19,13 @@
   sudo gem install ehrenmurdick-git-pair
   ```
 
-- setup the local db with realistic content:
+- local db needs setup with realistic content:
   ```
   cd atlas
   ber db:clone_devint
   ```
 
-- ghostscript needs to be setup correctly. Manually install via:
+- ghostscript needs re-installing to be setup correctly:
   ```
     brew uninstall freetype
     brew install freetype --from-source
@@ -35,12 +35,12 @@
     brew install ghostscript --from-source
   ```
 
-- install coffeescript (still needs automating):
+- coffeescript needs installing (should be automated):
   ```
   npm install -g coffee-script
   ```
 
-- these require manual intervention
+- these steps require manual intervention:
   * configuration for PGAdmin
   * installation of Skype
   * set the hostname (`sudo hostname` and edit System Preferences/Sharing/Computer Name)
