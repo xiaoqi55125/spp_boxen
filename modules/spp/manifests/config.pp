@@ -92,4 +92,8 @@ class spp::config {
     onlyif  => "ls -l /Applications | grep -ic Xcode",
     user    => "root"
   }
+
+  exec { "dont ask for password after screensaver starts":
+    command => "defaults write com.apple.screensaver askForPassword -int 0",
+  }
 }

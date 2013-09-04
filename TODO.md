@@ -49,7 +49,6 @@
   * setup printer
   * native scrolling for mouse
   * keyboard keypress repeat delay
-  * turn off screensaver "require password" (System Preferences/Security & Privacy/Require password)
   * Setup VirtualBox with a WindowsXP image - used for cross OS testing
 
 
