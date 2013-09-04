@@ -15,8 +15,8 @@
     cd ~/projects
   ```
 
-  NB: Our install scripts often timeout when cloning repositories for the first time.
-  It's much quicker to rsync from another pairing station:
+4. Clone a set of working repositories from another pairing station:
+
   ```
     cd ~/projects
     rsync -r dev@devmac-4:projects/atlas .
@@ -28,7 +28,7 @@
     rsync -r dev@devmac-4:projects/spp_boxen .
   ```
 
-4. Run:
+5. Run:
 
   ```
     cd ~/projects
@@ -40,11 +40,12 @@
     ./script/boxen
   ```
 
-5. Reboot to verify things startup as expected (e.g, postgresql, apache, Quicksilver, ShiftIt).
+6. Reboot.
 
-To finish, follow the manual steps described within [TODO](TODO.md).
+7. Finish up by following the manual steps within [TODO](TODO.md).
 
-#-
+---
+
 ## Other Stuff
 
 
