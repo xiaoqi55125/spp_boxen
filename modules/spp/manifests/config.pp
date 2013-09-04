@@ -13,14 +13,19 @@ class spp::config {
   include config::rubydebug
 
   file { "iTerm2 Preferences":
-    path => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
+    path    => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
     source  => "puppet:///modules/spp/com.googlecode.iterm2.plist",
     require => Package['iTerm'],
   }
 
   file { "Terminal Preferences":
-    path => "/Users/${::luser}/Library/Preferences/com.apple.Terminal.plist",
-    source  => "puppet:///modules/spp/com.apple.Terminal.plist",
+    path   => "/Users/${::luser}/Library/Preferences/com.apple.Terminal.plist",
+    source => "puppet:///modules/spp/com.apple.Terminal.plist",
+  }
+
+  file { "pgAdmin Preferences":
+    path   => "/Users/${::luser}/Library/Preferences/pgadmin3 Preferences",
+    source => "puppet:///modules/spp/pgadmin3 Preferences",
   }
 
   exec {"Disable Gatekeeper":

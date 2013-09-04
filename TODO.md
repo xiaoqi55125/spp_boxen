@@ -41,7 +41,6 @@
   ```
 
 - these steps require manual intervention:
-  * configuration for PGAdmin
   * installation of Skype
   * set the hostname (`sudo hostname` and edit System Preferences/Sharing/Computer Name)
   * enable automatic login (System Preferences/Users & Groups/Login Options)
