@@ -7,7 +7,7 @@
 ### Manual Steps (post-install)
 
 - passenger installer must still be run manually:
-  ```bash
+  ```
   cd atlas
   passenger-install-apache2-module
   sudo apachectl restart
@@ -40,9 +40,13 @@
   npm install -g coffee-script
   ```
 
+- hostname needs to be set in various places - we have a script to run:
+  ```
+  sudo set_hostname devmac-8  # or devmac-10, or devmac-11, or...
+  ```
+
 - these steps require manual intervention:
   * installation of Skype
-  * set the hostname (`sudo hostname` and edit System Preferences/Sharing/Computer Name)
   * enable automatic login (System Preferences/Users & Groups/Login Options)
   * Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock') 
   * disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
