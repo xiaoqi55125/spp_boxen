@@ -47,7 +47,6 @@
   * Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock') 
   * disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
   * setup printer
-  * native scrolling for mouse
   * keyboard keypress repeat delay
   * Setup VirtualBox with a WindowsXP image - used for cross OS testing
 
