@@ -40,12 +40,12 @@
   npm install -g coffee-script
   ```
 
-- hostname needs to be set in various places - we have a script to run:
+- hostname needs to be set in various places - we have a helper script:
   ```
   sudo set_hostname devmac-8  # or devmac-10, or devmac-11, or...
   ```
 
-- these steps require manual intervention:
+- these also need manual intervention:
   * installation of Skype
   * enable automatic login (System Preferences/Users & Groups/Login Options)
   * Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock') 
@@ -54,6 +54,7 @@
   * keyboard keypress repeat delay
   * Setup VirtualBox with a WindowsXP image - used for cross OS testing
 
+---
 
 ### Troubleshooting
 
@@ -64,32 +65,42 @@ run this command:
     sudo ln -s /opt/boxen/homebrew/Cellar/libtiff/4.0.3/lib/libtiff.5.dylib /usr/lib/libtiff.5.dylib
   ```
 
-#### Illegal instruction: 4' error
+---
+
+#### error: "Illegal instruction: 4"
 
 Something isn't installed from source. Run `brew info [app_name]` to tell you whether an app is installed from source. `libpng` needs to be install from source for remixer features to work, and possibly others.
 
+
+---
 
 #### Christo fails to fetch places and manifests?
 
 Most likely an issue with your server. Hit atlas.local/server-info to get more information
 
-#### Getting a Postgres error like: `PG::Error: ERROR: relation "geometry_columns" does not exist`
+---
 
-Postgis has not been setup correctly. Try re-installing with `script/boxen`.
-See `spp_boxen/modules/spp/files/postgis_153_installer.rb` for details.
+#### error: "PG::Error: ERROR: relation 'geometry_columns' does not exist"
 
-#### Getting a Postgres error like: `could not access file "$libdir/postgis-1.5": No such file or directory`
+Postgis has not been setup correctly. Try:
+  ```
+  cd atlas
+  ber db:clone_devint
+  ```
+Otherwise, re-install postgis with `script/boxen`
 
-The postgresql installation is probably missing the postgis shared library.
+---
 
-You can verify the location of your postgresql shared library directory via pg_config:
+#### error: "could not access file '$libdir/postgis-1.5': No such file or directory"
 
-`$ pg_config --pkglibdir`
+Postgresql is missing the postgis shared library.
+Try (re)running: `script/boxen`
 
-which will probably be something like:
+NB: pg_config can show the location of the postgresql shared library directory: `pg_config --pkglibdir`, which will be something like:
+  ```
+  /opt/boxen/homebrew/Cellar/postgresql/9.1.9-ocboxen/lib
+  ```
 
-`/opt/boxen/homebrew/Cellar/postgresql/9.1.9-ocboxen/lib`
-
-Check for the existence of the file: `postgis-1.5.so`. This ought to have been installed by boxen, but sometimes fails to materialise. Copying the binary across from another pairing station will resolve the problem until the spp_boxen scripts are fixed.
+Check for the existence of: `postgis-1.5.so`. As a quick hack, copy this binary across from another devmac.
 
 
