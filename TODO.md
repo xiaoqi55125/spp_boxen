@@ -4,26 +4,31 @@
 
 ### Manual Steps (post-install)
 
-- passenger installer must still be run manually:
+- `hostname` needs configuring in various places. Run:
+  ```
+  sudo set_hostname devmac-8  # or devmac-10, or devmac-11, or...
+  ```
+
+- install passenger:
   ```
   cd atlas
   passenger-install-apache2-module
   sudo apachectl restart
   ```
 
-- git-pair needs to be installed under system ruby:
+- install `git-pair` under system ruby:
   ```
   cd atlas
   sudo gem install ehrenmurdick-git-pair
   ```
 
-- local db needs setup with realistic content:
+- setup local db setup with realistic content:
   ```
   cd atlas
   ber db:clone_devint
   ```
 
-- ghostscript needs re-installing to be setup correctly:
+- re-install ghostscript (to set it up correctly):
   ```
     brew uninstall freetype
     brew install freetype --from-source
@@ -33,24 +38,18 @@
     brew install ghostscript --from-source
   ```
 
-- coffeescript needs installing (should be automated):
+- install coffeescript:
   ```
   npm install -g coffee-script
   ```
 
-- hostname needs to be set in various places - we have a helper script:
-  ```
-  sudo set_hostname devmac-8  # or devmac-10, or devmac-11, or...
-  ```
-
-- these also need manual intervention:
-  * installation of Skype
-  * enable automatic login (System Preferences/Users & Groups/Login Options)
-  * Quicksilver shows in dock (right-click, go to preferences, deselect 'show in dock') 
+- you might also want to setup:
+  * Skype
+  * the printer
+  * VirtualBox with a WindowsXP image (used for cross OS testing) (WindowXP makes me very cross)
+  * automatic login (System Preferences/Users & Groups/Login Options)
   * disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
-  * setup printer
-  * keyboard keypress repeat delay
-  * Setup VirtualBox with a WindowsXP image - used for cross OS testing
+  * keyboard keypress repeat delay (System Preferences/Keyboard)
 
 ---
 
@@ -121,5 +120,3 @@ gem install debugger
 '''
 
 Then run bundle install
-
-
