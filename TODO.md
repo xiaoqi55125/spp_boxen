@@ -1,7 +1,5 @@
 ### TODO
 
-- **Cannot run `./script/boxen` OR `git push` when logged into a devmac over an ssh connection**. Boxen has a problematic relationship with the OSX keychain. Make it not so.
-
 - **spp_boxen does not prompt for the hostname during install**. Make it so.
 
 ### Manual Steps (post-install)
@@ -57,6 +55,17 @@
 ---
 
 ### Troubleshooting
+
+#### Boxen Keychain Helper: Encountered error code: -25308, Error: User interaction is not allowed.
+
+If you see this error when ssh'd into a devmac, run this command:
+  ```
+  security unlock-keychain
+  ```
+
+For details, see: `https://github.com/boxen/boxen/issues/54#issuecomment-15938565`
+
+---
 
 #### dyld: Library not loaded: /opt/boxen/homebrew/lib/libtiff.5.dylib
 
