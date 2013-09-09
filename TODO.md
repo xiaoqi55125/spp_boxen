@@ -103,4 +103,14 @@ NB: pg_config can show the location of the postgresql shared library directory: 
 
 Check for the existence of: `postgis-1.5.so`. As a quick hack, copy this binary across from another devmac.
 
+#### ERROR:  Error installing debugger-linecache: ERROR: Failed to build gem native extension.
+
+Run these two commands manually if you get this error when bundle installing on remixer
+'''
+gem install debugger-ruby_core_source -v '1.1.7'
+gem install debugger
+'''
+
+Then run bundle install
+
 
