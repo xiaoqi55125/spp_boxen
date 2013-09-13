@@ -44,7 +44,7 @@
     ./script/boxen
   ```
   
-5a, Keep running boxen until it works without errors.
+5a. Keep running boxen until it works without errors.
 
 6. Reboot.
 
