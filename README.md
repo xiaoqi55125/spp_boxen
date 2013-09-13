@@ -20,12 +20,16 @@
   ```
     cd ~/projects
     rsync -r dev@devmac-4:projects/atlas .
+    rsync -r dev@devmac-4:projects/blog .
     rsync -r dev@devmac-4:projects/deployment_tools .
     rsync -r dev@devmac-4:projects/lpos-chef-repo .
+    rsync -r dev@devmac-4:projects/map_tile_loader .
     rsync -r dev@devmac-4:projects/pairing_station .
     rsync -r dev@devmac-4:projects/remixer .
     rsync -r dev@devmac-4:projects/spp_aws .
     rsync -r dev@devmac-4:projects/spp_boxen .
+    rsync -r dev@devmac-4:projects/spp_blog .
+    rsync -r dev@devmac-4:projects/spp_dashboard .
   ```
 
 5. Run:
