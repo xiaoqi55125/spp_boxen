@@ -26,6 +26,7 @@
   ```
   cd atlas
   ber db:clone_devint
+  RAILS_ENV=test ber db:setup
   ```
 
 - re-install ghostscript (to set it up correctly):
