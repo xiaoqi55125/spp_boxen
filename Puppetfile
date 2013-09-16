@@ -45,8 +45,15 @@ github "chrome",            "1.1.1"
 github "gitx",              "1.0.0"
 github "wget",              "1.0.0"
 github "sysctl",            "1.0.0" # Required by postgresql
-github "postgresql",        "1.0.3", :repo => "octanner/puppet-postgresql"
+
+# The postgresql manifest we were using created the DB cluster with the
+# default locale, which on our machines is usually en_AU.UTF-8.
+# This causes the Atlas database_correctly_configured_spec to fail.
+# This fork hardcodes the locale to en_US.UTF-8.
+mod "postgresql",           :git => "https://github.com/TimMoore/puppet-postgresql.git",
+                            :ref => 'hardcode-locale'
 # github "postgis",          "2.1.0", :repo => "lonelyplanet/puppet-postgis"
+
 github "iterm2",            "1.0.3"
 github "phantomjs",         "1.0.0"
 github "shiftit",           "0.0.2", :repo => "jlgeering/puppet-shiftit"
