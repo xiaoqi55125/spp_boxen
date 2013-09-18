@@ -23,4 +23,9 @@ class config::repositories {
   repository { "${::boxen_srcdir}/blog":
     source => 'lonelyplanet/blog',
   }
+
+  repository { "${::boxen_srcdir}/performance_test":
+    source => 'lonelyplanet/performance_test',
+  }
+
 }
