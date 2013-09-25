@@ -43,7 +43,7 @@ class people::mriddle::repositories {
     source => 'mriddle/websockets_chat',
   }
 
-  repository { "${::boxen_srcdir}/blog":
+  repository { "${::boxen_srcdir}/mriddle_blog":
     source => 'mriddle/blog',
   }
 
