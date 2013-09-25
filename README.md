@@ -35,12 +35,7 @@
 5. Run:
 
   ```
-    cd ~/projects
-    git clone https://github.com/lonelyplanet/spp_boxen.git
-    cd spp_boxen
-    #
-    # NB: When boxen prompts for username, provide `sppdev' (because this is our git user account).
-    #
+    cd ~/projects/spp_boxen
     ./script/boxen
   ```
   
