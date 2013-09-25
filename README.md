@@ -19,17 +19,18 @@
 
   ```
     cd ~/projects
-    rsync -r dev@devmac-4:projects/atlas .
-    rsync -r dev@devmac-4:projects/blog .
-    rsync -r dev@devmac-4:projects/deployment_tools .
-    rsync -r dev@devmac-4:projects/lpos-chef-repo .
-    rsync -r dev@devmac-4:projects/map_tile_loader .
-    rsync -r dev@devmac-4:projects/pairing_station .
-    rsync -r dev@devmac-4:projects/remixer .
-    rsync -r dev@devmac-4:projects/spp_aws .
-    rsync -r dev@devmac-4:projects/spp_boxen .
-    rsync -r dev@devmac-4:projects/spp_blog .
-    rsync -r dev@devmac-4:projects/spp_dashboard .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/atlas .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/blog .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/deployment_tools .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/lpos-chef-repo .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/map_tile_loader .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/pairing_station .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/remixer .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_aws .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_boxen .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_blog .
+    rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_dashboard .
+
   ```
 
 5. Run:
