@@ -88,7 +88,7 @@ class spp::config {
   }
 
   exec { "xcode-select XCode.app":
-    command => "xcode-select -switch /usr/bin",
+    command => "xcode-select -switch /Applications/Xcode.app",
     onlyif  => "ls -l /Applications | grep -ic Xcode",
     user    => "root"
   }
