@@ -11,6 +11,7 @@ class spp::config {
   include config::hosts
   include config::repositories
   include config::rubydebug
+  include config::dash
 
   file { "iTerm2 Preferences":
     path    => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
