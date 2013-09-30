@@ -49,7 +49,7 @@
   * the printer
   * VirtualBox with a WindowsXP image (used for cross OS testing) (WindowXP makes me very cross)
   * automatic login (System Preferences/Users & Groups/Login Options)
-  * disable cmd-space shortcut for Spotlight (so Quicksilver can use it)
+  * disable cmd-space shortcut for Spotlight (so Alfred can use it)
   * keyboard keypress repeat delay (System Preferences/Keyboard)
 
 ---

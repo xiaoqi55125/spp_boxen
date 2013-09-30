@@ -53,11 +53,11 @@ class spp::config {
     value  => '/opt/boxen/homebrew/bin/git',
   }
 
-  osx_login_item { 'Quicksilver':
-    name => 'Quicksilver',
-    path => '/Applications/Quicksilver.app',
+  osx_login_item { 'Alfred 2':
+    name => 'Alfred 2',
+    path => '/Applications/Alfred 2.app',
     hidden => true,
-    require => Package['Quicksilver'],
+    require => Package['Alfred'],
   }
 
   osx_login_item { 'ShiftIt':

@@ -13,6 +13,11 @@ GIT
     postgresql (0.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-alfred
+  specs:
+    alfred (1.1.4)
+
+GITHUBTARBALL
   remote: boxen/puppet-autoconf
   specs:
     autoconf (1.0.0)
@@ -143,6 +148,7 @@ GITHUBTARBALL
     stdlib (4.1.0)
 
 DEPENDENCIES
+  alfred (= 1.1.4)
   autoconf (= 1.0.0)
   boxen (>= 0)
   chrome (= 1.1.1)

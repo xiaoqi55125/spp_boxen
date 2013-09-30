@@ -7,16 +7,23 @@ class spp::applications {
   include shiftit
   include xquartz
   include pgadmin3
+  include alfred
+
+
+  define uninstall ($app_name = $title, $type) {
+    exec { "Remove app ${app_name}" :
+      command => "rm -rf '/Applications/${app_name}.app'; rm -f '/var/db/.puppet_${type}_installed_${app_name}'",
+      user => "root",
+    }
+  }
 
   package { 'Firefox':
     provider => 'appdmg',
     source   => 'http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/23.0.1/mac/en-US/Firefox%2023.0.1.dmg'
   }
 
-  package { "Quicksilver":
-    ensure   => "present",
-    provider => 'appdmg',
-    source   => 'http://cdn.qsapp.com/com.blacktree.Quicksilver__16384.dmg',
+  uninstall {'Quicksilver':
+    type => 'appdmg'
   }
 
   package { 'SublimeText2':
