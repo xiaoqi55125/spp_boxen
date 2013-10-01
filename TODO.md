@@ -51,7 +51,7 @@
   * automatic login (System Preferences/Users & Groups/Login Options)
   * disable cmd-space shortcut for Spotlight (so Alfred can use it)
   * keyboard keypress repeat delay (System Preferences/Keyboard)
-
+  * start Dash and enter app store password to enable it properly
 ---
 
 ### Troubleshooting
