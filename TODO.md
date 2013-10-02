@@ -78,8 +78,19 @@ run this command:
 
 #### error: "Illegal instruction: 4"
 
-Something isn't installed from source. Run `brew info [app_name]` to tell you whether an app is installed from source. `libpng` needs to be install from source for remixer features to work, and possibly others.
+Something isn't installed from source. Run `brew info [app_name]` to tell you whether an app is installed from source. `libpng` needs to be installed from source/re installed for remixer features to work, and possibly others.
 
+Checking the OSX Console for crash reports can help find which lib is failing:
+
+```
+Exception Type:  EXC_BAD_INSTRUCTION (SIGILL)
+Exception Codes: 0x0000000000000001, 0x0000000000000000
+
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libpng15.15.dylib             	0x0000000108fa4f1f png_write_destroy + 238
+1   libpng15.15.dylib             	0x0000000108fa4e09 png_destroy_write_struct + 181
+2   gs                            	0x0000000108948018 do_png_print_page + 1533
+```
 
 ---
 
