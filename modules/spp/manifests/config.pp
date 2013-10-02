@@ -12,6 +12,7 @@ class spp::config {
   include config::repositories
   include config::rubydebug
   include config::dash
+  include config::alfred
 
   file { "iTerm2 Preferences":
     path    => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
@@ -27,6 +28,15 @@ class spp::config {
   file { "pgAdmin Preferences":
     path   => "/Users/${::luser}/Library/Preferences/pgadmin3 Preferences",
     source => "puppet:///modules/spp/pgadmin3 Preferences",
+  }
+
+  file { "Keyboard shortcut preferences":
+    path   => "/Users/${::luser}/Library/Preferences/com.apple.symbolichotkeys.plist",
+    source => "puppet:///modules/spp/com.apple.symbolichotkeys.plist",
+  }
+
+  exec { "killall SystemUIServer":
+    provider => 'shell',
   }
 
   exec {"Disable Gatekeeper":
@@ -101,4 +111,5 @@ class spp::config {
   exec { "turn off natural scrolling":
     command => "defaults write -g com.apple.swipescrolldirection -bool false",
   }
+
 }

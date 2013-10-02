@@ -1,8 +1,9 @@
 ## Getting Started
 
 1. Install either:
-  * Xcode (with Command Line Tools installed from Preferences/Downloads/Components), or
-  * [Xcode Command Line Tools](http://docwiki.embarcadero.com/RADStudio/XE4/en/Installing_the_Xcode_Command_Line_Tools_on_a_Mac).
+  * Xcode (with Command Line Tools installed from Preferences/Downloads/Components)
+  * Note: installing command line tools only now produces the error "failed to exec real xcrun".
+  * Note 2: once XCode is installed, it needs some attention before it will play nicely, so open it and accept the license agreement.
 
 2. Ensure the OSX login account is `dev`. Note that our github user account is `sppdev`.
 
@@ -39,10 +40,12 @@
     cd ~/projects/spp_boxen
     ./script/boxen
   ```
-  
+
 5a. Keep running boxen until it works without errors.
 
 6. Reboot.
+  * This reloads the mac settings including shortcut keys for Spotlight.
+  * Also ensures Alfred and other apps that are supposed to start on login actually do.
 
 7. Finish up by following the manual steps within [TODO](TODO.md).
 
