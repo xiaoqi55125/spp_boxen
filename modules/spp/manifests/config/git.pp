@@ -45,3 +45,4 @@ class config::git {
   add_git_pair{"Jo Cranford <joanne.cranford@lonelyplanet.com.au>":}
   add_git_pair{"Dan Moore <daniel.moore@lonelyplanet.com.au>":}
   add_git_pair{"Marc Watts <marc.watts@lonelyplanet.com.au>":}
+}
