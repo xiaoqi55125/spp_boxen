@@ -3,7 +3,6 @@
 1. Install either:
   * Xcode (with Command Line Tools installed from Preferences/Downloads/Components)
   * Note: installing command line tools only now produces the error "failed to exec real xcrun".
-  * Note 2: once XCode is installed, it needs some attention before it will play nicely, so open it and accept the license agreement.
 
 2. Ensure the OSX login account is `dev`. Note that our github user account is `sppdev`.
 
@@ -42,6 +41,8 @@
   ```
 
 5a. Keep running boxen until it works without errors.
+
+5b. Boxes will ask to install a Java runtime, hit yes.
 
 6. Reboot.
   * This reloads the mac settings including shortcut keys for Spotlight.

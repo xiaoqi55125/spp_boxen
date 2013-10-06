@@ -36,7 +36,11 @@ class spp::applications {
     source   => 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.6.4.1.dmg',
   }
 
-  package { "tig":
+  homebrew::formula { 'tig':
+    before => Package['boxen/brews/tig'],
+  }
+
+  package { 'boxen/brews/tig':
     ensure => installed,
   }
 
