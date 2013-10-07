@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSWindow Frame alfredpreferences</key>
+	<string>730 389 1100 662 0 0 2560 1418 </string>
+	<key>hotkey.default</key>
+	<dict>
+		<key>key</key>
+		<integer>49</integer>
+		<key>mod</key>
+		<integer>1048576</integer>
+		<key>string</key>
+		<string>Space</string>
+	</dict>
+	<key>lastTab</key>
+	<string>general</string>
+	<key>lastTabBuild</key>
+	<string>212</string>
+	<key>lastTabTS</key>
+	<real>402797218.46799898</real>
+	<key>version</key>
+	<string>2.0.8</string>
+</dict>
+</plist>
