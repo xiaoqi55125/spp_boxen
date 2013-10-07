@@ -1,8 +1,9 @@
 class config::alfred {
 
-  exec {"Set keyboard shortcut":
-    command => "defaults write com.runningwithcrayons.Alfred-Preferences \"hotkey.default\" '{ key = 49; mod = 1048576 ; string = Space; }'",
-    user => "root"
+  file { "Alfred Preferences":
+    path    => "/Users/${::luser}/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist",
+    source  => "puppet:///modules/spp/com.runningwithcrayons.Alfred-Preferences.plist",
+    require => Package['Alfred'],
   }
 
 }
