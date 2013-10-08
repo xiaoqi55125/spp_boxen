@@ -36,6 +36,7 @@
 
   ```
     cd ~/projects/spp_boxen
+    git pull
     ./script/boxen
   ```
 
