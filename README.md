@@ -28,7 +28,6 @@
     rsync -r dev@devs-imac-2.au.lpint.net:projects/remixer .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_aws .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_boxen .
-    rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_blog .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_dashboard .
 
   ```
