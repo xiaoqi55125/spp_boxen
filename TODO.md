@@ -51,6 +51,7 @@
   * automatic login (System Preferences/Users & Groups/Login Options)
   * keyboard keypress repeat delay (System Preferences/Keyboard)
   * start Dash and enter app store password to enable it properly
+
 ---
 
 ### Troubleshooting
