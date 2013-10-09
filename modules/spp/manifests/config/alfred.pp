@@ -10,7 +10,7 @@ class config::alfred {
   file { "Alfred License":
     path    => "/Users/${::luser}/Library/Application Support/Alfred 2/license.plist",
     source  => "puppet:///modules/spp/alfred.license.plist",
-    require => Package['Alfred'], File[$licenseDir],
+    require => [Package['Alfred'], File[$licenseDir]],
   }
 
     file { "Alfred Preferences":
