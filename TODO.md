@@ -44,10 +44,20 @@
   npm install -g coffee-script
   ```
 
+- create Atlas2Ninjas profile in chrome
+  * login to google as atlas2ninjas@lonelyplanet.com.au
+
+- install Bling development VM (WinXP (used for cross OS testing) (WindowXP makes me very cross)
+  * install virtual box : https://www.virtualbox.org/wiki/Downloads
+  ```
+    mkdir -p /Users/dev/VirtualBox\ VMs/BlingDevelopment
+    rsync -v -r -a -e ssh "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
+  ```
+  * load vm
+
 - you might also want to setup:
   * Skype
   * the printer
-  * VirtualBox with a WindowsXP image (used for cross OS testing) (WindowXP makes me very cross)
   * automatic login (System Preferences/Users & Groups/Login Options)
   * keyboard keypress repeat delay (System Preferences/Keyboard)
   * start Dash and enter app store password to enable it properly
