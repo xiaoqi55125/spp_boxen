@@ -51,7 +51,7 @@
   * install virtual box : https://www.virtualbox.org/wiki/Downloads
   ```
     mkdir -p /Users/dev/VirtualBox\ VMs/BlingDevelopment
-    rsync -v -r -a -e ssh "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
+    rsync -av --progress --stats "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
   ```
   * load vm
 
