@@ -50,6 +50,8 @@
 - install Bling development VM (WinXP (used for cross OS testing) (WindowXP makes me very cross)
   * install virtual box : https://www.virtualbox.org/wiki/Downloads
 
+- map Caps Lock to Ctrl 
+
 ```
 mkdir -p /Users/dev/VirtualBox\ VMs/BlingDevelopment
 rsync -av --progress --stats "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
