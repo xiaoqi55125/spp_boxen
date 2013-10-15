@@ -21,7 +21,6 @@
     cd ~/projects
     rsync -r dev@devs-imac-2.au.lpint.net:projects/atlas .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/blog .
-    rsync -r dev@devs-imac-2.au.lpint.net:projects/deployment_tools .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/lpos-chef-repo .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/map_tile_loader .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/pairing_station .
