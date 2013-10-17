@@ -1,12 +1,16 @@
 ## Getting Started
 
+ 1. Install Mountain Lion
+
+ 2. Ensure the OSX login account is `dev`.
+
+    _Note that our github user account is `sppdev`._
+
  1. Install Xcode (with Command Line Tools installed from Preferences/Downloads/Components)
 
     _Note: installing command line tools only now produces the error "failed to exec real xcrun"._
 
- 2. Ensure the OSX login account is `dev`. Note that our github user account is `sppdev`.
-
- 3. Run the following:
+ 3. Run the following from the Terminal app:
 
     ```
     sudo mkdir -p /opt/boxen
@@ -47,6 +51,21 @@
     * Also ensures Alfred and other apps that are supposed to start on login actually do.
 
  7. Finish up by following the manual steps within [TODO](TODO.md).
+
+
+## Updating
+
+ 1. Quit all programs
+
+ 2. Run the following from the default OSX Terminal (not iTerm):
+
+    ```
+    cd ~/projects/spp_boxen
+    git pull
+    ./script/boxen
+    ```
+
+ 3. Reboot to ensure all settings are applied.
 
 ---
 
