@@ -6,11 +6,11 @@
 
     _Note that our github user account is `sppdev`._
 
- 1. Install Xcode (with Command Line Tools installed from Preferences/Downloads/Components)
+ 3. Install Xcode (with Command Line Tools installed from Preferences/Downloads/Components)
 
     _Note: installing command line tools only now produces the error "failed to exec real xcrun"._
 
- 3. Run the following from the Terminal app:
+ 4. Run the following from the Terminal app:
 
     ```
     sudo mkdir -p /opt/boxen
@@ -19,7 +19,7 @@
     cd ~/projects
     ```
 
- 4. Clone a set of working repositories from another pairing station:
+ 5. Clone a set of working repositories from another pairing station:
 
     ```
     cd ~/projects
@@ -34,7 +34,7 @@
     rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_dashboard .
     ```
 
- 5. Run:
+ 6. Run:
 
     ```
     cd ~/projects/spp_boxen
@@ -46,11 +46,11 @@
 
     2. Boxes will ask to install a Java runtime, hit yes.
 
- 6. Reboot.
+ 7. Reboot.
     * This reloads the mac settings including shortcut keys for Spotlight.
     * Also ensures Alfred and other apps that are supposed to start on login actually do.
 
- 7. Finish up by following the manual steps within [TODO](TODO.md).
+ 8. Finish up by following the manual steps within [TODO](TODO.md).
 
 
 ## Updating
