@@ -1,23 +1,23 @@
 ## Getting Started
 
-1. Install either:
-  * Xcode (with Command Line Tools installed from Preferences/Downloads/Components)
-  * Note: installing command line tools only now produces the error "failed to exec real xcrun".
+ 1. Install Xcode (with Command Line Tools installed from Preferences/Downloads/Components)
 
-2. Ensure the OSX login account is `dev`. Note that our github user account is `sppdev`.
+    _Note: installing command line tools only now produces the error "failed to exec real xcrun"._
 
-3. Run the following:
+ 2. Ensure the OSX login account is `dev`. Note that our github user account is `sppdev`.
 
-  ```
+ 3. Run the following:
+
+    ```
     sudo mkdir -p /opt/boxen
     sudo chown $USER:admin /opt/boxen
     mkdir -p ~/projects
     cd ~/projects
-  ```
+    ```
 
-4. Clone a set of working repositories from another pairing station:
+ 4. Clone a set of working repositories from another pairing station:
 
-  ```
+    ```
     cd ~/projects
     rsync -r dev@devs-imac-2.au.lpint.net:projects/atlas .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/blog .
@@ -28,26 +28,25 @@
     rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_aws .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_boxen .
     rsync -r dev@devs-imac-2.au.lpint.net:projects/spp_dashboard .
+    ```
 
-  ```
+ 5. Run:
 
-5. Run:
-
-  ```
+    ```
     cd ~/projects/spp_boxen
     git pull
     ./script/boxen
-  ```
+    ```
 
-5a. Keep running boxen until it works without errors.
+    1. Keep running boxen until it works without errors.
 
-5b. Boxes will ask to install a Java runtime, hit yes.
+    2. Boxes will ask to install a Java runtime, hit yes.
 
-6. Reboot.
-  * This reloads the mac settings including shortcut keys for Spotlight.
-  * Also ensures Alfred and other apps that are supposed to start on login actually do.
+ 6. Reboot.
+    * This reloads the mac settings including shortcut keys for Spotlight.
+    * Also ensures Alfred and other apps that are supposed to start on login actually do.
 
-7. Finish up by following the manual steps within [TODO](TODO.md).
+ 7. Finish up by following the manual steps within [TODO](TODO.md).
 
 ---
 
