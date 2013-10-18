@@ -104,12 +104,4 @@ class spp::config {
     user    => "root"
   }
 
-  exec { "dont ask for password after screensaver starts":
-    command => "defaults write com.apple.screensaver askForPassword -int 0",
-  }
-
-  exec { "turn off natural scrolling":
-    command => "defaults write -g com.apple.swipescrolldirection -bool false",
-  }
-
 }

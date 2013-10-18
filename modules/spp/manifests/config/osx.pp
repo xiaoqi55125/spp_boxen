@@ -5,6 +5,9 @@
 class config::osx {
 
   # OSX Defaults
+  #
+  # Before adding something here, see if the boxen-osx module already defines
+  # something you can reuse. See shared/osx/README.md
 
   ::boxen::osx_defaults { 'Secure Empty Trash':
     key    => 'EmptyTrashSecurely',
@@ -70,6 +73,20 @@ class config::osx {
     key    => '_FXShowPosixPathInTitle',
     domain => 'com.apple.finder',
     value  => 'true',
+  }
+
+  # This overrides boxen::security by reversing the setting.
+  # TODO: find a better way to do this (e.g., don't run boxen::security)
+  ::boxen::osx_defaults { 'do not require password at screensaver':
+    ensure => present,
+    domain => 'com.apple.screensaver',
+    key    => 'askForPassword',
+    value  => 0,
+    user   => $::boxen_user
+  }
+
+  class { '::osx::global::natural_mouse_scrolling':
+    enabled => false
   }
 
   exec { "Show the ~/Library folder":
