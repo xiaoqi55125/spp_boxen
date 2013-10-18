@@ -119,7 +119,6 @@ as many of these details as you can provide:
     * Add Chrome, iTerm, and Sublime to the Dock
     * Set up Dock auto-hiding
     * Enable right clicks for your mouse
-    * Enable auto-login for the dev user
     * Disable the guest user
 
 ---
