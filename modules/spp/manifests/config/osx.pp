@@ -57,11 +57,7 @@ class config::osx {
     value  => 'true',
   }
 
-  ::boxen::osx_defaults { "Automatically hide and show the Dock":
-    key    => 'autohide',
-    domain => 'com.apple.dock',
-    value  => 'true',
-  }
+  include ::osx::dock::autohide
 
   ::boxen::osx_defaults { "Show Status bar in Finder":
     key    => 'ShowStatusBar',

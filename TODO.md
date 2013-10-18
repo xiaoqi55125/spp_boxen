@@ -117,7 +117,6 @@ as many of these details as you can provide:
     * start Dash and enter app store password to enable it properly
     * OpenOffice
     * Add Chrome, iTerm, and Sublime to the Dock
-    * Set up Dock auto-hiding
     * Enable right clicks for your mouse
     * Disable the guest user
 
