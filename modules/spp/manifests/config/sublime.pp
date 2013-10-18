@@ -9,7 +9,7 @@ class config::sublime {
       cwd      => "/Users/${::luser}${packagedir}",
       provider => 'shell',
       creates  => "/Users/${::luser}${packagedir}${pkgname}",
-      path     => "${boxen::config::homebrewdir}/bin",
+      path     => "${::boxen::config::homebrewdir}/bin",
       require  => [Package['SublimeText2'], Package['boxen/brews/git']],
     }
   }
@@ -27,7 +27,7 @@ class config::sublime {
     mode    => '0755',
   }->
 
-  file { "${boxen::config::bindir}/subl":
+  file { "${::boxen::config::bindir}/subl":
     ensure  => link,
     target  => '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl',
     mode    => '0755',
@@ -54,7 +54,7 @@ class config::sublime {
     cwd      => "/Users/${::luser}${packagedir}",
     provider => 'shell',
     creates  => "/Users/${::luser}${packagedir}${pkgname}",
-    path     => "${boxen::config::homebrewdir}/bin",
+    path     => "${::boxen::config::homebrewdir}/bin",
     require  => [Package['SublimeText2'], Package['boxen/brews/git']],
   }
 
