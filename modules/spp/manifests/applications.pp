@@ -14,6 +14,7 @@ class spp::applications {
     exec { "Remove app ${app_name}" :
       command => "rm -rf '/Applications/${app_name}.app'; rm -f '/var/db/.puppet_${type}_installed_${app_name}'",
       user => "root",
+      onlyif => "test -e '/Applications/${app_name}.app'"
     }
   }
 
