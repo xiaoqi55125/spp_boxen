@@ -85,6 +85,14 @@ class config::osx {
     enabled => false
   }
 
+  # https://github.com/jfelchner/puppet-osx/blob/8ce267e6f2ca3bd058601199c3d319072b48d60c/manifests/touchpad/gestures/secondary_click.pp
+  ::boxen::osx_defaults { 'Toggle Secondary "Right" Click on Magic Mouse':
+    domain => 'com.apple.driver.AppleBluetoothMultitouch.mouse',
+    key    => 'MouseButtonMode',
+    value  => 'TwoButton',
+    user   => $::boxen_user,
+  }
+
   exec { "Show the ~/Library folder":
     command => "chflags nohidden ~/Library",
     onlyif => "ls -dlaO ~/Library | grep hidden",
