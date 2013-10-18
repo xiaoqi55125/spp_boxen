@@ -1,69 +1,126 @@
-### TODO
+# TODO
 
-- **spp_boxen does not prompt for the hostname during install**. Make it so.
+These are steps required to set up a paring station that are not yet automated.
+
+When you find something missing from the Boxen configuration add it here with
+as many of these details as you can provide:
+
+  - Exactly how to manually perform the step. Include URLs, commands to run,
+    etc.
+  - Why it is needed (e.g., it's a dependency of some app). These things can
+    change over time, so the more detail we include about the reason for a
+    manual step, the easier it is to evaluate whether we still need it in the
+    future.
+  - If you tried to automate it in Boxen, what difficulties you encountered.
+    This helps to prevent several people trying the same unsuccessful
+    automation strategies over and over.
 
 ### Manual Steps (post-install)
 
-- `hostname` needs configuring in various places. Run:
-  ```
-  sudo set_hostname devmac-8  # or devmac-10, or devmac-11, or...
-  ```
+  - `hostname` needs configuring in various places. Run:
 
-- install passenger:
-  ```
-  cd atlas
-  passenger-install-apache2-module
-  sudo apachectl restart
-  ```
+    ```
+    sudo set_hostname devmac-8  # or devmac-10, or devmac-11, or...
+    ```
 
-- install `git-pair` under system ruby:
-  ```
-  cd atlas
-  sudo gem install ehrenmurdick-git-pair
-  ```
+    - _Why we need it:_ the default hostname chosen by the OSX installer is not
+      very useful. We want to be able to ssh to these machines by name.
+    - _Why it's hard to automate:_ we can't auto-detect the value, and we
+      haven't figured out how to make Boxen prompt for it.
 
-- setup local db setup with realistic content:
-  ```
-  cd atlas
-  ber db:clone_devint
-  RAILS_ENV=test ber db:setup
-  ```
+  - install passenger:
 
-- re-install ghostscript (to set it up correctly):
-  ```
+    ```
+    cd atlas
+    passenger-install-apache2-module
+    sudo apachectl restart
+    ```
+
+    - _Why we need it:_ this is required to make Apache work with Passenger.
+      This is how we run Atlas and Remixer locally (as well as in production).
+      Before this step is run, Apache fails to start up.
+    - _Why it's hard to automate:_ this command is installed by a gem into the
+      Ruby version managed by `rbenv` for Atlas. We haven't figured out how to
+      run commands within the context of that environment with Boxen.
+    - Another strategy to try: modifying the
+      [Homebrew formula](https://github.com/mxcl/homebrew/blob/master/Library/Formula/passenger.rb)
+      and installing that way.
+
+  - install `git-pair` under the default gem path:
+
+    ```
+    cd atlas
+    gem install ehrenmurdick-git-pair
+    ```
+
+    - _Why we need it:_ we use this to manage the git configuration when
+      pairing.
+    - _Why it's hard to automate:_ this is in the atlas Gemfile, but for some
+      reason, Bundler is configured with `BUNDLE_PATH: /Users/dev/.bundle`,
+      which is not on our default `PATH`.
+
+  - add content to the local DB:
+
+    ```
+    cd atlas
+    ber db:clone_devint
+    RAILS_ENV=test ber db:setup
+    ```
+
+    - _Why we need it:_ prod-like data is useful for development and testing.
+    - _Why it's hard to automate:_ ???
+
+  - re-install ghostscript (to set it up correctly):
+
+    ```
     brew uninstall freetype
     brew install freetype --from-source
     brew uninstall fontconfig
     brew install fontconfig --from-source
     brew uninstall ghostscript
     brew install ghostscript --from-source
-  ```
+    ```
 
-- install coffeescript:
-  ```
-  npm install -g coffee-script
-  ```
+    - _Why we need it:_ ??? required by Remixer?
+    - _Why it's hard to automate:_ ???
 
-- create Atlas2Ninjas profile in chrome
-  * login to google as atlas2ninjas@lonelyplanet.com.au
+  - install CoffeeScript node package:
 
-- install Bling development VM (WinXP (used for cross OS testing) (WindowXP makes me very cross)
-  * install virtual box : https://www.virtualbox.org/wiki/Downloads
+    ```
+    npm install -g coffee-script
+    ```
 
-```
-mkdir -p /Users/dev/VirtualBox\ VMs/BlingDevelopment
-rsync -av --progress --stats "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
-```
-  * load vm
+    - _Why we need it:_ ???
+    - _Why it's hard to automate:_ ???
 
-- map Caps Lock to Ctrl 
+  - create Atlas2Ninjas profile in chrome
+    * login to google as atlas2ninjas@lonelyplanet.com.au
 
-- you might also want to setup:
-  * Skype
-  * the printer
-  * automatic login (System Preferences/Users & Groups/Login Options)
-  * keyboard keypress repeat delay (System Preferences/Keyboard)
-  * start Dash and enter app store password to enable it properly
+  - install Bling development VM (WinXP (used for cross OS testing) (WindowXP makes me very cross)
+
+    * install virtual box : https://www.virtualbox.org/wiki/Downloads
+
+      ```
+      mkdir -p /Users/dev/VirtualBox\ VMs/BlingDevelopment
+      rsync -av --progress --stats "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
+      ```
+
+    * load vm
+
+  - map Caps Lock to Ctrl
+
+  - you might also want to setup:
+    * Skype
+    * the printer
+    * automatic login (System Preferences/Users & Groups/Login Options)
+    * keyboard keypress repeat delay (System Preferences/Keyboard)
+    * start Dash and enter app store password to enable it properly
+    * OpenOffice
+    * Add Chrome, iTerm, and Sublime to the Dock
+    * Set up Dock auto-hiding
+    * Enable right clicks for your mouse
+    * Enable auto-login for the dev user
+    * Disable the guest user
 
 ---
 
