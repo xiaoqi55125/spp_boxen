@@ -42,9 +42,7 @@
     ./script/boxen
     ```
 
-    1. Keep running boxen until it works without errors.
-
-    2. Boxes will ask to install a Java runtime, hit yes.
+    Keep running boxen until it works without errors.
 
  7. Reboot.
     * This reloads the mac settings including shortcut keys for Spotlight.
