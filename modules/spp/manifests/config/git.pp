@@ -13,6 +13,10 @@ class config::git {
     value => 'auto',
   }
 
+  git::config::global{ 'merge.conflictstyle':
+    value => 'diff3',
+  }
+
   git::config::global{ 'core.editor':
     value => 'subl -w',
   }
