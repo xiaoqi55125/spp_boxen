@@ -95,11 +95,6 @@ as many of these details as you can provide:
 
   - create Atlas2Ninjas profile in chrome
     * login to google as atlas2ninjas@lonelyplanet.com.au
-  
-  - setup git 3 way diff
-    ```
-    git config --global merge.conflictstyle diff3
-    ```
 
   - install Bling development VM (WinXP (used for cross OS testing) (WindowXP makes me very cross)
 
