@@ -13,9 +13,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-# Running off a fork pending https://github.com/boxen/puppet-boxen/pull/62
-mod "boxen", :git => 'https://github.com/TimMoore/puppet-boxen.git',
-             :ref => 'appdmg_eula_permissions'
+github "boxen",      "3.0.4"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.

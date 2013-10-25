@@ -1,10 +1,10 @@
 class config::source_tree {
 
-  $app_support = "/Users/${::luser}/Library/Application Support/SourceTree"
+  $app_support = "/Users/${::boxen_user}/Library/Application Support/SourceTree"
 
   file { $app_support:
     ensure  => 'directory',
-    owner   => "${::luser}",
+    owner   => "${::boxen_user}",
     mode    => '0755',
   }->
 

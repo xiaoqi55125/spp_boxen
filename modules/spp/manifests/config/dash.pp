@@ -1,12 +1,12 @@
 class config::dash {
 
   file { "Dash Preferences":
-    path    => "/Users/${::luser}/Library/Preferences/com.kapeli.dash.plist",
+    path    => "/Users/${::boxen_user}/Library/Preferences/com.kapeli.dash.plist",
     source  => "puppet:///modules/spp/com.kapeli.dash.plist",
     require => Package['Dash'],
   }
 
-  $base = "/Users/${::luser}/Library/Application Support"
+  $base = "/Users/${::boxen_user}/Library/Application Support"
   $dash_dir = "${base}/Dash"
   $docsets_dir = "${dash_dir}/DocSets"
 
@@ -14,7 +14,7 @@ class config::dash {
 
   file { $structure:
     ensure  => 'directory',
-    owner   => "${::luser}",
+    owner   => "${::boxen_user}",
     mode    => '0755',
   }
 }

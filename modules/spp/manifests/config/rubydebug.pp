@@ -1,6 +1,6 @@
 class config::rubydebug {
 
-  file { "/Users/${::luser}/.rdebugrc":
+  file { "/Users/${::boxen_user}/.rdebugrc":
     ensure  => link,
     target  => "${::boxen_srcdir}/pairing_station/rdebugrc",
     mode    => '0755',

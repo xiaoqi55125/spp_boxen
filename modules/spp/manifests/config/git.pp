@@ -32,7 +32,7 @@ class config::git {
   define add_git_pair ($user_details = $title) {
     exec {"Add ${user_details} git pair":
       command => "git config --global --add git-pair.authors \"${user_details}\"",
-      unless => "grep -c \"${user_details}\" /Users/${::luser}/.gitconfig"
+      unless => "grep -c \"${user_details}\" /Users/${::boxen_user}/.gitconfig"
     }
   }
 

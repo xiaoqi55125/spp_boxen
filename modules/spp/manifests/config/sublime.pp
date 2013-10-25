@@ -6,15 +6,15 @@ class config::sublime {
     $pkgname = $pkgarray[1]
 
     exec { "git clone https://github.com/${name}.git":
-      cwd      => "/Users/${::luser}${packagedir}",
+      cwd      => "/Users/${::boxen_user}${packagedir}",
       provider => 'shell',
-      creates  => "/Users/${::luser}${packagedir}${pkgname}",
+      creates  => "/Users/${::boxen_user}${packagedir}${pkgname}",
       path     => "${::boxen::config::homebrewdir}/bin",
       require  => [Package['SublimeText2'], Package['boxen/brews/git']],
     }
   }
 
-  $base = "/Users/${::luser}/Library/Application Support"
+  $base = "/Users/${::boxen_user}/Library/Application Support"
   $structure = [ "${base}/Sublime Text 2",
                  "${base}/Sublime Text 2/Settings",
                  "${base}/Sublime Text 2/Packages",
@@ -23,7 +23,7 @@ class config::sublime {
 
   file { $structure:
     ensure  => 'directory',
-    owner   => "${::luser}",
+    owner   => "${::boxen_user}",
     mode    => '0755',
   }->
 
@@ -37,7 +37,7 @@ class config::sublime {
   $installedPackagesDir = "${base}/Sublime Text 2/Installed Packages"
   file { $installedPackagesDir:
     ensure  => "${installedPackagesDir}",
-    owner   => "${::luser}",
+    owner   => "${::boxen_user}",
     mode    => '0755',
   }
 
@@ -51,9 +51,9 @@ class config::sublime {
   }
 
   exec { "git clone https://github.com/${name}.git":
-    cwd      => "/Users/${::luser}${packagedir}",
+    cwd      => "/Users/${::boxen_user}${packagedir}",
     provider => 'shell',
-    creates  => "/Users/${::luser}${packagedir}${pkgname}",
+    creates  => "/Users/${::boxen_user}${packagedir}${pkgname}",
     path     => "${::boxen::config::homebrewdir}/bin",
     require  => [Package['SublimeText2'], Package['boxen/brews/git']],
   }
@@ -100,13 +100,13 @@ class config::sublime {
     ]:
   }
 
-  file { "/Users/${::luser}/Library/Fonts":
+  file { "/Users/${::boxen_user}/Library/Fonts":
     ensure  => 'directory',
-    owner   => "${::luser}",
+    owner   => "${::boxen_user}",
     mode    => '0700',
   }->
 
-  file { "/Users/${::luser}/Library/Fonts/Inconsolata.otf":
+  file { "/Users/${::boxen_user}/Library/Fonts/Inconsolata.otf":
     mode    => '0644',
     source  => "puppet:///modules/spp/Inconsolata.otf",
   }

@@ -7,7 +7,7 @@ class people::lukerobins {
   }
 
   define add_dotfile ($dotfile = $title) {
-    file { "/Users/${::luser}/.${dotfile}":
+    file { "/Users/${::boxen_user}/.${dotfile}":
       ensure  => link,
       mode    => '0644',
       target  => "${::boxen_srcdir}/pairing_station/${dotfile}",

@@ -13,7 +13,7 @@ class people::dhodges::config {
   }
 
   define add_dotfile ($dotfile = $title) {
-    file { "/Users/${::luser}/.${dotfile}":
+    file { "/Users/${::boxen_user}/.${dotfile}":
       ensure  => link,
       mode    => '0644',
       target  => "${::boxen_srcdir}/pairing_station/${dotfile}",
@@ -26,21 +26,21 @@ class people::dhodges::config {
   add_dotfile {'bash_profile': }
   add_dotfile {'inputrc': }
 
-  file { "/Users/${::luser}/.ssh/id_rsa":
+  file { "/Users/${::boxen_user}/.ssh/id_rsa":
     ensure  => link,
     mode    => '0644',
     target  => "${::boxen_srcdir}/pairing_station/ssh_pairing_station",
     require => Repository["${::boxen_srcdir}/pairing_station"],
   }
 
-  file { "/Users/${::luser}/.ssh/id_rsa.pub":
+  file { "/Users/${::boxen_user}/.ssh/id_rsa.pub":
     ensure  => link,
     mode    => '0644',
     target  => "${::boxen_srcdir}/pairing_station/ssh_pairing_station.pub",
     require => Repository["${::boxen_srcdir}/pairing_station"],
   }
 
-  file { "/Users/${::luser}/.ssh/config":
+  file { "/Users/${::boxen_user}/.ssh/config":
     ensure  => link,
     mode    => '0644',
     target  => "${::boxen_srcdir}/pairing_station/ssh_config",

@@ -15,23 +15,23 @@ class spp::config {
   include config::alfred
 
   file { "iTerm2 Preferences":
-    path    => "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist",
+    path    => "/Users/${::boxen_user}/Library/Preferences/com.googlecode.iterm2.plist",
     source  => "puppet:///modules/spp/com.googlecode.iterm2.plist",
     require => Package['iTerm'],
   }
 
   file { "Terminal Preferences":
-    path   => "/Users/${::luser}/Library/Preferences/com.apple.Terminal.plist",
+    path   => "/Users/${::boxen_user}/Library/Preferences/com.apple.Terminal.plist",
     source => "puppet:///modules/spp/com.apple.Terminal.plist",
   }
 
   file { "pgAdmin Preferences":
-    path   => "/Users/${::luser}/Library/Preferences/pgadmin3 Preferences",
+    path   => "/Users/${::boxen_user}/Library/Preferences/pgadmin3 Preferences",
     source => "puppet:///modules/spp/pgadmin3 Preferences",
   }
 
   file { "Keyboard shortcut preferences":
-    path   => "/Users/${::luser}/Library/Preferences/com.apple.symbolichotkeys.plist",
+    path   => "/Users/${::boxen_user}/Library/Preferences/com.apple.symbolichotkeys.plist",
     source => "puppet:///modules/spp/com.apple.symbolichotkeys.plist",
   }
 
@@ -59,7 +59,7 @@ class spp::config {
 
   property_list_key { 'Show GitX where git lives':
     ensure => present,
-    path   => "/Users/${::luser}/Library/Preferences/nl.frim.GitX.plist",
+    path   => "/Users/${::boxen_user}/Library/Preferences/nl.frim.GitX.plist",
     key    => 'gitExecutable',
     value  => '/opt/boxen/homebrew/bin/git',
   }

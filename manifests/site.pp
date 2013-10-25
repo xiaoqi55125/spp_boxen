@@ -7,7 +7,7 @@ include boxen::config
 Exec {
   group       => 'staff',
   logoutput   => on_failure,
-  user        => $luser,
+  user        => $boxen_user,
 
   path => [
     "${boxen::config::home}/rbenv/shims",
@@ -22,13 +22,13 @@ Exec {
 
   environment => [
     "HOMEBREW_CACHE=${homebrew::config::cachedir}",
-    "HOME=/Users/${::luser}"
+    "HOME=/Users/${::boxen_user}"
   ]
 }
 
 File {
   group => 'staff',
-  owner => $luser
+  owner => $boxen_user
 }
 
 Package {
@@ -41,11 +41,10 @@ Repository {
   extra    => [
     '--recurse-submodules'
   ],
-  config => {
-    # see:  https://github.com/boxen/our-boxen/issues/286#issuecomment-18516146
-    # also: https://github.com/boxen/our-boxen/issues/286#issuecomment-18508672
+  require  => File["${boxen::config::bindir}/boxen-git-credential"],
+  config   => {
     'credential.helper' => "${boxen::config::bindir}/boxen-git-credential"
-  },
+  }
 }
 
 Service {
