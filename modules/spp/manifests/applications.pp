@@ -59,4 +59,10 @@ class spp::applications {
     provider => 'compressed_app',
     source => 'https://s3-ap-southeast-2.amazonaws.com/spp-boxen/Dash.zip'
   }
+
+  exec { 'AWS CLI':
+    command => 'easy_install awscli',
+    user => 'root',
+    creates => '/usr/local/bin/aws'
+  }
 }
