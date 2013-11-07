@@ -33,4 +33,10 @@ class projects::atlas {
     source  => "puppet:///modules/projects/postgresql.conf",
     require => Package['boxen/brews/postgresql'],
   }
+
+  exec { 'atlas DB users':
+    command => "${boxen::config::srcdir}/atlas/script/db/setup_db_roles.sh",
+    cwd     => "${boxen::config::srcdir}/atlas",
+    require => [ Package['boxen/brews/postgresql'], Boxen::Project['atlas'] ],
+  }
 }
