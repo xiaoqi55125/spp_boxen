@@ -1,7 +1,6 @@
 class spp::config {
 
   include config::sublime
-  include config::postgis
   include config::pgpass
   include config::git
   include config::shift_it
