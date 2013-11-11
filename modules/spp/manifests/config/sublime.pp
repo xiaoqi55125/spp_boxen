@@ -97,6 +97,7 @@ class config::sublime {
     "CraigWilliams/BeautifyRuby",
     "irohiroki/RubyBlockConverter",
     "iltempo/sublime-text-2-hash-syntax",
+    "vkocubinsky/SublimeTableEditor",
     ]:
   }
 
