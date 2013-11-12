@@ -19,6 +19,17 @@ class projects::atlas {
     source        => 'lonelyplanet/atlas'
   }
 
+  file { '/tmp/boxen/uninstall_postgis.sh':
+    source => 'puppet:///modules/spp/uninstall_postgis.sh',
+  }
+
+  exec { '/tmp/boxen/uninstall_postgis.sh':
+    before  => [ Package['boxen/brews/postgresql'], Package['boxen/brews/postgis'], ],
+    require => File['/tmp/boxen/uninstall_postgis.sh'],
+    onlyif  => "[ \"$(brew list --versions postgis)\" != \"postgis ${postgis::version}\" ]",
+    user    => root,
+  }
+
   file { '/private/etc/apache2/other/atlas-vhost.conf':
     ensure  => file,
     owner   => 'root',

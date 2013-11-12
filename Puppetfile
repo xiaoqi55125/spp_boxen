@@ -53,7 +53,7 @@ github "sysctl",            "1.0.0" # Required by postgresql
 mod "postgresql",           :git => "https://github.com/TimMoore/puppet-postgresql.git",
                             :ref => 'hardcode-locale'
 
-github "postgis",          "2.1.5", :repo => "lonelyplanet/puppet-postgis"
+github "postgis",           "2.1.6", :repo => "lonelyplanet/puppet-postgis"
 
 github "iterm2",            "1.0.4"
 github "phantomjs",         "1.0.0"
