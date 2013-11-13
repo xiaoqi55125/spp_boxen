@@ -50,11 +50,6 @@ class spp::applications {
     source => 'http://freefr.dl.sourceforge.net/project/chicken/Chicken-2.2b2.dmg'
   }
 
-  package { 'GrowlNotify':
-    provider => 'compressed_pkg',
-    source => 'http://growl.cachefly.net/GrowlNotify-1.3.zip'
-  }
-
   package { 'Dash':
     provider => 'compressed_app',
     source => 'https://s3-ap-southeast-2.amazonaws.com/spp-boxen/Dash.zip'
