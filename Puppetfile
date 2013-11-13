@@ -34,15 +34,15 @@ github "repository", "2.2.0"
 github "ruby",       "6.3.4"
 github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",       "1.0.0"
-github "xquartz",    "1.1.0"
+github "xquartz",    "1.1.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
 # SPP Modules
 
-github "chrome",            "1.1.1"
-github "gitx",              "1.0.0"
+github "chrome",            "1.1.2"
+github "gitx",              "1.2.0"
 github "wget",              "1.0.0"
 github "sysctl",            "1.0.0" # Required by postgresql
 
@@ -54,13 +54,13 @@ mod "postgresql",           :git => "https://github.com/TimMoore/puppet-postgres
                             :ref => 'hardcode-locale'
 # github "postgis",          "2.1.0", :repo => "lonelyplanet/puppet-postgis"
 
-github "iterm2",            "1.0.3"
+github "iterm2",            "1.0.4"
 github "phantomjs",         "1.0.0"
 github "shiftit",           "0.0.2", :repo => "jlgeering/puppet-shiftit"
 github "osx",               "1.6.0"
 github "property_list_key", "0.1.0", :repo => "glarizza/puppet-property_list_key"
 github "pgadmin3",          "1.0.0"
-github "alfred",            "1.1.5"
+github "alfred",            "1.1.6"
 
 # Personal Modules (Used in modules/people/manifests/$user.pp)
 github "minecraft",         "1.0.0"
