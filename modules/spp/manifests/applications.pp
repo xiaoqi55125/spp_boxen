@@ -20,7 +20,7 @@ class spp::applications {
 
   package { 'Firefox':
     provider => 'appdmg',
-    source   => 'http://download.cdn.mozilla.net/pub/mozilla.org/firefox/releases/23.0.1/mac/en-US/Firefox%2023.0.1.dmg'
+    source   => 'http://download-origin.cdn.mozilla.net/pub/mozilla.org/firefox/releases/25.0/mac/en-US/Firefox%2025.0.dmg'
   }
 
   uninstall {'Quicksilver':
@@ -34,7 +34,7 @@ class spp::applications {
 
   package { 'SourceTree':
     provider => 'appdmg',
-    source   => 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.6.4.1.dmg',
+    source   => 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.7.4.1.dmg',
   }
 
   homebrew::formula { 'tig':
