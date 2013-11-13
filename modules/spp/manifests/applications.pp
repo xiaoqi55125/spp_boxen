@@ -55,6 +55,11 @@ class spp::applications {
     source => 'https://s3-ap-southeast-2.amazonaws.com/spp-boxen/Dash.zip'
   }
 
+  package { 'VirtualBox':
+    provider => 'appdmg',
+    source => 'http://download.virtualbox.org/virtualbox/4.3.2/VirtualBox-4.3.2-90405-OSX.dmg'
+  }
+
   exec { 'AWS CLI':
     command => 'easy_install awscli',
     user => 'root',
