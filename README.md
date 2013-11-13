@@ -8,7 +8,7 @@
 
  3. Install Xcode (with Command Line Tools installed from Preferences/Downloads/Components)
 
-    _Note: installing command line tools only now produces the error "failed to exec real xcrun"._
+    _Note: only installing the command line tools will cause the error: "failed to exec real xcrun"._
 
  4. Run the following from the Terminal app:
 

@@ -1,8 +1,8 @@
 # TODO
 
-These are steps required to set up a paring station that are not yet automated.
+These setup steps are not yet automated.
 
-When you find something missing from the Boxen configuration add it here with
+When you find something missing from the Boxen configuration, add it here with
 as many of these details as you can provide:
 
   - Exactly how to manually perform the step. Include URLs, commands to run,
@@ -18,7 +18,6 @@ as many of these details as you can provide:
 ### Manual Steps (post-install)
 
   - `hostname` needs configuring in various places. Run:
-
     ```
     sudo set_hostname devmac-8  # or devmac-10, or devmac-11, or...
     ```
@@ -29,7 +28,6 @@ as many of these details as you can provide:
       haven't figured out how to make Boxen prompt for it.
 
   - install passenger:
-
     ```
     cd atlas
     passenger-install-apache2-module
@@ -47,7 +45,6 @@ as many of these details as you can provide:
       and installing that way.
 
   - install `git-pair` under the default gem path:
-
     ```
     cd atlas
     gem install ehrenmurdick-git-pair
@@ -60,7 +57,6 @@ as many of these details as you can provide:
       which is not on our default `PATH`.
 
   - add content to the local DB:
-
     ```
     cd atlas
     ber db:clone_devint
@@ -71,39 +67,32 @@ as many of these details as you can provide:
     - _Why it's hard to automate:_ ???
 
   - re-install ghostscript (to set it up correctly):
-
     ```
-    brew uninstall freetype
-    brew install freetype --from-source
-    brew uninstall fontconfig
-    brew install fontconfig --from-source
-    brew uninstall ghostscript
-    brew install ghostscript --from-source
+    brew uninstall freetype;    brew install freetype --from-source
+    brew uninstall fontconfig;  brew install fontconfig --from-source
+    brew uninstall ghostscript; brew install ghostscript --from-source
     ```
 
     - _Why we need it:_ ??? required by Remixer?
     - _Why it's hard to automate:_ ???
 
   - install CoffeeScript node package:
-
     ```
     npm install -g coffee-script
     ```
 
-    - _Why we need it:_ ???
-    - _Why it's hard to automate:_ ???
+    - _Why we need it:_ this is the standard CoffeeScript compiler, used by SublimeText et. al.
+    - _Why it's hard to automate:_ this is a node (npm) module, and npm assumes the presence of a shell
 
   - create Atlas2Ninjas profile in chrome
     * login to google as atlas2ninjas@lonelyplanet.com.au
+      (details: https://lonelyplanet.atlassian.net/wiki/display/SPP/Shared+Accounts#SharedAccounts-Google)
 
-  - install Bling development VM (WinXP (used for cross OS testing) (WindowXP makes me very cross)
-
-    * install virtual box : https://www.virtualbox.org/wiki/Downloads
-
-      ```
-      mkdir -p /Users/dev/VirtualBox\ VMs/BlingDevelopment
-      rsync -av --progress --stats "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
-      ```
+  - install Bling development VM (WinXP, used for cross OS testing (WinXP makes me very cross)
+    ```
+    mkdir -p /Users/dev/VirtualBox\ VMs/BlingDevelopment
+    rsync -av --progress --stats "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
+    ```
 
     * load vm
 
