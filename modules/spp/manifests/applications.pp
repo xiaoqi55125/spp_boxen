@@ -60,6 +60,20 @@ class spp::applications {
     source => 'http://download.virtualbox.org/virtualbox/4.3.2/VirtualBox-4.3.2-90405-OSX.dmg'
   }
 
+  package { 'DbVisualizer':
+    provider => 'compressed_app',
+    source => 'http://www.dbvis.com/product_download/dbvis-8.0.12/media/dbvis_macos_8_0_12.tgz'
+  }
+
+  $dbvis_tarball = "${::boxen_srcdir}/pairing_station/preferences/dbvisualizer/_dbvis_preferences.tgz"
+
+  exec { 'DbVisualizer Prefs':
+    command  => "tar -zxvf ${dbvis_tarball}",
+    provider => 'shell',
+    cwd      => "/Users/${::luser}",
+    require  => [Package['DbVisualizer'], Repository["${::boxen_srcdir}/pairing_station"]],
+  }
+
   exec { 'AWS CLI':
     command => 'easy_install awscli',
     user => 'root',
