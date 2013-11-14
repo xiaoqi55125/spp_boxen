@@ -74,6 +74,12 @@ class spp::applications {
     require  => [Package['DbVisualizer'], Repository["${::boxen_srcdir}/pairing_station"]],
   }
 
+  exec { "install watch":
+    command  => "brew install watch",
+    provider => 'shell',
+    unless   => "ls -l ${::boxen::config::homebrewdir}/bin | grep -ic watch",
+  }
+
   exec { 'AWS CLI':
     command => 'easy_install awscli',
     user => 'root',
