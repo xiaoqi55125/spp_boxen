@@ -13,9 +13,17 @@ class config::alfred {
     require => [Package['Alfred'], File[$licenseDir]],
   }
 
-    file { "Alfred Preferences":
+  file { "Alfred Preferences":
     path    => "/Users/${::luser}/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist",
     source  => "puppet:///modules/spp/com.runningwithcrayons.Alfred-Preferences.plist",
     require => Package['Alfred'],
   }
+
+  file { "Alfred Preferences2":
+    path    => "/Users/${::luser}/Library/Preferences/com.runningwithcrayons.Alfred-2.plist",
+    source  => "puppet:///modules/spp/com.runningwithcrayons.Alfred-2.plist",
+    require => Package['Alfred'],
+  }
 }
+
+
