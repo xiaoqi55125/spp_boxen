@@ -1,11 +1,4 @@
 GIT
-  remote: https://github.com/TimMoore/puppet-boxen.git
-  ref: appdmg_eula_permissions
-  sha: 727ae215dd5fe4d8062a56efa43edcbe306ea018
-  specs:
-    boxen (0.0.1)
-
-GIT
   remote: https://github.com/TimMoore/puppet-postgresql.git
   ref: hardcode-locale
   sha: 7aaee83e948567b4ab4b7609f1b1d3a0b69115d1
@@ -21,6 +14,11 @@ GITHUBTARBALL
   remote: boxen/puppet-autoconf
   specs:
     autoconf (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-boxen
+  specs:
+    boxen (3.3.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-chrome
@@ -105,7 +103,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.3.4)
+    ruby (6.7.6)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -155,7 +153,7 @@ GITHUBTARBALL
 DEPENDENCIES
   alfred (= 1.1.7)
   autoconf (= 1.0.0)
-  boxen (>= 0)
+  boxen (= 3.3.5)
   chrome (= 1.1.2)
   dnsmasq (= 1.0.0)
   gcc (= 2.0.1)
@@ -176,7 +174,7 @@ DEPENDENCIES
   postgresql (>= 0)
   property_list_key (= 0.1.0)
   repository (= 2.2.0)
-  ruby (= 6.3.4)
+  ruby (= 6.7.6)
   shiftit (= 0.0.2)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)

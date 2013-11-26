@@ -71,10 +71,8 @@ node default {
   }
 
   # default ruby versions
-  include ruby::1_8_7
-  include ruby::1_9_2
-  include ruby::1_9_3
-  include ruby::2_0_0
+  include ruby::1_9_3_p484 # All of our projects use this
+  include ruby::2_0_0      # We don't use it yet, but it's useful to have
 
   # common, useful packages
   package {

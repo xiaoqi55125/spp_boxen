@@ -14,8 +14,7 @@ end
 # config. Required.
 
 # Running off a fork pending https://github.com/boxen/puppet-boxen/pull/62
-mod "boxen", :git => 'https://github.com/TimMoore/puppet-boxen.git',
-             :ref => 'appdmg_eula_permissions'
+github "boxen", "3.3.5"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
@@ -31,7 +30,7 @@ github "nginx",      "1.4.2"
 github "nodejs",     "3.2.9"
 github "openssl",    "1.0.0"
 github "repository", "2.2.0"
-github "ruby",       "6.3.4"
+github "ruby",       "6.7.6"
 github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",       "1.0.0"
 github "xquartz",    "1.1.1"
