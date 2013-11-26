@@ -8,7 +8,7 @@ class spp::applications {
   include xquartz
   include pgadmin3
   include alfred
-
+  include virtualbox
 
   define uninstall ($app_name = $title, $type) {
     exec { "Remove app ${app_name}" :
@@ -53,11 +53,6 @@ class spp::applications {
   package { 'Dash':
     provider => 'compressed_app',
     source => 'https://s3-ap-southeast-2.amazonaws.com/spp-boxen/Dash.zip'
-  }
-
-  package { 'VirtualBox':
-    provider => 'appdmg',
-    source => 'http://download.virtualbox.org/virtualbox/4.3.2/VirtualBox-4.3.2-90405-OSX.dmg'
   }
 
   package { 'DbVisualizer':
