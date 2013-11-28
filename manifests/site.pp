@@ -72,6 +72,7 @@ node default {
 
   # default ruby versions
   include ruby::1_9_3_p484 # All of our projects use this
+  include ruby::1_9_3      # Alias for 1.9.3-p484
   include ruby::2_0_0      # We don't use it yet, but it's useful to have
 
   # common, useful packages
