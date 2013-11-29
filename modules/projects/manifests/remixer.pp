@@ -4,7 +4,7 @@ class projects::remixer {
 
   boxen::project { 'remixer':
     postgresql    => true,
-    ruby          => '1.9.3-p392',
+    ruby          => '1.9.3-p484',
     source        => 'lonelyplanet/remixer'
   }
 

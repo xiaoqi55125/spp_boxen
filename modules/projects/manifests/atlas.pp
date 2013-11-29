@@ -4,7 +4,7 @@ class projects::atlas {
   include postgresql
   include postgis
 
-  $ruby_version = '1.9.3-p392'
+  $ruby_version = '1.9.3-p484'
   $passenger_version = '3.0.17'
 
   ruby::gem { "passenger for atlas":
