@@ -88,6 +88,8 @@ class spp::config {
   }
 
   # ensure xcode-select, regardless of whether we've installed Xcode or command-line tools
+  # without this, any use of gcc will cause 'xcrun: Error: failed to exec real xcrun'
+  # first thing to check when native gems fail to compile
 
   exec { "xcode-select /usr/bin":
     # Without this `gem install libv8` fails and so does brew install node
@@ -97,10 +99,17 @@ class spp::config {
     user    => "root"
   }
 
-  exec { "xcode-select XCode.app":
+  # XCode 4.x
+  exec { "xcode-select /Applications/XCode.app":
     command => "xcode-select -switch /Applications/Xcode.app",
     onlyif  => "ls -l /Applications | grep -ic Xcode",
     user    => "root"
   }
 
+  # XCode 5.x
+  exec { "xcode-select /Applications/XCode.app/Contents/Developer":
+    command => "xcode-select -switch /Applications/Xcode.app/Contents/Developer",
+    onlyif  => "ls -l /Applications/Xcode.app/Contents | grep -ic Developer",
+    user    => "root"
+  }
 }

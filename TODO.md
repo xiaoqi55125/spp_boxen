@@ -112,6 +112,39 @@ as many of these details as you can provide:
 
 ### Troubleshooting
 
+---
+
+#### xcrun: Error: failed to exec real xcrun
+
+Often hidden behind the inability of native gems to compile, e.g:
+```
+Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+        /opt/boxen/rbenv/versions/1.9.3-p484/bin/ruby extconf.rb
+Extracting libxml2-2.8.0.tar.gz into tmp//ports/libxml2/2.8.0... OK
+Running 'configure' for libxml2 2.8.0... ERROR, review 'tmp//ports/libxml2/2.8.0/configure.log' to see what happened.
+*** extconf.rb failed ***
+```
+
+You can verify by invoking gcc:
+```
+$ gcc --version
+$ xcrun: Error: failed to exec real xcrun
+```
+
+This issue is related to the shim-based management of gcc within OSX. The fix depends on the version of XCode installed.
+
+command-line tools:
+```sudo xcode-select -switch /usr/bin```
+
+XCode 4.x:
+```sudo xcode-select -switch /Applications/Xcode.app```
+
+XCode 5.x:
+```sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer```
+
+---
+
 #### Boxen Keychain Helper: Encountered error code: -25308, Error: User interaction is not allowed.
 
 If you see this error when ssh'd into a devmac, run this command:
