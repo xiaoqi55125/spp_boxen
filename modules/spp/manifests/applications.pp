@@ -9,6 +9,7 @@ class spp::applications {
   include pgadmin3
   include alfred
   include virtualbox
+  include openoffice
 
   define uninstall ($app_name = $title, $type) {
     exec { "Remove app ${app_name}" :

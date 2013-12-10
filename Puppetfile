@@ -62,6 +62,7 @@ github "property_list_key", "0.1.0", :repo => "glarizza/puppet-property_list_key
 github "pgadmin3",          "1.0.0"
 github "alfred",            "1.1.7"
 github "virtualbox",        "1.0.9"
+github "openoffice",        "1.2.0"
 
 # Personal Modules (Used in modules/people/manifests/$user.pp)
 github "minecraft",         "1.0.0"

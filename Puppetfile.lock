@@ -76,6 +76,11 @@ GITHUBTARBALL
     nodejs (3.2.9)
 
 GITHUBTARBALL
+  remote: boxen/puppet-openoffice
+  specs:
+    openoffice (1.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-openssl
   specs:
     openssl (1.0.0)
@@ -171,6 +176,7 @@ DEPENDENCIES
   minecraft (= 1.0.0)
   nginx (= 1.4.2)
   nodejs (= 3.2.9)
+  openoffice (= 1.2.0)
   openssl (= 1.0.0)
   osx (= 1.6.0)
   pgadmin3 (= 1.0.0)
