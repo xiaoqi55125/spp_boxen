@@ -2,6 +2,7 @@ class spp::config {
 
   include config::sublime
   include config::pgpass
+  include config::psqlrc
   include config::git
   include config::shift_it
   include config::dock
