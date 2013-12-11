@@ -24,4 +24,8 @@ class config::repositories {
     source => 'lonelyplanet/performance_test',
   }
 
+  repository { "${::boxen_srcdir}/spp_on_rails":
+    source => 'lonelyplanet/spp_on_rails',
+  }
+
 }
