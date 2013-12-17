@@ -13,11 +13,20 @@ class projects::remixer {
     ensure  => "link"
   }
 
-  # xquartz includes fontconfig, which remixer depends on
   include xquartz
 
-  package { "gs":
+  package { "freetype":
     ensure => installed
+  }
+
+  package { "fontconfig":
+    ensure => installed,
+    require => Package['freetype']
+  }
+
+  package { "ghostscript":
+    ensure => installed,
+    require => Package['fontconfig']
   }
 
   package { "imagemagick":
