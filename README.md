@@ -1,6 +1,7 @@
 ## Getting Started
 
  1. Install Mountain Lion
+  use AppleID from https://lonelyplanet.atlassian.net/wiki/display/SPP/Shared+Accounts
 
  2. Ensure the OSX login account is `dev`.
 
