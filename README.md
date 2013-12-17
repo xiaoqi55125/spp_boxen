@@ -1,13 +1,13 @@
 ## Getting Started
 
- 1. Install Mountain Lion
+ 1. Install Mountain Lion.
   use AppleID from https://lonelyplanet.atlassian.net/wiki/display/SPP/Shared+Accounts
 
  2. Ensure the OSX login account is `dev`.
 
     _Note that our github user account is `sppdev`._
 
- 3. Install Xcode (with Command Line Tools installed from Preferences/Downloads/Components)
+ 3. Install Xcode via the app store (with Command Line Tools installed from Preferences/Downloads/Components)
 
     _Note: only installing the command line tools will cause the error: "failed to exec real xcrun"._
 
