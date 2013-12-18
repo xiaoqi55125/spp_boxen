@@ -72,7 +72,7 @@ mod "postgresql",           :git => "https://github.com/TimMoore/puppet-postgres
 
 github "postgis",           "2.1.6", :repo => "lonelyplanet/puppet-postgis"
 
-github "iterm2",            "1.0.4"
+github "iterm2",            "1.0.6"
 github "shiftit",           "0.0.2", :repo => "jlgeering/puppet-shiftit"
 github "osx",               "1.6.0"
 github "property_list_key", "0.2.0", :repo => "glarizza/puppet-property_list_key"
