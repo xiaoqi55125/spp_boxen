@@ -2,12 +2,10 @@ require boxen::environment
 require homebrew
 require gcc
 
-include boxen::config
-
 Exec {
   group       => 'staff',
   logoutput   => on_failure,
-  user        => $luser,
+  user        => $boxen_user,
 
   path => [
     "${boxen::config::home}/rbenv/shims",
@@ -22,13 +20,13 @@ Exec {
 
   environment => [
     "HOMEBREW_CACHE=${homebrew::config::cachedir}",
-    "HOME=/Users/${::luser}"
+    "HOME=/Users/${::boxen_user}"
   ]
 }
 
 File {
   group => 'staff',
-  owner => $luser
+  owner => $boxen_user
 }
 
 Package {
@@ -41,7 +39,8 @@ Repository {
   extra    => [
     '--recurse-submodules'
   ],
-  config => {
+  require  => File["${boxen::config::bindir}/boxen-git-credential"],
+  config   => {
     # see:  https://github.com/boxen/our-boxen/issues/286#issuecomment-18516146
     # also: https://github.com/boxen/our-boxen/issues/286#issuecomment-18508672
     'credential.helper' => "${boxen::config::bindir}/boxen-git-credential"
@@ -60,9 +59,6 @@ node default {
   include hub
 
   # node versions
-  include nodejs::v0_4
-  include nodejs::v0_6
-  include nodejs::v0_8
   include nodejs::v0_10
 
   # default node version

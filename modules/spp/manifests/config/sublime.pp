@@ -36,7 +36,7 @@ class config::sublime {
 
   $installedPackagesDir = "${base}/Sublime Text 2/Installed Packages"
   file { $installedPackagesDir:
-    ensure  => "${installedPackagesDir}",
+    ensure  => 'directory',
     owner   => "${::luser}",
     mode    => '0755',
   }
