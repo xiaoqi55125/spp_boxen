@@ -148,7 +148,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: glarizza/puppet-property_list_key
   specs:
-    property_list_key (0.1.0)
+    property_list_key (0.2.0)
 
 GITHUBTARBALL
   remote: jlgeering/puppet-shiftit
@@ -195,7 +195,7 @@ DEPENDENCIES
   pkgconfig (= 1.0.0)
   postgis (= 2.1.6)
   postgresql (>= 0)
-  property_list_key (= 0.1.0)
+  property_list_key (= 0.2.0)
   repository (= 2.2.0)
   ruby (= 6.7.6)
   shiftit (= 0.0.2)
