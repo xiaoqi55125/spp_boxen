@@ -88,24 +88,7 @@ as many of these details as you can provide:
     * login to google as atlas2ninjas@lonelyplanet.com.au
       (details: https://lonelyplanet.atlassian.net/wiki/display/SPP/Shared+Accounts#SharedAccounts-Google)
 
-  - install Bling development VM (WinXP, used for cross OS testing (WinXP makes me very cross)
-    ```
-    mkdir -p /Users/dev/VirtualBox\ VMs/BlingDevelopment
-    rsync -av --progress --stats "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
-    ```
-
-    * load vm
-
   - map Caps Lock to Ctrl
-
-  - you might also want to setup:
-    * Skype
-    * the printer
-    * automatic login (System Preferences/Users & Groups/Login Options)
-    * keyboard keypress repeat delay (System Preferences/Keyboard)
-    * start Dash and enter app store password to enable it properly
-    * Add Chrome, iTerm, and Sublime to the Dock
-    * Disable the guest user
 
   - test atlas
    * cd atlas && gpl && bundle install
@@ -118,6 +101,24 @@ as many of these details as you can provide:
    * ber db:migrate
    * ber spec:covered cucumber:all
   
+
+
+  - you might also want to setup:
+    * Skype
+    * the printer
+    * automatic login (System Preferences/Users & Groups/Login Options)
+    * keyboard keypress repeat delay (System Preferences/Keyboard)
+    * start Dash and enter app store password to enable it properly
+    * Add Chrome, iTerm, and Sublime to the Dock
+    * Disable the guest user
+
+  - install Bling development VM (WinXP, used for cross OS testing (WinXP makes me very cross)
+    ```
+    mkdir -p /Users/dev/VirtualBox\ VMs/BlingDevelopment
+    rsync -av --progress --stats "devmac-1:/Users/dev/VirtualBox\\ VMs/BlingDevelopment" /Users/dev/VirtualBox\ VMs/BlingDevelopment
+    ```
+
+    * load vm
   
 ---
 
