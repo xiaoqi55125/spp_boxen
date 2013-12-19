@@ -33,6 +33,14 @@ class config::git {
     value => 'true'
   }
 
+  git::config::global{ 'user.name':
+    value => 'atlas2ninjas'
+  }
+
+  git::config::global{ 'user.email':
+    value => 'atlas2ninjas@lonelyplanet.com.au'
+  }
+
   define add_git_pair ($user_details = $title) {
     exec {"Add ${user_details} git pair":
       command => "git config --global --add git-pair.authors \"${user_details}\"",
