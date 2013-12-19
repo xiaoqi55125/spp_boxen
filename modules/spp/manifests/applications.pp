@@ -10,6 +10,7 @@ class spp::applications {
   include alfred
   include virtualbox
   include openoffice
+  include firefox
 
   define uninstall ($app_name = $title, $type) {
     exec { "Remove app ${app_name}" :
@@ -17,11 +18,6 @@ class spp::applications {
       user => "root",
       onlyif => "test -e '/Applications/${app_name}.app'"
     }
-  }
-
-  package { 'Firefox':
-    provider => 'appdmg',
-    source   => 'http://download-origin.cdn.mozilla.net/pub/mozilla.org/firefox/releases/25.0/mac/en-US/Firefox%2025.0.dmg'
   }
 
   uninstall {'Quicksilver':
