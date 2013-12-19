@@ -12,6 +12,26 @@ class spp::applications {
   include openoffice
   include firefox
 
+  exec { 'Enable Accessibility API for ShiftIt':
+    # This is required for ShiftIt to function on Mavericks.
+    #
+    # The equivalent in the UI is:
+    #  - System Preferences > Security & Privacy > Privacy > Accessibility
+    #  - Click the lock to make changes and authenticate
+    #  - Check ShiftIt under "Allow the apps below to control your computer."
+    #
+    # A future version of ShiftIt is expected to handle enabling this at launch
+    # time by prompting the user for root permission.
+    #
+    # When that is available, this workaround should be removed.
+    #
+    # See https://github.com/fikovnik/ShiftIt/issues/110 for details.
+    command => "/usr/bin/sqlite3 '/Library/Application Support/com.apple.TCC/TCC.db' 'update access set allowed=1 where client like \"%org.shiftitapp.ShiftIt%\"'",
+    user    => "root",
+    onlyif  => "test -f '/Library/Application Support/com.apple.TCC/TCC.db'",
+    before  => Package["ShiftIt"]
+  }
+
   define uninstall ($app_name = $title, $type) {
     exec { "Remove app ${app_name}" :
       command => "rm -rf '/Applications/${app_name}.app'; rm -f '/var/db/.puppet_${type}_installed_${app_name}'",
