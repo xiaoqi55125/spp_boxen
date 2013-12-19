@@ -107,6 +107,18 @@ as many of these details as you can provide:
     * Add Chrome, iTerm, and Sublime to the Dock
     * Disable the guest user
 
+  - test atlas
+   * cd atlas && gpl && bundle install
+   * RAILS_ENV=development ber db:setup
+   * ber fast:specs
+   * check atlas christo and ui load
+   
+  - test remixer
+   * cd remixer && gpl && bundle install
+   * ber db:migrate
+   * ber spec:covered cucumber:all
+  
+  
 ---
 
 ### Troubleshooting
