@@ -81,6 +81,7 @@ github "alfred",            "1.1.7"
 github "virtualbox",        "1.0.9"
 github "openoffice",        "1.2.0"
 github "firefox",           "1.1.7"
+github "java",              "1.2.0"  # Needed for Simian in the Atlas/Remixer builds
 
 # Personal Modules (Used in modules/people/manifests/$user.pp)
 github "minecraft",         "1.0.0"

@@ -3,6 +3,7 @@ class projects::atlas {
   include phantomjs
   include postgresql
   include postgis
+  include java # Needed for Simian in the Atlas/Remixer builds
 
   $ruby_version = '1.9.3-p484'
   $passenger_version = '4.0.29'

@@ -1,6 +1,7 @@
 class projects::remixer {
 
   include postgresql
+  include java # Needed for Simian in the Atlas/Remixer builds
 
   boxen::project { 'remixer':
     postgresql    => true,
