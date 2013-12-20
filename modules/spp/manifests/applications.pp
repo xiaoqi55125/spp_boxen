@@ -1,4 +1,10 @@
 class spp::applications {
+  # Want to add a Homebrew package?
+  #
+  #  - If it's a dependency for one of our projects, add it to the appropriate
+  #    file in modules/projects/manifests/.
+  #  - If it's a generally-useful command-line tool, add it to the package list
+  #    in site.pp.
 
   include iterm2::stable
   include gitx
@@ -54,14 +60,6 @@ class spp::applications {
     source   => 'http://downloads.atlassian.com/software/sourcetree/SourceTree_1.7.4.1.dmg',
   }
 
-  homebrew::formula { 'tig':
-    before => Package['boxen/brews/tig'],
-  }
-
-  package { 'boxen/brews/tig':
-    ensure => installed,
-  }
-
   package { 'ChickenVNC':
     provider => 'appdmg',
     source => 'http://freefr.dl.sourceforge.net/project/chicken/Chicken-2.2b2.dmg'
@@ -84,10 +82,6 @@ class spp::applications {
     provider => 'shell',
     cwd      => "/Users/${::luser}",
     require  => [Package['DbVisualizer'], Repository["${::boxen_srcdir}/pairing_station"]],
-  }
-
-  package { "watch":
-    ensure => 'installed'
   }
 
   exec { 'AWS CLI':

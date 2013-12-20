@@ -79,6 +79,9 @@ node default {
       'gnu-tar',
       'csshX',
       'bash-completion',
+      'watch',
+      'jq',  # http://stedolan.github.io/jq/
+      'tig', # http://jonas.nitro.dk/tig/
     ]:
   }
 
