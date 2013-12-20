@@ -1,10 +1,5 @@
 class config::git {
 
-  ruby::gem { "1.9.3 edgecase-git-pair":
-    gem => 'edgecase-git-pair',
-    ruby => '1.9.3'
-  }
-
   git::config::global{ 'alias.lg':
     value => "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches --remotes --tags",
   }

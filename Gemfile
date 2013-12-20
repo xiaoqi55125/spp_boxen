@@ -15,5 +15,4 @@ group :development do
   gem "aws-sdk", "~> 1.21"
   gem "net-ssh"
   gem "rbvmomi"
-  gem "edgecase-git-pair"
 end
