@@ -44,18 +44,6 @@ as many of these details as you can provide:
       [Homebrew formula](https://github.com/mxcl/homebrew/blob/master/Library/Formula/passenger.rb)
       and installing that way.
 
-  - install `git-pair` under the default gem path:
-    ```
-    cd atlas
-    gem install ehrenmurdick-git-pair
-    ```
-
-    - _Why we need it:_ we use this to manage the git configuration when
-      pairing.
-    - _Why it's hard to automate:_ this is in the atlas Gemfile, but for some
-      reason, Bundler is configured with `BUNDLE_PATH: /Users/dev/.bundle`,
-      which is not on our default `PATH`.
-
   - add content to the local DB:
     ```
     cd atlas
@@ -96,12 +84,12 @@ as many of these details as you can provide:
    * RAILS_ENV=development ber db:setup
    * ber fast:specs
    * check atlas christo and ui load
-   
+
   - test remixer
    * cd remixer && gpl && bundle install
    * ber db:migrate
    * ber spec:covered cucumber:all
-  
+
 
 
   - you might also want to setup:
@@ -120,7 +108,7 @@ as many of these details as you can provide:
     ```
 
     * load vm
-  
+
 ---
 
 ### Troubleshooting

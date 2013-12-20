@@ -82,7 +82,15 @@ node default {
       'watch',
       'jq',  # http://stedolan.github.io/jq/
       'tig', # http://jonas.nitro.dk/tig/
+      'brew-gem', # Allows installation of gems as if they were Homebrews
     ]:
+  }
+
+  # This installs git-pair using brew gem.
+  # This way, it acts as a system command rather than as a gem.
+  package { 'ehrenmurdick-git-pair':
+    provider => brew_gem,
+    require  => Package['brew-gem'],
   }
 
   file { "${boxen::config::srcdir}/our-boxen":
