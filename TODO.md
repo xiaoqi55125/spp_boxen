@@ -89,6 +89,7 @@ as many of these details as you can provide:
       (details: https://lonelyplanet.atlassian.net/wiki/display/SPP/Shared+Accounts#SharedAccounts-Google)
 
   - map Caps Lock to Ctrl
+  - disable all mission control keyboard shortcuts
 
   - test atlas
    * cd atlas && gpl && bundle install
