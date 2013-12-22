@@ -7,7 +7,8 @@
 
     _Note that our github user account is `sppdev`._
 
- 3. Install Xcode via the app store
+ 3. Install system updates via app store
+ 4. Install Xcode via the app store
     - On Mountain Lion: install Command Line Tools in Xcode from Preferences/Downloads/Components
     - On Mavericks: open Terminal and type `xcode-select --install`.
 
