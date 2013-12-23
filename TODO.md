@@ -67,6 +67,7 @@ as many of these details as you can provide:
     * login to google as atlas2ninjas@lonelyplanet.com.au
       (details: https://lonelyplanet.atlassian.net/wiki/display/SPP/Shared+Accounts#SharedAccounts-Google)
 
+  - enable shiftit, under system preferences / security & privacy / privacy / accessibility, check shiftit
   - map Caps Lock to Ctrl
   - disable all mission control keyboard shortcuts
 
