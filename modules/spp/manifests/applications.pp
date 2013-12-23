@@ -72,7 +72,7 @@ class spp::applications {
 
   package { 'DbVisualizer':
     provider => 'compressed_app',
-    source => 'http://www.dbvis.com/product_download/dbvis-8.0.12/media/dbvis_macos_8_0_12.tgz'
+    source => 'http://www.dbvis.com/product_download/dbvis-9.1.5/media/dbvis_macos_9_1_5.tgz'
   }
 
   $dbvis_tarball = "${::boxen_srcdir}/pairing_station/preferences/dbvisualizer/_dbvis_preferences.tgz"
