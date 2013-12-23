@@ -91,7 +91,6 @@ as many of these details as you can provide:
     * keyboard keypress repeat delay (System Preferences/Keyboard)
     * start Dash and enter app store password to enable it properly
     * Add Chrome, iTerm, and Sublime to the Dock
-    * Disable the guest user
 
   - install Bling development VM (WinXP, used for cross OS testing (WinXP makes me very cross)
     ```
