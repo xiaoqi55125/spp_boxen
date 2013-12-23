@@ -82,7 +82,9 @@ as many of these details as you can provide:
    * ber db:migrate
    * ber spec:covered cucumber:all
 
-
+  - open and setup the following apps
+   * sourcetree (login to github as sppdev)
+   * dbvisualizer install java runtime and update
 
   - you might also want to setup:
     * Skype
