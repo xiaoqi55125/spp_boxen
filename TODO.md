@@ -54,15 +54,6 @@ as many of these details as you can provide:
     - _Why we need it:_ prod-like data is useful for development and testing.
     - _Why it's hard to automate:_ ???
 
-  - re-install ghostscript (to set it up correctly):
-    ```
-    brew uninstall freetype;    brew install freetype --from-source
-    brew uninstall fontconfig;  brew install fontconfig --from-source
-    brew uninstall ghostscript; brew install ghostscript --from-source
-    ```
-
-    - _Why we need it:_ ??? required by Remixer?
-    - _Why it's hard to automate:_ ???
 
   - install CoffeeScript node package:
     ```
