@@ -128,7 +128,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (6.7.6)
+    ruby (7.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -180,6 +180,11 @@ GITHUBTARBALL
   specs:
     stdlib (4.1.0)
 
+GITHUBTARBALL
+  remote: ripienaar/puppet-module-data
+  specs:
+    ripienaar-module_data (0.0.1)
+
 DEPENDENCIES
   alfred (= 1.1.7)
   boxen (= 3.3.5)
@@ -209,7 +214,8 @@ DEPENDENCIES
   postgresql (>= 0)
   property_list_key (= 0.2.0)
   repository (= 2.2.0)
-  ruby (= 6.7.6)
+  ripienaar-module_data (= 0.0.1)
+  ruby (= 7.0.1)
   shiftit (= 0.0.2)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)

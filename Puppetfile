@@ -48,10 +48,14 @@ github "openssl",    "1.0.0"
 github "phantomjs",  "2.1.0"
 github "pkgconfig",  "1.0.0"
 github "repository", "2.2.0"
-github "ruby",       "6.7.6"
+github "ruby",       "7.0.1"
 github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",       "1.0.0"
 github "xquartz",    "1.1.1"
+
+# This allows the use of the Ruby version aliases and
+# is recommended by https://github.com/boxen/puppet-ruby/blob/master/README.md
+github "ripienaar-module_data", "0.0.1", :repo => "ripienaar/puppet-module-data"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
